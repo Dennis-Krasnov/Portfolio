@@ -17,9 +17,14 @@
 
 <!-- TODO: I also need to link to appropriate experience!! -->
 <!-- TODO: make <ExperienceLogo url="" id=""/> tags inside of Landing!!! -->
+<!-- summary="I have <a href='#experience'>3 years</a> experience designing and developing structured software systems. I'm a computer science student at a top Canadian University, currently looking for an internship." -->
+<!-- summary="I have <a href='#experience'>3 years</a> experience designing and developing structured software systems. I'm a CS student at a top Canadian University, currently looking for an internship." -->
+<!-- summary="Hi, I'm Dennis. I have <a href='#experience'>3 years</a> experience designing and developing structured software systems. I'm a computer science student at uWaterloo, currently looking for an internship." -->
+
+
 <Landing
-	title="Software Developer"
-	summary="lool"
+	title="Full-Stack Software Developer"
+	summary="Hi, I'm Dennis. I have <a href='#experience'>3 years</a> experience designing and developing structured software systems. Currently studying CS at uWaterloo and looking for a summer 2020 internship."
 	companyLogoUrls={[
 		"successkid.jpg",
 		"successkid.jpg",
@@ -31,47 +36,53 @@
 	]}
 />
 
-<Section title="skills" subheading="We create back-end and front-end solutions using top-notch and up-to-date technologies, that are reliable, future-proof and scalable.">
+<!-- imageUrl="kotlin/spring/python/java" -->
+<!-- imageUrl="html/css/js/react"
+imageUrl="rust/c/c++/bash"
+imageUrl="flutter+dart+android+ios" -->
+
+<Section title="skills" subheading="Here's what I'm good at">
 	<Skills>
 		<Skill
-			imageUrl="kotlin/spring/python/java"
+			imageUrl="/pythonDjango.png"
 			title="Backend Development"
 			summary="Python is the backbone of the future, enabling Machine Learning and super scalable code."
 		/>
 
 		<Skill
-			imageUrl="html/css/js/react"
+			imageUrl="/react.png"
 			title="Web Development"
-			summary="Gatsby is a modern static site generator based on React. We use it to build extremely fast websites and apps."
+			summary="<a href='https://www.gatsbyjs.org/'>Gatsby</a> is a modern static <i>site generator</i> based on <b>React</b>. We use it to build extremely fast websites and apps."
 		/>
 
 		<Skill
-			imageUrl="rust/c/c++/bash"
+			imageUrl="/node.png"
 			title="Systems Programming"
 			summary="We use React.js to build design system based, dynamic and modern front-end web apps."
 		/>
 
 		<Skill
-			imageUrl="flutter+dart+android+ios"
+			imageUrl="/react.png"
 			title="Mobile Development"
 			summary="React Native allows us to build and deploy multiplatform, native apps for Android and iOS."
 		/>
 
 		<Skill
-			imageUrl="???"
+			imageUrl="/pythonDjango.png"
 			title="UX Design"
 			summary="Swift is the language of the iPhone, iPad and Mac. We build fully native apps for all these platforms."
 		/>
 
 		<Skill
-			imageUrl="???"
-			title="Full Business cycle"
+			imageUrl="/react.png"
+			title="Full Business Cycle"
 			summary="We use HTML5, CSS3 and JS for pixel-perfect and search engine friendly projects."
 		/>
 	</Skills>
 </Section>
 
-<Section title="projects" subheading="night and day">
+<!-- <Section title="projects" subheading="I'm a programmer by day and by night, sometimes I even go outside"></Section> -->
+<Section title="projects" subheading="I'm a programmer by day and by night; sometimes I even go outside">
 	<!-- TODO: extra 'flipped' attribute -->
 	<ProjectSummary
 		logoUrl = "successkid.jpg"
@@ -90,7 +101,7 @@
 	/>
 </Section>
 
-<Section title="experience" subheading="Here's companies">
+<Section title="experience" subheading="I'm grateful to have worked at some amazing companies">
 	<Experience
 		name = "Ultimate Software"
 		title = "Software Engineering Intern"
@@ -122,7 +133,7 @@
 	/>
 </Section>
 
-<Section title="contact" subheading="gimme a call">
+<Section title="contact" subheading="Got any questions? I would love to get in touch (especially if you know someone who makes hiring decisions 😉)">
 	<ContactForm/>
 </Section>
 

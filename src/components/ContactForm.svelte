@@ -2,7 +2,6 @@
 </script>
 
 <div>
-HIUII
 </div>
 
 <style>

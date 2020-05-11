@@ -20,13 +20,6 @@
 		scroll-margin-top: 75px;
 	}
 
-	/* TODO: nest with scss */
-	/* @media screen and (prefers-reduced-motion: reduce) {
-		.section {
-			scroll-behavior: auto;
-		}
-	} */
-
 	h1 {
 		/* font-size: 33px; */
 		/* font-height: 37px; */
