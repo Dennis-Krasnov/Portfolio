@@ -4,25 +4,50 @@
 </script>
 
 <!-- TODO: light/dark/etc modifiers? -->
-<div id="{title}" class="section">
-	<h1>{title}</h1>
-	<p>{subheading}</p>
-	<slot/>
-</div>
+{#if title}
+	<section id="{title}" class="section">
+		<h1>{title}</h1>
+		<p>{subheading}</p>
+		<slot/>
+	</section>
+{:else}
+	<section class="section">
+		<slot/>
+	</section>
+{/if}
 
-<style>
+<style lang="scss">
+	@import "../style/constants.scss";
+	// @import "../style/mixins.scss";
+
 	.section {
-		max-width: 1185px;
+		max-width: $max-screen-width;
 		width: 95%;
-		margin: 120px auto 0 auto;
-		/* TODO: make media query - this margin only for desktops! */
+		margin: $m-xl auto 0 auto;
+		// margin-top: 30px;
+		// @include css-lock($m-xl, $m-xl * 5, 320px, 1200px, margin-top);
+		// margin-right: auto;
+		// margin-bottom: 0;
+		// margin-left: auto;
 
-		scroll-margin-top: 75px;
+		// calc(64px + (320px - 64px) * ((100vw - 320px) / (1200px - 320px)))
+		// calc(64px + (320px - 64px) * ((100vw - 320px)))
+		// calc(64px + (320px - 64px))
+		// calc(64px)
+
+		scroll-margin-top: $m-l + $menu-height;
+
+		// @media (min-width: 40em) {& {
+		// 	margin: $m-xl * 2 auto 0 auto;
+		// }}
+
+		&:first-child {
+			margin: 0 auto;
+		}
 	}
 
 	h1 {
-		/* font-size: 33px; */
-		/* font-height: 37px; */
+		font-size: 2em; // 28 -> 36px
 		text-align: center;
 		text-transform: uppercase;
 		font-weight: 700;
@@ -31,14 +56,10 @@
 	}
 
 	p {
-		margin: 25px auto 50px auto;
+		margin: $m-n auto $m-l auto;
 		max-width: 647px;
-		/* line-height: 24px; */
 		text-align: center;
-		/* font-size: 18px; */
-		font-weight: 700;
-
-		/* font-style: italic; */
+		font-style: italic;
+		// font-weight: 700;
 	}
-
 </style>

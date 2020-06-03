@@ -5,59 +5,41 @@
 </script>
 
 <div class="skill-container">
-	<img src="{imageUrl}" alt="Programming language logos"/>
+	<figure>
+		<svg xmlns="http://www.w3.org/2000/svg" width="48px" height="48px" viewBox="0 0 48 48"><g fill="none" fill-rule="evenodd"><path fill="#87BBFD" fill-rule="nonzero" d="M46 33.44v3.09a1 1 0 0 1-.8.97l-42 8.93a1 1 0 0 1-1.2-.98v-3.09a1 1 0 0 1 .8-.97l42-8.93a1 1 0 0 1 1.2.98zm0-10v3.09a1 1 0 0 1-.8.97l-42 8.93a1 1 0 0 1-1.2-.98v-3.09a1 1 0 0 1 .8-.97l42-8.93a1 1 0 0 1 1.2.98zm0-10v3.09a1 1 0 0 1-.8.97l-42 8.93a1 1 0 0 1-1.2-.98v-3.09a1 1 0 0 1 .8-.97l42-8.93a1 1 0 0 1 1.2.98z"></path><path fill="#555ABF" fill-rule="nonzero" d="M46 3.44v3.09a1 1 0 0 1-.8.97l-42 8.93a1 1 0 0 1-1.2-.98v-3.09a1 1 0 0 1 .8-.97l42-8.93a1 1 0 0 1 1.2.98z"></path></g></svg>
+	</figure>
+	<!-- <img src="{imageUrl}" alt="Programming language logos"/> -->
 	<h2>{title}</h2>
 	<p>{@html summary}</p>
 </div>
 
-<style>
+<style lang="scss">
+	@import "../style/constants.scss";
+
+	// Inspired by https://stripe.com/en-ca/terminal
+
 	.skill-container {
-		position: relative;
 
-		display: flex;
-		flex-flow: column nowrap;
-		padding: 0 0 60px 0;
 	}
 
-	img {
-		width: 50%;
-		height: 30px;
-		margin: 0 auto;
-		object-fit: contain;
+	figure {
+		min-height: 48px;
+		margin: 0 0 16px;
+		display: grid;
+		align-items: end;
 	}
 
-	.skill-container > h2 {
-		margin: 15px 0 0 0;
-		text-align: center;
+	h2 {
+		font-weight: 600;
+		font-size: 19px;
+		line-height: 32px;
+		color: #32325d;
 	}
 
-	.skill-container > p {
-		margin: 15px 0 0 0;
-		text-align: center;
-	}
-
-	@media (min-width: 40em) {
-		.skill-container {
-			padding: 30px;
-
-			box-shadow: 0 10px 30px rgba(75, 89, 123, .13);
-		}
-
-		.skill-container::before {
-			content: "";
-			top: 0;
-			left: 0;
-			position: absolute;
-			background: linear-gradient(312.39deg,#ed88ff 0%,#1868f1 100%);
-			-webkit-box-shadow: 0 4px 9px rgba(116,123,247,.25);
-			box-shadow: 0 4px 9px rgba(116,123,247,.25);
-			width: 100%;
-			height: 5px;
-		}
-
-		img {
-			width: 100%;
-			height: 60px;
-		}
+	p {
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 28px;
+		color: #525f7f;
 	}
 </style>
