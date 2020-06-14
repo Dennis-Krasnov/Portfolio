@@ -9,7 +9,7 @@
 	import Skill from '../components/Skill.svelte';
 	import Skills from '../components/Skills.svelte';
 
-	let professionalStartDate = "08/01/2017"; // First time I got paid for development work
+	let professionalStartDate = "08/01/2017"; // First time I got paid for development work, Pocket Trade Show
 	let millisecondsInYear = 31536000000;
 	let yearsExperience = Math.floor((new Date().getTime() - new Date(professionalStartDate).getTime()) / millisecondsInYear);
 </script>
@@ -23,7 +23,7 @@
 		title="Experienced Developer Available for Hire"
 		summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
 	/>
-	<Companies/>
+	<!-- <Companies/> -->
 </Section>
 
 <Section id="skills" watermark="skills" watermarkCreep=0.2 dark>
@@ -104,7 +104,7 @@
 	</Projects>
 </Section>
 
-<Section id="work" watermark="work" dark>
+<Section id="work" watermark="work" watermarkCreep=0 dark>
 	<Experience
 		name = "Ultimate Software"
 		title = "Software Engineering Intern"
@@ -136,7 +136,7 @@
 	/>
 </Section>
 
-<Section id="contact" watermark="contact">
+<Section id="contact" watermark="contact" watermarkCreep=0.25>
 	<ContactForm/>
 </Section>
 

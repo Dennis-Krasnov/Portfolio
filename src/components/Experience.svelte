@@ -30,4 +30,6 @@
 <style lang="scss">
 	@import "../style/constants.scss";
 
+	// TODO: timeline only for large screens!
+
 </style>

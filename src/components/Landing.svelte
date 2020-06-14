@@ -30,7 +30,8 @@
 
 		grid-gap: 0 30px;
 		gap: 0 30px;
-		padding: $m-l 0 0 0;
+		padding: $m-l 0 $m-l 0;
+		// TODO: for companies, padding: $m-l 0 0 0;
 
 		@media (min-width: $two-by-three-breakpoint) {& {
 			grid-template-columns: .55fr .45fr;
@@ -39,7 +40,8 @@
 
 			min-height: 299px; // height of lhs when p spans 3 lines.
 
-			padding: $m-xl 0 $m-l 0;
+			padding: $m-xl 0 ($m-xl * 2) 0;
+			// TODO: for companies, padding: $m-xl 0 $m-l 0;
 		}}
 	}
 
