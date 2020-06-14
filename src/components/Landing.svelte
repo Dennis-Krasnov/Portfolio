@@ -11,8 +11,7 @@
 		<p>{@html summary}</p>
 
 		<ul class="cta">
-			<Button href="#projects" primary>view my work</Button>
-			<Button href="/resume.pdf" targetBlank>download resume</Button>
+			<Button href="#projects" primary>view projects</Button><Button href="/resume.pdf" targetBlank>download resume</Button>
 		</ul>
 	</div>
 	<div class="rhs">
@@ -51,7 +50,10 @@
 			min-height: 299px; // height of lhs when p spans 3 lines.
 
 			// padding: $m-xl 0 (2 * $m-xl) 0;
-			padding: $m-xl 0 $m-xl 0;
+			// padding: $m-xl 0 $m-xl 0;
+			// padding: $m-xl 0 $m-l 0;
+			padding: $m-xl 0 $m-l 0;
+			// padding: $m-xl 0 0 0;
 		}}
 	}
 
@@ -81,8 +83,8 @@
 		}
 
 		.cta {
-			margin: 0 0 30px;
-			// margin: 15px 0 30px;
+			// margin: 0 0 30px;
+			margin: 15px 0 30px;
 
 			@media (min-width: $two-by-three-breakpoint) {& {
 				// margin: 50px 0 0 0;

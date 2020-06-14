@@ -8,10 +8,6 @@
 <style lang="scss">
     @import "../style/constants.scss";
 
-    $two-by-three-breakpoint: 42.5em;
-    // $two-by-three-breakpoint: 40em;
-    // $three-by-two-breakpoint: 60em;
-
     // $card-width: 250px;
     // $card-width: 400px;
     // $card-height: 300px;
@@ -27,7 +23,7 @@
         grid-gap: 26px 0;
         gap: 26px 0;
 
-        @media (min-width: $two-by-three-breakpoint) {& {
+        @media (min-width: $mobile-breakpoint) {& {
 
             // grid-template-columns: repeat(2, $card-width);
             // grid-template-rows: repeat(3, $card-height);

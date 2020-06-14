@@ -22,6 +22,10 @@
 </a>
 
 <style lang="scss">
+	@import "../style/constants.scss";
+
+	// Inspired by http://qaisar.design
+
 	a {
 		width: 100%;
 		// display: block;
@@ -75,7 +79,9 @@
 				position: absolute;
 				bottom: 0;
 				right: 0;
+
 				transition: all 0.25s ease;
+				user-select: none;
 
 				img {
 					display: block;
@@ -84,5 +90,12 @@
 				}
 			}
 		}
+
+		@media (min-width: $mobile-breakpoint) {& {
+			// &:nth-child(even) {
+			&:nth-child(odd) {
+				margin: -$project-offset 0 0 0;
+			}
+		}}
 	}
 </style>
