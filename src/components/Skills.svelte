@@ -8,10 +8,6 @@
 <style lang="scss">
     @import "../style/constants.scss";
 
-    // $card-width: 250px;
-    // $card-width: 400px;
-    // $card-height: 300px;
-
     .skills-container {
         display: grid;
         justify-content: center;
@@ -24,22 +20,10 @@
         gap: 26px 0;
 
         @media (min-width: $mobile-breakpoint) {& {
-
-            // grid-template-columns: repeat(2, $card-width);
-            // grid-template-rows: repeat(3, $card-height);
-            // grid-gap: $m-l;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            // grid-gap: 0 26px;
-            // gap: 0 26px;
             grid-gap: 42px 26px;
             gap: 42px 26px;
         }}
-
-        // @media (min-width: $three-by-two-breakpoint) {& {
-        //     grid-template-columns: repeat(3, $card-width);
-        //     grid-template-rows: repeat(2, $card-height);
-        //     grid-gap: $m-xl;
-        // }}
     }
 </style>

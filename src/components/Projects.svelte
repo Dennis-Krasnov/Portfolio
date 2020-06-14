@@ -24,7 +24,6 @@
             grid-template-rows: auto;
 
             padding: $project-offset 0 0 0;
-            // padding: ($project-offset + 52px) 0 0 0;
         }}
     }
 </style>

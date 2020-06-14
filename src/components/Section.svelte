@@ -8,12 +8,15 @@
 	$: darkClass = dark ? "dark" : "";
 	$: paddingClass = noPadding ? "no-padding" : "";
 	$: watermarkClass = dark ? "right" : "left";
+
+	$: viewportWatermarkCreep = `-${19 * watermarkCreep}vw`;
+	$: pixelWatermarkCreep = `-${227.8 * watermarkCreep}px`;
 </script>
 
 <section id="{id}" class="section {darkClass} {paddingClass}">
 {#if watermark}
 	<h1 class="{watermarkClass}">{watermark}</h1>
-	<div class="watermark-spacer" style="margin-bottom: max(-{19 * watermarkCreep}vw, -{227.8 * watermarkCreep}px)"></div>
+	<div class="watermark-spacer" style="margin-bottom: max({viewportWatermarkCreep}, {pixelWatermarkCreep})"></div>
 {/if}
 	<div class="content">
 		<slot/>
@@ -56,7 +59,7 @@
 
 			&.right {
 				top: $padding-size;
-				right: calc(max(-2.5vw, -30px)); // TODO: scroll bar takes up some space, => -1.5vw??
+				right: calc(max(-2.5vw, -30px)); // TODO: scroll bar takes up some space, => -2vw??
 			}
 		}
 
@@ -78,20 +81,6 @@
 		&.no-padding {
 			padding: 0;
 		}
-
-		// 	padding: 80px 0 0 0;
-		// }
-		// // @media (min-width: 40em) {& {
-		// // 	margin: $m-xl * 2 auto 0 auto;
-		// // }}
-
-		// &.no-top-padding {
-		// 	padding-top: 0;
-		// }
-
-		// &.no-bottom-padding {
-		// 	padding-bottom: 0;
-		// }
 
 		&.dark {
 			background: #f5f5f9;

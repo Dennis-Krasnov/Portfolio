@@ -21,10 +21,9 @@
 	// Inspired by https://stripe.com/en-ca/
 	// TODO: size individual companies logos like stripe does
 
-	$two-by-three-breakpoint: 880px;
+	$breakpoint: 880px;
 
 	#customer-logos {
-		// margin: 40px 0;
 		// border-top: 2px solid #f6f9fc;
 
 		a {
@@ -66,7 +65,7 @@
 				}
 			}
 
-			@media (min-width: $two-by-three-breakpoint) {
+			@media (min-width: $breakpoint) {
 				& {
 					padding-top: 70px;
 					padding-bottom: 65px;
@@ -86,7 +85,6 @@
 					filter:blur(10px);
 				}
 
-				// TODO: seperate breakpoint?
 				ul {
 					justify-content: space-between;
 				}

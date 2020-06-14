@@ -92,7 +92,6 @@
 		}
 
 		@media (min-width: $mobile-breakpoint) {& {
-			// &:nth-child(even) {
 			&:nth-child(odd) {
 				margin: -$project-offset 0 0 0;
 			}

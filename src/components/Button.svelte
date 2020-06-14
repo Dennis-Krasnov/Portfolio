@@ -7,6 +7,10 @@
 <a href="{href}" class={primary ? "primary" : "secondary"} target={targetBlank ? "_blank" : "_self"}><slot/></a>
 
 <style lang="scss">
+	@import "../style/constants.scss";
+
+	// Inspired by https://stripe.com
+
 	a {
 		color: white;
 		white-space: nowrap;
@@ -30,8 +34,7 @@
 		margin: 15px 0 0 0;
 
 		&.primary {
-			// background-color: #3ecf8e;
-			background-color: #d61f35;
+			background-color: $logo-colour;
 		}
 
 		&.secondary {
@@ -43,6 +46,7 @@
 		}
 
 		&:hover {
+			// TODO: create hover animation
 			// outline: none;
 			// box-shadow:0 0 0 1.5px hsla(0,0%,100%,.75),inset 0 0 0 1.25px rgba(82,95,127,.5),0 13px 27px -5px rgba(50,50,93,.25),0 8px 16px -8px rgba(0,0,0,.3),0 -6px 16px -6px rgba(0,0,0,.025)
 		}
