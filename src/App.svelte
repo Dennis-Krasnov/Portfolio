@@ -6,15 +6,13 @@
 
 	import About from "./routes/About.svelte";
 	import Portfolio from "./routes/Portfolio.svelte";
-
-  	// export let name: string;
 </script>
 
 <Router>
-	<NavBar/>
+	<NavBar />
 	<main>
 		<Route path="/" component="{Portfolio}" />
     	<Route path="about" component="{About}" />
 	</main>
-	<Footer/>
+	<Footer />
 </Router>

@@ -2,5 +2,17 @@
 	import NavLink from "../components/NavLink.svelte";
 </script>
 
-<NavLink to="/">Portfolio</NavLink>
-<NavLink to="about">About</NavLink>
+<nav>
+    <NavLink to="/">Portfolio</NavLink>
+    <NavLink to="about">About</NavLink>
+</nav>
+
+<style>
+    nav {
+        position: sticky;
+		top: 0;
+		z-index: 1;
+		height: 100px;
+		background: white;
+    }
+</style>
