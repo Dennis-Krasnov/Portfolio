@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 	import { Router, Link, Route } from "svelte-routing";
 	import NavLink from "./components/NavLink.svelte";
 	import About from "./routes/About.svelte";
 	import Portfolio from "./routes/Portfolio.svelte";
 
-	export let name;
+  	export let name: string;
 </script>
 
 <!-- url="{url}" -->
@@ -21,10 +21,10 @@
   </div>
 </Router>
 
-<!-- <main>
+<main>
 	<h1>Hello the mighty {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main> -->
+</main>
 
 <style>
 	/* main {
