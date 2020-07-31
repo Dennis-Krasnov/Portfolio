@@ -1,7 +1,9 @@
 <script lang="ts">
-	// import NavLink from "../components/NavLink.svelte";
+	import Section from "../components/Section.svelte";
 </script>
 
 <footer>
-	el footer!
+	<Section>
+		el footer!
+	</Section>
 </footer>
