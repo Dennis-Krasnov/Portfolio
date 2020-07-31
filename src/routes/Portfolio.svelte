@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Section from "../components/Section.svelte";
+	import Project from "../components/Project.svelte";
+	import Projects from "../components/Projects.svelte";
 	import Skill from "../components/Skill.svelte";
 	import Skills from "../components/Skills.svelte";
 	import WatermarkHeader from "../components/WatermarkHeader.svelte";
@@ -60,8 +62,43 @@
 </Section>
 
 <Section id="projects" watermarkPadding>
-	<WatermarkHeader title="projects" />
-	el projects
+	<WatermarkHeader title="projects" negativeMargin=74 />
+	<Projects>
+		<!-- TODO: Nanobox Config Linter -->
+		<Project
+			name = "Nanobox Integration"
+			summary = "IntelliJ Plugin"
+			colourHex = "#e5e8ee"
+			blackText
+			projectId = "nanobox"
+			imageUrl = "http://qaisar.design/assets/images/agncee-project.png"
+		/>
+
+		<Project
+			name = "Diet Driven"
+			summary = "Calorie Counter Mobile App"
+			colourHex = "#538BF3"
+			projectId = "diet-driven"
+			imageUrl = "http://qaisar.design/assets/images/squidex-project.png"
+		/>
+
+		<Project
+			name = "krasnov.dev"
+			summary = "Portfolio Website"
+			colourHex = "#A274EC"
+			projectId = "portfolio"
+			imageUrl = "http://qaisar.design/assets/images/agncee-project.png"
+		/>
+
+		<Project
+			name = "Chess"
+			summary = "Game of<br/>Chess"
+			colourHex = "#e5e8ee"
+			blackText
+			projectId = "chess"
+			imageUrl = "http://qaisar.design/assets/images/sports-project.png"
+		/>
+	</Projects>
 </Section>
 
 <Section id="work" watermarkPadding dark>

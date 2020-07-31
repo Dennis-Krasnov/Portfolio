@@ -12,7 +12,12 @@
 	<NavBar />
 	<main>
 		<Route path="/" component="{Portfolio}" />
-    	<Route path="about" component="{About}" />
+		<Route path="about" component="{About}" />
+		<!-- TODO: path parameter, read from json file! -->
+		<Route path="projects/nanobox" component="{About}" />
+		<Route path="projects/diet-driven" component="{About}" />
+		<Route path="projects/portfolio" component="{About}" />
+		<Route path="projects/chess" component="{About}" />
 	</main>
 	<Footer />
 </Router>

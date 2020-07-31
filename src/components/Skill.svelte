@@ -5,10 +5,8 @@
 </script>
 
 <div class="skill-container">
-    <figure>
-		<!-- <img src="{imageUrl}" alt="{title} icon"/> -->
-		<img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" alt="{title} icon"/>
-	</figure>
+    <!-- TODO: <img src="{imageUrl}" alt="{title} icon"/> -->
+    <img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" alt="{title} icon"/>
 	<h2>{title}</h2>
 	<p>{@html summary}</p>
 </div>
@@ -16,19 +14,14 @@
 <style lang="scss">
 	@import "../styles/constants.scss";
 
-	figure {
-		min-height: 48px;
-		margin: 0 0 16px;
-		display: grid;
-		align-items: end;
 
-		user-select: none;
-
-		img {
-			height: 48px;
-			width: 48px;
-		}
-	}
+    img {
+        height: 48px;
+        margin: 0 0 12px 0;
+        width: 48px;
+        
+        user-select: none;
+    }
 
 	h2 {
 		font-weight: 600;
