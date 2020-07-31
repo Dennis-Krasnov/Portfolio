@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Section from "../components/Section.svelte";
 
 	// The first time I got paid for development work, Pocket Trade Show
 	let professionalStartDate: string = "08/01/2017";
@@ -10,7 +11,13 @@
 	<title>Dennis Krasnov - Experienced developer available for hire</title>
 </svelte:head>
 
-summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
+<Section>
+	summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
+</Section>
+
+<Section id="skills">
+	Backend Development <b>lol</b>
+</Section>
 
 <style>
 

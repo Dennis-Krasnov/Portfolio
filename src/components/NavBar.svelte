@@ -1,18 +1,23 @@
 <script lang="ts">
-	import NavLink from "../components/NavLink.svelte";
+	// import NavLink from "../components/NavLink.svelte";
 </script>
 
 <nav>
-    <NavLink to="/">Portfolio</NavLink>
-    <NavLink to="about">About</NavLink>
+    <!-- <NavLink to="/">Portfolio</NavLink>
+    <NavLink to="about">About</NavLink> -->
 </nav>
 
-<style>
+<style lang="scss">
+    @import "../styles/constants.scss";
+
     nav {
+        // Stick to top of screen
         position: sticky;
 		top: 0;
-		z-index: 1;
-		height: 100px;
+        z-index: 1;
+        
+        height: $menu-height;
+        
 		background: white;
     }
 </style>

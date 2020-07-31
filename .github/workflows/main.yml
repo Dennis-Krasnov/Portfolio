@@ -66,4 +66,3 @@ jobs:
             https://krasnov-dev.web.app/
             https://krasnov-dev.web.app/about
           uploadArtifacts: true
-          runs: 3
