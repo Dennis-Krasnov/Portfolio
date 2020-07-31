@@ -30,7 +30,7 @@ jobs:
         name: public-folder
         path: public/
 
-  # TODO: generate resume job
+  # TODO: generate resume job, redeploy public folder (parallel with profile)!
 
   deploy:
     needs: build
@@ -51,3 +51,19 @@ jobs:
           args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+  profile:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            https://krasnov-dev.web.app/
+            https://krasnov-dev.web.app/about
+          uploadArtifacts: true
+          runs: 3
