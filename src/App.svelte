@@ -16,3 +16,31 @@
 	</main>
 	<Footer />
 </Router>
+
+
+<style lang="scss">
+	:global(html) {
+		// ...
+		scroll-behavior: smooth;
+
+		// FIXME: what is this for?
+		// @media screen and (prefers-reduced-motion: reduce) {& {
+		// 	scroll-behavior: auto;
+		// }}
+	}
+
+	:global(body) {
+		font-size: 16px;
+		font-family: 'Source Sans Pro', sans-serif;
+		color:rgb(51, 51, 51);
+	}
+
+	:global(h1, h2, h3, h4, h5, h6, p, ul, ol, pre) {
+		margin: 0;
+		padding: 0;
+	}
+
+	:global(a) {
+		text-decoration: none;
+	}
+</style>

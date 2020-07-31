@@ -1,6 +1,5 @@
 <script lang="ts">
     import Section from "../components/Section.svelte";
-	// import NavLink from "../components/NavLink.svelte";
 </script>
 
 <nav>

@@ -1,12 +1,14 @@
 <script lang="ts">
-	export let id: string;
+	export let id: string = "";
+	export let watermarkPadding: boolean = false;
 	export let dark: boolean = false;
 
+	$: watermarkPaddingClass = watermarkPadding ? "watermark-padding" : "";
 	$: darkClass = dark ? "dark" : "";
 </script>
 
 <section id="{id}" class="{darkClass}">
-	<div class="content">
+	<div class="content {watermarkPaddingClass}">
 		<slot/>
 	</div>
 </section>
@@ -15,21 +17,21 @@
 	@import "../styles/constants.scss";
 
 	section {
-		// Allow overflowing absolute-positioned headers
-		position: relative;
-		overflow: hidden;
-
 		// Don't let menu go overtop section when anchor scrolling
 		scroll-margin-top: $menu-height;
+
+		&.dark {
+			background: #f5f5f9;
+		}
 
 		.content {
 			max-width: $max-content-width;
 			width: 95%;
 			margin: 0 auto;
-		}
 
-		&.dark {
-			background: #f5f5f9;
+			&.watermark-padding {
+				padding: 80px 0 100px 0;
+			}
 		}
 	}
 </style>
