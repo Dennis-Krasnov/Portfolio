@@ -10,9 +10,7 @@
 	<title>Dennis Krasnov - Experienced developer available for hire</title>
 </svelte:head>
 
-<main>
-	summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
-</main>
+summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
 
 <style>
 

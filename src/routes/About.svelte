@@ -5,9 +5,7 @@
 	<title>Dennis Krasnov - the about page</title>
 </svelte:head>
 
-<main>
-	HIII ABOUT
-</main>
+HIII ABOUT
 
 <style>
 
