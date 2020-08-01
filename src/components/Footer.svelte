@@ -4,6 +4,6 @@
 
 <footer>
 	<Section>
-		el footer!
+		el footer
 	</Section>
 </footer>

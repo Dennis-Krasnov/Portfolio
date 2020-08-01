@@ -64,5 +64,5 @@ jobs:
         with:
           urls: |
             https://krasnov-dev.web.app/
-            https://krasnov-dev.web.app/about
+            # https://krasnov-dev.web.app/resume
           uploadArtifacts: true

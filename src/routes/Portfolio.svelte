@@ -1,7 +1,8 @@
 <script lang="ts">
-	import Section from "../components/Section.svelte";
+	import Landing from "../components/Landing.svelte";
 	import Project from "../components/Project.svelte";
 	import Projects from "../components/Projects.svelte";
+	import Section from "../components/Section.svelte";
 	import Skill from "../components/Skill.svelte";
 	import Skills from "../components/Skills.svelte";
 	import WatermarkHeader from "../components/WatermarkHeader.svelte";
@@ -17,7 +18,11 @@
 </svelte:head>
 
 <Section>
-	summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
+	<Landing
+		title="Experienced Developer Available for Hire"
+		summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
+	/>
+	<!-- TODO: <Companies/> -->
 </Section>
 
 <Section id="skills" watermarkPadding dark>

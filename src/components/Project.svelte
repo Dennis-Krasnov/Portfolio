@@ -12,6 +12,7 @@
 </script>
 
 <div class="skill-container">
+	<!-- TODO: switch back to a? what advantage does Link give? -->
 	<Link to="projects/{projectId}">
 		<div class="placeholder" style="background: {colourHex}">
 			<div class="title {colourClass}">

@@ -24,7 +24,7 @@
 
 		@media (max-width: $mobile-breakpoint) {& {
 			// Revert to a normal header on mobile screens
-			margin-bottom: 12px !important;
+			margin-bottom: 32px !important;
 		}}
 	}
 </style>

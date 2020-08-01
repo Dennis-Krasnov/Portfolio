@@ -12,8 +12,8 @@
 	<NavBar />
 	<main>
 		<Route path="/" component="{Portfolio}" />
-		<Route path="about" component="{About}" />
-		<!-- TODO: path parameter, read from json file! -->
+		<!-- <Route path="resume" component="{About}" /> -->
+		<!-- TODO: path parameter, read data from json file? -->
 		<Route path="projects/nanobox" component="{About}" />
 		<Route path="projects/diet-driven" component="{About}" />
 		<Route path="projects/portfolio" component="{About}" />
@@ -25,13 +25,11 @@
 
 <style lang="scss">
 	:global(html) {
-		// ...
 		scroll-behavior: smooth;
 
-		// FIXME: what is this for?
-		// @media screen and (prefers-reduced-motion: reduce) {& {
-		// 	scroll-behavior: auto;
-		// }}
+		@media screen and (prefers-reduced-motion: reduce) {& {
+			scroll-behavior: auto;
+		}}
 	}
 
 	:global(body) {
