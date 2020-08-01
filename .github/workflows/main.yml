@@ -23,6 +23,12 @@ jobs:
       
     - name: Build Svelte project
       run: npm run build
+
+    - name: Install Gimp
+      run: sudo apt-get install gimp
+
+    - name: Generate project thumbnails
+      run: npm run export-project-thumbnails
       
     - name: Upload public folder
       uses: actions/upload-artifact@v2

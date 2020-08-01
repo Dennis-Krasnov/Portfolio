@@ -76,23 +76,26 @@
 			colourHex = "#e5e8ee"
 			blackText
 			projectId = "nanobox"
-			imageUrl = "http://qaisar.design/assets/images/agncee-project.png"
+			imageUrl = "/project-thumbnails/nanobox.png"
 		/>
+		<!-- imageUrl = "http://qaisar.design/assets/images/agncee-project.png" -->
 
 		<Project
 			name = "Diet Driven"
 			summary = "Calorie Counter Mobile App"
 			colourHex = "#538BF3"
 			projectId = "diet-driven"
-			imageUrl = "http://qaisar.design/assets/images/squidex-project.png"
+			imageUrl = "/project-thumbnails/diet-driven.png"
 		/>
+		<!-- imageUrl = "http://qaisar.design/assets/images/squidex-project.png" -->
 
 		<Project
 			name = "krasnov.dev"
 			summary = "Portfolio Website"
-			colourHex = "#A274EC"
+			colourHex = "#d5f0fe"
+			blackText
 			projectId = "portfolio"
-			imageUrl = "http://qaisar.design/assets/images/agncee-project.png"
+			imageUrl = "/project-thumbnails/portfolio.png"
 		/>
 
 		<Project
@@ -101,8 +104,9 @@
 			colourHex = "#e5e8ee"
 			blackText
 			projectId = "chess"
-			imageUrl = "http://qaisar.design/assets/images/sports-project.png"
+			imageUrl = "/project-thumbnails/chess.png"
 		/>
+		<!-- imageUrl = "http://qaisar.design/assets/images/sports-project.png" -->
 	</Projects>
 </Section>
 
