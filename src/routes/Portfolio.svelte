@@ -69,16 +69,14 @@
 <Section id="projects" watermarkPadding>
 	<WatermarkHeader title="projects" negativeMargin=74 />
 	<Projects>
-		<!-- TODO: Nanobox Config Linter -->
+		<!-- TODO: Nanobox Config Linter; name = "Nanobox Integration"; summary = "Game of<br/>Chess" -->
 		<Project
-			name = "Nanobox Integration"
+			name = "Nanobox File Linter"
 			summary = "IntelliJ Plugin"
-			colourHex = "#e5e8ee"
-			blackText
+			colourHex = "#1e1e1e"
 			projectId = "nanobox"
 			imageUrl = "/project-thumbnails/nanobox.png"
 		/>
-		<!-- imageUrl = "http://qaisar.design/assets/images/agncee-project.png" -->
 
 		<Project
 			name = "Diet Driven"
@@ -87,7 +85,6 @@
 			projectId = "diet-driven"
 			imageUrl = "/project-thumbnails/diet-driven.png"
 		/>
-		<!-- imageUrl = "http://qaisar.design/assets/images/squidex-project.png" -->
 
 		<Project
 			name = "krasnov.dev"
@@ -100,13 +97,12 @@
 
 		<Project
 			name = "Chess"
-			summary = "Game of<br/>Chess"
+			summary = "Game of Chess"
 			colourHex = "#e5e8ee"
 			blackText
 			projectId = "chess"
 			imageUrl = "/project-thumbnails/chess.png"
 		/>
-		<!-- imageUrl = "http://qaisar.design/assets/images/sports-project.png" -->
 	</Projects>
 </Section>
 
