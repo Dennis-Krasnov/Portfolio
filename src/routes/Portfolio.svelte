@@ -97,7 +97,7 @@
 
 		<Project
 			name = "Chess"
-			summary = "Game of Chess"
+			summary = "JavaFX Game"
 			colourHex = "#e5e8ee"
 			blackText
 			projectId = "chess"

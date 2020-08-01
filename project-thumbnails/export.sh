@@ -18,6 +18,9 @@ gimp -n -i -b - <<EOF
   )
 EOF
 
+# Ensure folder exists
+mkdir -p ../public/project-thumbnails
+
 # Remove old pictures
 rm ../public/project-thumbnails/*
 
