@@ -1,10 +1,15 @@
 <script lang="ts">
 	export let href: string;
+	export let buttonRow: boolean = false;
 	export let primary: boolean = false;
 	export let targetBlank: boolean = false;
+
+	$: buttonRowClass = buttonRow ? "button-row" : "";
+	$: primarySecondaryClass = primary ? "primary" : "secondary";
+	$: targetBlankAttribute = targetBlank ? "_blank" : "_self";
 </script>
 
-<a href="{href}" class={primary ? "primary" : "secondary"} target={targetBlank ? "_blank" : "_self"}><slot/></a>
+<a href="{href}" class="{buttonRowClass} {primarySecondaryClass}" target={targetBlankAttribute}><slot/></a>
 
 <style lang="scss">
 	@import "../styles/constants.scss";
@@ -31,7 +36,9 @@
 		-webkit-transition: all .15s ease;
 		transition: all .15s ease;
 
-		margin: 0 12px 15px 0;
+		&.button-row {
+			margin: 0 12px 15px 0;
+		}
 
 		&.primary {
 			background-color: $logo-colour;

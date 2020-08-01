@@ -11,7 +11,7 @@
 		<p>{@html summary}</p>
 
 		<ul class="cta">
-			<Button href="#projects" primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" targetBlank>download resume</Button>
+			<Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank>download resume</Button>
 		</ul>
 	</div>
 	<div class="rhs" />
@@ -20,14 +20,12 @@
 <style lang="scss">
 	@import "../styles/constants.scss";
 
-	$breakpoint: 820px;
-
 	.landing-container {
 		display: grid;
 
 		padding: 32px 0 80px 0; // FIXME
 
-		@media (min-width: $breakpoint) {& {
+		@media (min-width: $landing-page-breakpoint) {& {
 			grid-template-columns: .55fr .45fr;
 			gap: 0 40px;
 
@@ -48,7 +46,7 @@
 			color: #32325d;
 			transition: all 0.25s ease;
 			
-			@media (min-width: $breakpoint) {& {
+			@media (min-width: $landing-page-breakpoint) {& {
 				font-size: 42px;
 				line-height: 52px;
 			}}
@@ -65,7 +63,7 @@
 		.cta {
 			margin: 15px 0 0 0;
 
-			@media (min-width: $breakpoint) {& {
+			@media (min-width: $landing-page-breakpoint) {& {
 				margin: 30px 0 0 0;
 			}}
 		}
@@ -77,7 +75,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 
-		@media (max-width: $breakpoint) {& {
+		@media (max-width: $landing-page-breakpoint) {& {
 			display: none;
 		}}
 	}

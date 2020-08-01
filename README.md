@@ -4,6 +4,6 @@
 ## Instructions
 ```bash
 npm i node-sass
-Svelte > Language-server: Runtime” = 'which node'
 ```
-restart VSCODE
+Set VSC settings "Svelte > Language-server: Runtime" to result of 'which node'
+restart VSC
