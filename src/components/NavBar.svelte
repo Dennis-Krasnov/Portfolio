@@ -26,6 +26,7 @@
             <div class="expand" />
 
             <ul class="scroll-links">
+                <!-- TODO: create NavButton components! -->
 				<li><a href="#skills">skills</a></li>
 				<li><a href="#projects">projects</a></li>
 				<li><a href="#work">work</a></li>
