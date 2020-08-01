@@ -24,8 +24,11 @@ jobs:
     - name: Build Svelte project
       run: npm run build
 
+    - name: Install Snapcraft
+      uses: samuelmeuli/action-snapcraft@v1
+
     - name: Install Gimp
-      run: sudo apt-get install gimp
+      run: sudo snap install gimp
 
     - name: Generate project thumbnails
       run: npm run export-project-thumbnails
