@@ -73,7 +73,7 @@
 		background: url("/cartoon.png");
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: center; // TODO: right align???
 
 		@media (max-width: $landing-page-breakpoint) {& {
 			display: none;

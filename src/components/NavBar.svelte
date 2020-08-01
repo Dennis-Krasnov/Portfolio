@@ -26,10 +26,10 @@
             <div class="expand" />
 
             <ul class="scroll-links">
-				<li><a href="#skills"><span>skills</span></a></li>
-				<li><a href="#projects"><span>projects</span></a></li>
-				<li><a href="#work"><span>work</span></a></li>
-				<li><a href="#contact"><span>contact</span></a></li>
+				<li><a href="#skills">skills</a></li>
+				<li><a href="#projects">projects</a></li>
+				<li><a href="#work">work</a></li>
+				<li><a href="#contact">contact</a></li>
             </ul>
             
             <span class="resume-download">
@@ -93,19 +93,18 @@
 					margin: 0 0 0 10px;
 
 					a { 
-                        span {
-                            padding: 8px;
-                            font-size: 16px;
-                            font-weight: 600;
-                            
-                            color: #525873;
-                            -webkit-transition: all .15s ease;
-                            transition: all .15s ease;
-                        }
+                        padding: 8px;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                        color: #525873;
+                        -webkit-transition: all .15s ease;
+                        transition: all .15s ease;
 
                         // Similar hover animation to button
-                        &:hover span {
+                        &:hover {
                             color: #242733;
+                            // padding-bottom: 2px; // FIXME: fix text jumping when hovering bottom part
                             transform: translateY(-2px);
                         }
 					}

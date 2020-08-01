@@ -3,6 +3,7 @@
 	export let negativeMargin: number = 0;
 </script>
 
+<!-- TODO: use vw instead of pixels, headers are barely visible when screen is just larger than mobile breakpoint -->
 <h1 style="margin-bottom: -{negativeMargin}px">{title}</h1>
 
 <style lang="scss">

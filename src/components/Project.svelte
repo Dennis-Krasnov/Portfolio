@@ -11,7 +11,7 @@
 	$: colourClass = blackText ? "" : "white-text";
 </script>
 
-<div class="skill-container">
+<div class="project-container">
 	<!-- TODO: switch back to a? what advantage does Link give? -->
 	<Link to="projects/{projectId}">
 		<div class="placeholder" style="background: {colourHex}">
@@ -31,7 +31,7 @@
 
 	// Inspired by http://qaisar.design
 
-	.skill-container {
+	.project-container {
 		// Force shorter names/summaries to fill full width
 		width: 100%;
 
