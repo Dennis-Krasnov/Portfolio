@@ -11,7 +11,7 @@
 		font-size: 16px;
 		font-weight: 600;
 
-		color: #525873;
+		color: #556;
 		-webkit-transition: all .15s ease;
 		transition: all .15s ease;
 

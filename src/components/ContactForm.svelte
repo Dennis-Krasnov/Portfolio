@@ -77,7 +77,7 @@
 				display: flex;
 				align-items: center;
 
-				color: #525873;
+				color: #556;
 
 				span {
 					margin-left: 8px;
@@ -87,6 +87,7 @@
 				}
 
 				&:hover {
+					color: #242733;
 					transform: translateY(-2px);
 				}
 			}

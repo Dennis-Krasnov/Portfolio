@@ -16,6 +16,7 @@
 		line-height: 1;
 		text-align: center;
 
+		color: #556; // Instead of body's rgb(51, 51, 51)
 		text-transform: uppercase;
 		user-select: none;
 

@@ -8,11 +8,9 @@
 <style lang="scss">
 	a {
 		margin: 0 10px;
-		border-radius: 50%;
 		padding: 15px;
 
-		// background: #f5f5f9; // FIXME: looks better without background circle!
-		color: black;
+		color: #556;
 		-webkit-transition: all .15s ease;
 		transition: all .15s ease;
 
