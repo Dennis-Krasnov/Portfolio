@@ -5,28 +5,41 @@
 	import Spinner from "../components/Spinner.svelte";
 	import SubmitButton from "../components/SubmitButton.svelte";
 
+	let message: string = "";
+
 	const schema = yup.object().shape({
-		name: yup.string().required(),
+		name: yup.string().required(), // TODO: max
 		email: yup.string().required().email(),
-		message: yup.string().required(),
-		// password: yup.string().min(4),
-		// language: yup.string().required(),
-		// os: yup.string(),
+		message: yup.string().required(), // TODO: max
 	});
 
 	async function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-		const url = "https://us-central1-krasnov-dev.cloudfunctions.net/helloWorld";
+		const url = "/send-email";
+		const params = {
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				name: values.name,
+				email: values.email,
+				message: values.message,
+			}),
+			method: "POST",
+		};
 
 		try {
-			const res = await fetch(url);
-			console.log("success");
-			console.log("res");
+			message = "";
+			const res = await fetch(url, params);
+			if (!res.ok || res.status != 200) {
+				throw "Failed to send email!";
+			}
+			resetForm();
+			message = "Success!";
 		} catch (error) {
 			console.error(error);
+			message = "Something went wrong... try emailing me?";
 		} finally {
-			console.log(values);
 			setSubmitting(false);
-			resetForm();
 		}
 	}
 </script>
@@ -59,7 +72,7 @@
 			{#if isSubmitting}
 				<Spinner />
 			{:else}
-				<SubmitButton>shoot me a message</SubmitButton>
+				<SubmitButton>shoot me a message</SubmitButton> <span class="message">{message}</span>
 			{/if}
 		</Form>
 	</div>
@@ -103,6 +116,10 @@
 
 		.contact-form {
 			flex: 1;
+
+			.message {
+				margin-left: 8px;
+			}
 		}
 
 		@media (min-width: $mobile-breakpoint) {& {

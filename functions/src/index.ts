@@ -30,3 +30,4 @@ export const sendEmail = functions.https.onRequest(async (request, response) => 
 });
 
 // curl -d '{"name":"Dennis Krasnov", "email":"denny@gmail.com", "message": "HELLO THERE!"}' -H "Content-Type: application/json" -X POST https://us-central1-krasnov-dev.cloudfunctions.net/sendEmail
+// curl -d '{"name":"Dennis Krasnov", "email":"denny@gmail.com", "message": "HELLO THERE!"}' -H "Content-Type: application/json" -X POST https://krasnov.dev/send-email

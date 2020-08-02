@@ -39,7 +39,7 @@ jobs:
         name: public-folder
         path: public/
 
-  deploy-hosting:
+  deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -72,7 +72,7 @@ jobs:
           urls: https://krasnov.dev
           uploadArtifacts: true
 
-  deploy-functions:
+  build-deploy-functions:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
