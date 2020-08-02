@@ -108,6 +108,7 @@
 	}
 
 	// Inspired by https://mdauner.github.io/sveltejs-forms/?ref=madewithsvelte.com
+	// TODO: inline the html labels/inputs to avoid using :global css
 
 	:global(.sveltejs-forms .field) {
 		margin: 20px 0;

@@ -109,7 +109,7 @@
 
 <Section id="work" watermarkPadding dark>
 	<WatermarkHeader title="work" />
-	el work
+	TODO
 </Section>
 
 <Section id="contact" watermarkPadding>

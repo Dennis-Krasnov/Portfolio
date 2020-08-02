@@ -4,18 +4,21 @@
 	import NavBar from "./components/NavBar.svelte";
 	import Footer from "./components/Footer.svelte";
 
-	import About from "./routes/About.svelte";
+	import ChessCaseStudy from "./routes/ChessCaseStudy.svelte";
+	import DietDrivenCaseStudy from "./routes/DietDrivenCaseStudy.svelte";
+	import NanoboxCaseStudy from "./routes/NanoboxCaseStudy.svelte";
 	import Portfolio from "./routes/Portfolio.svelte";
+	import PortfolioCaseStudy from "./routes/PortfolioCaseStudy.svelte";
 </script>
 
 <Router>
 	<NavBar />
 	<main>
 		<Route path="/" component="{Portfolio}" />
-		<Route path="projects/nanobox" component="{About}" />
-		<Route path="projects/diet-driven" component="{About}" />
-		<Route path="projects/portfolio" component="{About}" />
-		<Route path="projects/chess" component="{About}" />
+		<Route path="projects/nanobox" component="{NanoboxCaseStudy}" />
+		<Route path="projects/diet-driven" component="{DietDrivenCaseStudy}" />
+		<Route path="projects/portfolio" component="{PortfolioCaseStudy}" />
+		<Route path="projects/chess" component="{ChessCaseStudy}" />
 	</main>
 	<Footer />
 </Router>

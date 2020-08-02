@@ -2,10 +2,10 @@
 </script>
 
 <svelte:head>
-	<title>Dennis Krasnov - the about page</title>
+	<title>Dennis Krasnov - TODO</title>
 </svelte:head>
 
-HIII ABOUT
+case study of chess!
 
 <style>
 

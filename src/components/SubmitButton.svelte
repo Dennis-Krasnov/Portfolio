@@ -7,7 +7,7 @@
 <style lang="scss">
 	@import "../styles/constants.scss";
 
-	// Adapted from link Button
+	// Adapted from Button
 
 	button {
 		// Reset button css styles
