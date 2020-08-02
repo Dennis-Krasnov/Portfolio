@@ -73,7 +73,6 @@ jobs:
         with:
           urls: |
             https://krasnov-dev.web.app/
-            https://krasnov-dev.web.app/resume
             https://krasnov-dev.web.app/projects/nanobox
             https://krasnov-dev.web.app/projects/diet-driven
             https://krasnov-dev.web.app/projects/portfolio

@@ -12,8 +12,6 @@
 	<NavBar />
 	<main>
 		<Route path="/" component="{Portfolio}" />
-		<Route path="resume" component="{About}" />
-		<!-- TODO: path parameter, read data from json file? -->
 		<Route path="projects/nanobox" component="{About}" />
 		<Route path="projects/diet-driven" component="{About}" />
 		<Route path="projects/portfolio" component="{About}" />
