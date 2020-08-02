@@ -1,5 +1,6 @@
 <script lang="ts">
     import Button from '../components/Button.svelte';
+    import NavBarButton from '../components/NavBarButton.svelte';
     import Section from "../components/Section.svelte";
 
     // Must link to # for scoll animation
@@ -25,13 +26,12 @@
 
             <div class="expand" />
 
-            <ul class="scroll-links">
-                <!-- TODO: create NavButton components! -->
-				<li><a href="#skills">skills</a></li>
-				<li><a href="#projects">projects</a></li>
-				<li><a href="#work">work</a></li>
-				<li><a href="#contact">contact</a></li>
-            </ul>
+            <div class="scroll-links">
+                <NavBarButton hash="skills">skills</NavBarButton>
+                <NavBarButton hash="projects">projects</NavBarButton>
+                <NavBarButton hash="work">work</NavBarButton>
+                <NavBarButton hash="contact">contact</NavBarButton>
+            </div>
             
             <span class="resume-download">
                 <Button href="/dennis_krasnov_resume.pdf" targetBlank>download resume</Button>
@@ -86,30 +86,8 @@
                 flex-flow: row nowrap;
 				justify-content: flex-end;
 				align-items: center;
-                list-style: none;
 
                 margin: 0 20px 0 0;
-
-                li {
-					margin: 0 0 0 10px;
-
-					a { 
-                        padding: 8px;
-                        font-size: 16px;
-                        font-weight: 600;
-
-                        color: #525873;
-                        -webkit-transition: all .15s ease;
-                        transition: all .15s ease;
-
-                        // Similar hover animation to button
-                        &:hover {
-                            color: #242733;
-                            // padding-bottom: 2px; // FIXME: fix text jumping when hovering bottom part
-                            transform: translateY(-2px);
-                        }
-					}
-                }
                 
                 @media (max-width: $landing-page-breakpoint) {& {
                     display: none;
