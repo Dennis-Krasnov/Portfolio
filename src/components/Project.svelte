@@ -99,6 +99,7 @@
 			margin: auto;
 
 			// Switch to :nth-child(odd) for alternative layout
+			// FIXME: odd works better for an odd number of projects
 			&:nth-child(even) {
 				margin: -$project-offset 0 $project-offset 0;
 			}
