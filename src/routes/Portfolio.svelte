@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ContactForm from "../components/ContactForm.svelte";
 	import Landing from "../components/Landing.svelte";
 	import Project from "../components/Project.svelte";
 	import Projects from "../components/Projects.svelte";
@@ -113,7 +114,7 @@
 
 <Section id="contact" watermarkPadding>
 	<WatermarkHeader title="contact" />
-	el contact
+	<ContactForm />
 </Section>
 
 <style lang="scss"></style>

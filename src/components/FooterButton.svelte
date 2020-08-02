@@ -11,7 +11,7 @@
 		border-radius: 50%;
 		padding: 15px;
 
-		background: #f5f5f9;
+		// background: #f5f5f9; // FIXME: looks better without background circle!
 		color: black;
 		-webkit-transition: all .15s ease;
 		transition: all .15s ease;

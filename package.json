@@ -26,6 +26,8 @@
   "dependencies": {
     "node-sass": "^4.14.1",
     "sirv-cli": "^1.0.0",
-    "svelte-routing": "^1.4.2"
+    "svelte-routing": "^1.4.2",
+    "sveltejs-forms": "^2.0.1",
+    "yup": "^0.29.2"
   }
 }
