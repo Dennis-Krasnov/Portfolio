@@ -52,10 +52,17 @@ jobs:
           name: public-folder
           path: public
     
-      - name: Deploy to Firebase Hosting
+      - name: Update sendgrid API key
         uses: w9jds/firebase-action@v1.5.0
         with:
-          args: deploy --only hosting
+          args: functions:config:set sendgrid.api_key="${{ secrets.SENDGRID_API_KEY }}"
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+      - name: Deploy to Firebase Hosting and Functions
+        uses: w9jds/firebase-action@v1.5.0
+        with:
+          args: deploy
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 

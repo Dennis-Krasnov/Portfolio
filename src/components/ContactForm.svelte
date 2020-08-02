@@ -14,12 +14,20 @@
 		// os: yup.string(),
 	});
 
-	function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
-		setTimeout(() => {
+	async function handleSubmit({ detail: { values, setSubmitting, resetForm } }) {
+		const url = "https://us-central1-krasnov-dev.cloudfunctions.net/helloWorld";
+
+		try {
+			const res = await fetch(url);
+			console.log("success");
+			console.log("res");
+		} catch (error) {
+			console.error(error);
+		} finally {
 			console.log(values);
 			setSubmitting(false);
 			resetForm();
-		}, 5000);
+		}
 	}
 </script>
 
@@ -108,7 +116,7 @@
 	}
 
 	// Inspired by https://mdauner.github.io/sveltejs-forms/?ref=madewithsvelte.com
-	// TODO: inline the html labels/inputs to avoid using :global css
+	// TODO: inline the html labels/inputs to avoid using :global css https://github.com/mdauner/sveltejs-forms/blob/master/src/components/Input.svelte
 
 	:global(.sveltejs-forms .field) {
 		margin: 20px 0;

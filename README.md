@@ -7,3 +7,9 @@ npm i node-sass
 ```
 Set VSC settings "Svelte > Language-server: Runtime" to result of 'which node'
 restart VSC
+
+
+
+
+firebase functions:config:set sendgrid.api_key="THE API KEY"
+
