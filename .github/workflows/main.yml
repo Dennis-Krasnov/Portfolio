@@ -39,8 +39,6 @@ jobs:
         name: public-folder
         path: public/
 
-  # TODO: generate resume job, redeploy public folder (parallel with profile)!
-
   deploy:
     needs: build
     runs-on: ubuntu-latest
