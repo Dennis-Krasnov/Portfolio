@@ -19,7 +19,7 @@ export const sendEmail = functions.https.onRequest(async (request, response) => 
     const res = await sendGridMail.send({
         to: 'dennis.krasnov@gmail.com',
         from: 'dennis@krasnov.dev',
-        subject: `${name} sent you a message from portfolio contact form`,
+        subject: `${name} - portfolio contact form`,
         text: `${message}. From: ${name} - ${email}`,
         html: `NAME: ${name}<br/><br/>EMAIL: ${email}<br /><br />MESSAGE: ${message}`,
     });

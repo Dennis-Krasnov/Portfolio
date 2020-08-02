@@ -36,7 +36,6 @@
 			resetForm();
 			message = "Success!";
 		} catch (error) {
-			console.error(error);
 			message = "Something went wrong... try emailing me?";
 		} finally {
 			setSubmitting(false);
@@ -72,7 +71,7 @@
 			{#if isSubmitting}
 				<Spinner />
 			{:else}
-				<SubmitButton>shoot me a message</SubmitButton> <span class="message">{message}</span>
+				<SubmitButton>shoot me a message</SubmitButton><span class="message">{message}</span>
 			{/if}
 		</Form>
 	</div>

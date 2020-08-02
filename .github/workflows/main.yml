@@ -88,7 +88,7 @@ jobs:
           cd functions
           npm install
       
-      - name: Update sendgrid API key
+      - name: Update SendGrid API key
         uses: w9jds/firebase-action@v1.5.0
         with:
           args: functions:config:set sendgrid.api_key="${{ secrets.SENDGRID_API_KEY }}"
