@@ -60,7 +60,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
   profile:
-    needs: deploy-hosting
+    needs: deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
