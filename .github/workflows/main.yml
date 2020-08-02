@@ -39,7 +39,7 @@ jobs:
         name: public-folder
         path: public/
 
-  deploy:
+  deploy-hosting:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -51,7 +51,31 @@ jobs:
         with:
           name: public-folder
           path: public
-    
+
+      - name: Deploy to Firebase Hosting
+        uses: w9jds/firebase-action@v1.5.0
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
+  deploy-functions:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
+      - name: Install npm dependencies
+        run: |
+          cd functions
+          npm install
+      
       - name: Update sendgrid API key
         uses: w9jds/firebase-action@v1.5.0
         with:
@@ -59,15 +83,15 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
-      - name: Deploy to Firebase Hosting and Functions
+      - name: Deploy to Firebase Functions
         uses: w9jds/firebase-action@v1.5.0
         with:
-          args: deploy
+          args: deploy --only functions
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
   profile:
-    needs: deploy
+    needs: deploy-hosting
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
