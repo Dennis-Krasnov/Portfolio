@@ -12,7 +12,7 @@
 </script>
 
 <div class="project-container">
-	<!-- TODO: switch back to a? what advantage does Link give? -->
+	<!-- TODO: switch back to a? what advantage does Link give? https://github.com/EmilTholin/svelte-routing -->
 	<Link to="projects/{projectId}">
 		<div class="placeholder" style="background: {colourHex}">
 			<div class="title {colourClass}">

@@ -71,10 +71,5 @@ jobs:
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
-          urls: |
-            https://krasnov-dev.web.app/
-            https://krasnov-dev.web.app/projects/nanobox
-            https://krasnov-dev.web.app/projects/diet-driven
-            https://krasnov-dev.web.app/projects/portfolio
-            https://krasnov-dev.web.app/projects/chess
+          urls: https://krasnov.dev
           uploadArtifacts: true
