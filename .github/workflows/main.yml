@@ -59,8 +59,20 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
+  profile:
+    needs: deploy-hosting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: https://krasnov.dev
+          uploadArtifacts: true
+
   deploy-functions:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -89,16 +101,3 @@ jobs:
           args: deploy --only functions
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-
-  profile:
-    needs: deploy-hosting
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
-      - name: Run Lighthouse
-        uses: treosh/lighthouse-ci-action@v3
-        with:
-          urls: https://krasnov.dev
-          uploadArtifacts: true
