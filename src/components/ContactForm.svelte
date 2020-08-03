@@ -47,9 +47,9 @@
 	<div class="contact-info">
 		<!-- TODO: component -->
 		<!-- TODO: use streamline UX icons, these icons should have higher fidelity! -->
-		<a href="https://www.google.ca/maps/place/Waterloo,+ON/@43.4822754,-80.5817388,13z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096" target="_blank" rel="noopener"><i class="far fa-map-marker-alt fa-fw fa-2x"></i><span>Waterloo, ON</span></a>
-		<a href="mailto:dennis@krasnov.dev"><i class="far fa-envelope fa-fw fa-2x"></i><span>dennis@krasnov.dev</span></a>
-		<a href="tel:226-580-9787"><i class="far fa-mobile-android fa-fw fa-2x"></i><span>(226) 580 - 9787</span></a>
+		<a href="https://www.google.ca/maps/place/Waterloo,+ON/@43.4822754,-80.5817388,13z/data=!3m1!4b1!4m5!3m4!1s0x882bf1565ffe672b:0x5037b28c7231d90!8m2!3d43.4642578!4d-80.5204096" target="_blank" rel="noopener"><i class="far fa-map-marker-alt fa-fw fa-lg"></i><span>Waterloo, ON</span></a>
+		<a href="mailto:dennis@krasnov.dev"><i class="far fa-envelope fa-fw fa-lg"></i><span>dennis@krasnov.dev</span></a>
+		<a href="tel:226-580-9787"><i class="far fa-mobile-android fa-fw fa-lg"></i><span>(226) 580 - 9787</span></a>
 	</div>
 	<div class="contact-form">
 		<Form {schema} on:submit={handleSubmit} let:isSubmitting>
@@ -95,15 +95,15 @@
 			align-items: start;
 
 			a {
-				margin: 25px 0;
+				margin: 20px 0;
 				display: flex;
 				align-items: center;
 
 				color: #556;
 
 				span {
-					margin-left: 8px;
-					font-size: 26px;
+					margin-left: 12px;
+					font-size: 22px;
 					white-space: nowrap;
 					font-weight: 600;
 				}
@@ -128,7 +128,7 @@
 
 			.contact-info {
 				// Center vertically with form (excluding button)
-				padding-bottom: 60px;
+				padding: 20px 0 68px 0;
 			}
 		}}
 	}
