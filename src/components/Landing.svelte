@@ -10,9 +10,9 @@
 		<h1>{title}</h1>
 		<p>{@html summary}</p>
 
-		<ul class="cta">
+		<div class="cta">
 			<Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank>download resume</Button>
-		</ul>
+		</div>
 	</div>
 	<div class="rhs" />
 </div>

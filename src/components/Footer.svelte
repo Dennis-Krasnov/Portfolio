@@ -29,6 +29,6 @@
 		margin: 20px 0;
 		text-align: center;
 
-		color: rgb(136, 152, 170);
+		color: #525f7f;
 	}
 </style>

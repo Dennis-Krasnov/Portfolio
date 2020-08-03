@@ -3,7 +3,7 @@
 	export let icon: string;
 </script>
 
-<a href="{url}"><i class="fab fa-{icon} fa-lg" /></a>
+<a href="{url}" target="_blank" rel="noopener"><i class="fab fa-{icon} fa-lg" /></a>
 
 <style lang="scss">
 	a {
