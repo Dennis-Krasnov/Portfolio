@@ -13,7 +13,9 @@
 			<FooterButton url="https://www.hackerrank.com/krasnov" icon="hackerrank" />
 		</div>
 		<div class="copyright">
-			© {currentYear} Dennis Krasnov
+			© {currentYear} Dennis Krasnov.
+			<!-- https://www.flaticon.com/authors/basic-miscellany/flat/ -->
+			<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 		</div>
 	</Section>
 </footer>
@@ -28,7 +30,12 @@
 	.copyright {
 		margin: 20px 0;
 		text-align: center;
+		line-height: 22px;
 
 		color: #525f7f;
+
+		a {
+			color: #525f7f;
+		}
 	}
 </style>
