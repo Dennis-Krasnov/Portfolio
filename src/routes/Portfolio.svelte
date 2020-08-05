@@ -1,5 +1,7 @@
 <script lang="ts">
 	import ContactForm from "../components/ContactForm.svelte";
+	import Experience from "../components/Experience.svelte";
+	import Experiences from "../components/Experiences.svelte";
 	import Landing from "../components/Landing.svelte";
 	import Project from "../components/Project.svelte";
 	import Projects from "../components/Projects.svelte";
@@ -27,7 +29,7 @@
 </Section>
 
 <Section id="skills" watermarkPadding dark>
-	<WatermarkHeader title="skills" negativeMargin=50 />
+	<WatermarkHeader title="skills" />
 	<Skills>
 		<Skill
 			imageUrl="/skills/backend.svg"
@@ -68,14 +70,13 @@
 </Section>
 
 <Section id="projects" watermarkPadding>
-	<WatermarkHeader title="projects" negativeMargin=74 />
+	<WatermarkHeader title="projects" />
 	<Projects>
-		<!-- TODO: Nanobox Config Linter; name = "Nanobox Integration"; summary = "Game of<br/>Chess" -->
 		<Project
-			name = "Nanobox File Linter"
-			summary = "IntelliJ Plugin"
+			name = "Creative FOSS"
+			summary = "????????"
 			colourHex = "#1e1e1e"
-			projectId = "nanobox"
+			projectId = "creative-foss"
 			imageUrl = "/project-thumbnails/nanobox.png"
 		/>
 
@@ -98,7 +99,7 @@
 
 		<Project
 			name = "Chess"
-			summary = "JavaFX Game"
+			summary = "Swing Game"
 			colourHex = "#e5e8ee"
 			blackText
 			projectId = "chess"
@@ -109,7 +110,37 @@
 
 <Section id="work" watermarkPadding dark>
 	<WatermarkHeader title="work" />
-	TODO
+	<Experiences>
+		<Experience
+			imageUrl = "/work/ultimate-software.svg"
+			position = "Software Engineer"
+			company = "Ultimate Software"
+			startDate = "Sep 2019"
+			endDate = "Dec 2019"
+			points = {[
+				"Developed authorization microservices in identity platform team",
+				"Added permissions claim to JWT for identity gateway to be used for all requests by 51M users; refactored to avoid authorization recursion",
+				"Researched performance of event sourcing aggregate replay, discovered major architectural flaw, escalated to the tech lead",
+				"Java, Axon Framework, EDA, CQRS, event sourcing, ForgeRock IG/AM",
+			]}
+		/>
+
+		<Experience 
+			imageUrl = "/work/krasnov-tech.svg"
+			position = "Freelance Web Developer"
+			company = "Krasnov Tech"
+			startDate = "Jun 2018"
+			endDate = "Aug 2019"
+			points = {[
+				"sgbiotec.com is an e-commerce store selling fluorescent proteins",
+				"Pocket Trade Show is an online tradeshow platform for salesmen",
+				"Founded business, acquired customers, built projects start to finish",
+				"React, MobX, Firestore, Shopify API; PHP 7, jQuery, MySQL, AWS S3",
+			]}
+		/>
+		<!-- TODO: quote = "Amazing"
+			quotee = "Someone" -->
+	</Experiences>
 </Section>
 
 <Section id="contact" watermarkPadding>

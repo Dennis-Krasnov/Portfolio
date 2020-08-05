@@ -98,9 +98,8 @@
 		@media (min-width: $max-content-width - $project-shink-before-breakpoint) {& {
 			margin: auto;
 
-			// Switch to :nth-child(odd) for alternative layout
-			// FIXME: odd works better for an odd number of projects
-			&:nth-child(even) {
+			// Odd works better for an odd number of projects
+			&:nth-child(odd) {
 				margin: -$project-offset 0 $project-offset 0;
 			}
 		}}

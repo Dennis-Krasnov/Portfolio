@@ -20,7 +20,7 @@
     <Section>
         <div class="horizontal">
             <a href="/#" id="logo" on:click={eraseHash}>
-                <img src="/logo.png" alt="Dennis Krasnov Logo"/>
+                <img src="/logo.svg" alt="Dennis Krasnov Logo"/>
                 <span>Dennis Krasnov</span>
             </a>
 
@@ -49,7 +49,7 @@
         // Stick to top of screen
         position: sticky;
 		top: 0;
-        z-index: 1;
+        z-index: 3;
         
         background: white;
         

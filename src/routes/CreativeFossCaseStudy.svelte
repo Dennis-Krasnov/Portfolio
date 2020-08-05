@@ -5,7 +5,7 @@
 	<title>Dennis Krasnov - TODO</title>
 </svelte:head>
 
-case study of nanobox!
+case study of creative foss!
 
 <style>
 

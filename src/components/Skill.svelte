@@ -6,7 +6,6 @@
 
 <div class="skill-container">
     <img src="{imageUrl}" alt="{title} icon"/>
-    <!-- FIXME: colour icons <img src="https://cdn.worldvectorlogo.com/logos/google-icon.svg" alt="{title} icon"/> -->
 	<h2>{title}</h2>
 	<p>{@html summary}</p>
 </div>

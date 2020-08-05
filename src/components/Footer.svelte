@@ -34,8 +34,12 @@
 
 		color: #525f7f;
 
-		a {
-			color: #525f7f;
+		div {
+			font-size: 12px;
+
+			a {
+				color: #525f7f;
+			}	
 		}
 	}
 </style>

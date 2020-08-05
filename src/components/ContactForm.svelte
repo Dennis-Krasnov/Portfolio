@@ -84,7 +84,6 @@
 	.contact-container {
 		display: flex;
 		flex-flow: column nowrap;
-		margin-top: 32px;
 
 		.contact-info {
 			flex: 1;

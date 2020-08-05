@@ -5,8 +5,8 @@
 	import Footer from "./components/Footer.svelte";
 
 	import ChessCaseStudy from "./routes/ChessCaseStudy.svelte";
+	import CreativeFossCaseStudy from "./routes/CreativeFossCaseStudy.svelte";
 	import DietDrivenCaseStudy from "./routes/DietDrivenCaseStudy.svelte";
-	import NanoboxCaseStudy from "./routes/NanoboxCaseStudy.svelte";
 	import Portfolio from "./routes/Portfolio.svelte";
 	import PortfolioCaseStudy from "./routes/PortfolioCaseStudy.svelte";
 </script>
@@ -15,7 +15,7 @@
 	<NavBar />
 	<main>
 		<Route path="/" component="{Portfolio}" />
-		<Route path="projects/nanobox" component="{NanoboxCaseStudy}" />
+		<Route path="projects/creative-foss" component="{CreativeFossCaseStudy}" />
 		<Route path="projects/diet-driven" component="{DietDrivenCaseStudy}" />
 		<Route path="projects/portfolio" component="{PortfolioCaseStudy}" />
 		<Route path="projects/chess" component="{ChessCaseStudy}" />
