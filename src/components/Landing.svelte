@@ -3,6 +3,12 @@
 
 	export let title: string;
 	export let summary: string;
+
+	// Log custom event in Google Analytics
+	let logDownloadEvent = () => {
+		// @ts-ignore
+		firebase.analytics().logEvent("resume_download");
+	}
 </script>
 
 <div class="landing-container">
@@ -11,7 +17,7 @@
 		<p>{@html summary}</p>
 
 		<div class="cta">
-			<Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank>download resume</Button>
+			<Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>
 		</div>
 	</div>
 	<div class="rhs" />

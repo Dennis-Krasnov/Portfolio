@@ -5,15 +5,15 @@
     export let startDate: string;
     export let endDate: string;
     export let points: string[];
-    export let quote: string;
-	export let quotee: string;
+    export let quote: string = "";
+	export let quotee: string = "";
 </script>
 
 <div class="experience-container">
     <div class="logo-daterange">
-        <div class="date">{endDate}</div>
-        <div class="logo"><img src="{imageUrl}" alt="{company} logo"/></div>
         <div class="date">{startDate}</div>
+        <div class="logo"><img src="{imageUrl}" alt="{company} logo"/></div>
+        <div class="date">{endDate}</div>
     </div>
     <div class="content">
         <div class="header"><h2>{position}</h2><h4>@ {company}</h4></div>
@@ -112,7 +112,7 @@
             flex-flow: row nowrap;
 
             .logo-daterange {
-                flex-flow: column nowrap;
+                flex-flow: column-reverse nowrap;
                 justify-content: start;
             }
 

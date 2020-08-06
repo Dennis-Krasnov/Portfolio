@@ -9,7 +9,8 @@
 	$: targetBlankAttribute = targetBlank ? "_blank" : "_self";
 </script>
 
-<a href="{href}" class="{buttonRowClass} {primarySecondaryClass}" target={targetBlankAttribute}><slot/></a>
+<!-- Event forward on:click -->
+<a href="{href}" class="{buttonRowClass} {primarySecondaryClass}" target={targetBlankAttribute} on:click><slot/></a>
 
 <style lang="scss">
 	@import "../styles/constants.scss";
