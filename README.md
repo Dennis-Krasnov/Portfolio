@@ -15,6 +15,9 @@ firebase functions:config:set sendgrid.api_key="THE API KEY"
 
 
 Running locally:
+
 https://firebase.google.com/docs/functions/local-emulator#set_up_functions_configuration_optional
+
 firebase functions:config:get > .runtimeconfig.json
+
 firebase serve
