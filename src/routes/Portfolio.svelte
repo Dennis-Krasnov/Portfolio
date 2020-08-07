@@ -74,10 +74,10 @@
 	<Projects>
 		<Project
 			name = "Creative FOSS"
-			summary = "????????"
-			colourHex = "#1e1e1e"
+			summary = "Open Source Collaboration Tool"
+			colourHex = "#82b440"
 			projectId = "creative-foss"
-			imageUrl = "/project-thumbnails/nanobox.png"
+			imageUrl = "/project-thumbnails/creative-foss.png"
 		/>
 
 		<Project
