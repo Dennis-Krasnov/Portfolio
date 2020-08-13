@@ -5,8 +5,6 @@
     export let startDate: string;
     export let endDate: string;
     export let points: string[];
-    export let quote: string = "";
-	export let quotee: string = "";
 </script>
 
 <div class="experience-container">
@@ -22,9 +20,6 @@
                 <li>{point}</li>
             {/each}
         </ul>
-        {#if quote && quotee}
-            <blockquote>"{quote}" - {quotee}</blockquote>
-        {/if}
     </div>
 </div>
 

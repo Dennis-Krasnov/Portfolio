@@ -12,9 +12,9 @@
 </script>
 
 <div class="project-container">
-	<!-- TODO: switch back to a? what advantage does Link give? https://github.com/EmilTholin/svelte-routing -->
+	<!-- Link allows routing during npm dev -->
 	<Link to="projects/{projectId}">
-		<div class="placeholder" style="background: {colourHex}">
+		<div class="background" style="background: {colourHex}">
 			<div class="title {colourClass}">
 				<h4>{name}</h4>
 				<h2>{@html summary}</h2>
@@ -36,7 +36,7 @@
 		width: 100%;
 
 		&:hover {
-			.placeholder {
+			.background {
 				transform: scale(0.94);
 			}
 
@@ -46,7 +46,7 @@
 		}
 	
 		
-		.placeholder {
+		.background {
 			position: relative;
 			height: 520px;
 			padding: 40px;

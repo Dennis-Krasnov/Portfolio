@@ -126,20 +126,30 @@
 		/>
 
 		<Experience 
-			imageUrl = "/work/krasnov-tech.svg"
+			imageUrl = "/work/sgbiotec.png"
 			position = "Freelance Web Developer"
-			company = "Krasnov Tech"
-			startDate = "Jun 2018"
-			endDate = "Aug 2019"
+			company = "Solar Grants Biotechnology"
+			startDate = "??"
+			endDate = "??"
 			points = {[
 				"sgbiotec.com is an e-commerce store selling fluorescent proteins",
-				"Pocket Trade Show is an online tradeshow platform for salesmen",
 				"Founded business, acquired customers, built projects start to finish",
-				"React, MobX, Firestore, Shopify API; PHP 7, jQuery, MySQL, AWS S3",
+				"React, MobX, Firestore, Shopify API",
 			]}
 		/>
-		<!-- TODO: quote = "Amazing"
-			quotee = "Someone" -->
+
+		<Experience 
+			imageUrl = "/work/pocket-trade-show.png"
+			position = "Freelance Web Developer"
+			company = "Pocket Trade Show"
+			startDate = "??"
+			endDate = "??"
+			points = {[
+				"Pocket Trade Show is an online tradeshow platform for salesmen",
+				"Founded business, acquired customers, built projects start to finish",
+				"PHP 7, jQuery, MySQL, AWS S3",
+			]}
+		/>
 	</Experiences>
 </Section>
 

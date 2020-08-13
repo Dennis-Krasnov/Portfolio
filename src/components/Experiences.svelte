@@ -9,8 +9,6 @@
 
 	.experiences-container {
         position: relative;
-        // display: grid;
-        // gap: 64px 0;
 
         @media (min-width: $mobile-breakpoint) {& {
             &::after {
