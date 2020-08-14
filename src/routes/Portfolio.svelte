@@ -119,34 +119,36 @@
 			endDate = "Dec 2019"
 			points = {[
 				"Developed authorization microservices in identity platform team",
-				"Added permissions claim to JWT for identity gateway to be used for all requests by 51M users; refactored to avoid authorization recursion",
-				"Researched performance of event sourcing aggregate replay, discovered major architectural flaw, escalated to the tech lead",
-				"Java, Axon Framework, EDA, CQRS, event sourcing, ForgeRock IG/AM",
+				"Added permissions claim to JWT for identity gateway to be used for all requests by 51M users; refactored to prevent authorization recursion",
+				"Researched performance of event sourcing projection replay, discovered major architectural flaw, escalated to the tech lead",
+				"Java, Axon Framework, Spring, CQRS, event sourcing, ForgeRock IG, Kubernetes",
 			]}
 		/>
 
 		<Experience 
 			imageUrl = "/work/sgbiotec.png"
-			position = "Freelance Web Developer"
-			company = "Solar Grants Biotechnology"
-			startDate = "??"
-			endDate = "??"
+			position = "Freelance Developer"
+			company = "Solar Grants Biotechnology Inc."
+			startDate = "Jun 2018"
+			endDate = "Aug 2019"
 			points = {[
-				"sgbiotec.com is an e-commerce store selling fluorescent proteins",
+				"Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an e-commerce store selling fluorescent proteins",
+				"Designed UI with structured product description and custom shopping cart, integrated with Shopify storefront API",
 				"Founded business, acquired customers, built projects start to finish",
-				"React, MobX, Firestore, Shopify API",
+				"React, MobX, Shopify storefront API, Docker Compose",
 			]}
 		/>
 
 		<Experience 
 			imageUrl = "/work/pocket-trade-show.png"
-			position = "Freelance Web Developer"
+			position = "Freelance Developer"
 			company = "Pocket Trade Show"
-			startDate = "??"
-			endDate = "??"
+			startDate = "Jul 2016"
+			endDate = "Aug 2017"
 			points = {[
-				"Pocket Trade Show is an online tradeshow platform for salesmen",
-				"Founded business, acquired customers, built projects start to finish",
+				"Created Pocket Trade Show, an online tradeshow platform that connects buyers and sellers",
+				"Developed web frontend using MVC pattern in PHP, implemented file upload to S3 bucket",
+				"Restructured MySQL database to accomadate web in addition to mobile app, migrated existing data",
 				"PHP 7, jQuery, MySQL, AWS S3",
 			]}
 		/>

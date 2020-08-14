@@ -17,7 +17,7 @@
         <div class="header"><h2>{position}</h2><h4>@ {company}</h4></div>
         <ul>
             {#each points as point}
-                <li>{point}</li>
+                <li>{@html point}</li>
             {/each}
         </ul>
     </div>
@@ -113,6 +113,11 @@
 
             .content {
                 padding: 0 0 0 48px;
+
+                ul {
+                    // Make text more readable
+                    padding: 0 calc(min(100px, 10vw)) 0 18px;
+                }
             }
         }}
     }
