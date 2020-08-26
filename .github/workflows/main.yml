@@ -52,20 +52,42 @@ jobs:
           name: public-folder
           path: public
 
-      - name: Deploy to Firebase Hosting
-        uses: w9jds/firebase-action@v1.5.0
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - name: Build docker image
+        run: docker build -t registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER .
 
-  profile:
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Log in to DigitalOcean Container Registry with short-lived credentials
+        run: doctl registry login --expiry-seconds 600
+
+      - name: Push image to DigitalOcean Container Registry
+        run: docker push registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER
+  
+  redeploy-production-kubernetes:
     needs: deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install doctl
+      uses: digitalocean/action-doctl@v2
+      with:
+        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+    - name: Save DigitalOcean kubeconfig
+      run: doctl kubernetes cluster kubeconfig save personal
+
+    - name: Upgrade frontend helm chart
+      run: helm upgrade portfolio-web ./helm --set runNumber=$GITHUB_RUN_NUMBER
+
+  profile:
+    needs: redeploy-production-kubernetes
+    runs-on: ubuntu-latest
+    steps:
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:

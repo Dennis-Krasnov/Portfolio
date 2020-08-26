@@ -23,7 +23,6 @@
 	<Footer />
 </Router>
 
-
 <style lang="scss">
 	:global(html) {
 		scroll-behavior: smooth;

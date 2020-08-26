@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-web
+spec:
+  selector:
+    matchLabels:
+      app: portfolio
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: portfolio
+    spec:
+      containers:
+      - name: nginx
+        image: registry.digitalocean.com/krasnov/portfolio-web:{{ .Values.runNumber }}
+        ports:
+        - containerPort: 80

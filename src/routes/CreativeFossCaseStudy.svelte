@@ -8,8 +8,10 @@
 	<title>Dennis Krasnov - Creative FOSS Case Study</title>
 </svelte:head>
 
-<Section>
-	I'm currently working on this project!
+<Section watermarkPadding>
+	I'm currently working on this project.
+	<br /><br />
+	I won $1000 in the <a href="https://www.gnome.org/challenge/">Gnome Community Engagement Challenge</a>, and currently working on the proof of concept :)
 </Section>
 
 <style>
