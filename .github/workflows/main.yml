@@ -90,7 +90,7 @@ jobs:
       run: doctl kubernetes cluster kubeconfig save personal
 
     - name: Upgrade helm chart
-      run: helm upgrade portfolio-web ./helm --set runNumber=$GITHUB_RUN_NUMBER
+      run: helm upgrade --install portfolio-web ./helm --set runNumber=$GITHUB_RUN_NUMBER --wait
 
   profile:
     needs: redeploy-production-kubernetes
