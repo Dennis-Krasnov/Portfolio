@@ -17,6 +17,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
+
+    - name: Cache NPM
+      uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
     
     - name: Install npm dependencies
       run: npm install
@@ -81,7 +89,7 @@ jobs:
     - name: Save DigitalOcean kubeconfig
       run: doctl kubernetes cluster kubeconfig save personal
 
-    - name: Upgrade frontend helm chart
+    - name: Upgrade helm chart
       run: helm upgrade portfolio-web ./helm --set runNumber=$GITHUB_RUN_NUMBER
 
   profile:
@@ -104,6 +112,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+
+      - name: Cache NPM
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install npm dependencies
         run: |

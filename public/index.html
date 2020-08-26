@@ -32,10 +32,22 @@
 	<script defer src='/build/bundle.js'></script>
 
 	<!-- Google Analytics -->
-	<script src="/__/firebase/7.17.1/firebase-app.js"></script>
-	<script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
-	<script src="/__/firebase/init.js"></script>
-	<script>firebase.analytics();</script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+	<script>
+		var firebaseConfig = {
+			apiKey: "AIzaSyA7-Zj0JFsuTQJE2ORvzCG_iBxdH1gHnzk",
+			authDomain: "krasnov-dev.firebaseapp.com",
+			databaseURL: "https://krasnov-dev.firebaseio.com",
+			projectId: "krasnov-dev",
+			storageBucket: "krasnov-dev.appspot.com",
+			messagingSenderId: "124169986424",
+			appId: "1:124169986424:web:b76907169ba1777c02a88d",
+			measurementId: "G-T86SJLE1SB"
+		};
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
 </head>
 <body></body>
 </html>
