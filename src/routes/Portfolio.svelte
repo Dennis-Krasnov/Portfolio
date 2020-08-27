@@ -83,7 +83,8 @@
 		<Project
 			name = "Diet Driven"
 			summary = "Calorie Counter Mobile App"
-			colourHex = "#538BF3"
+			colourHex = "#eaeceb"
+			blackText
 			projectId = "diet-driven"
 			imageUrl = "/project-thumbnails/diet-driven.png"
 		/>
