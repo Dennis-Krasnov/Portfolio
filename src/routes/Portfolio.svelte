@@ -114,15 +114,15 @@
 	<Experiences>
 		<Experience
 			imageUrl = "/work/ultimate-software.svg"
-			position = "Software Engineer"
+			position = "Software Engineering Intern"
 			company = "Ultimate Software"
 			startDate = "Sep 2019"
 			endDate = "Dec 2019"
 			points = {[
 				"Developed authorization microservices in identity platform team",
-				"Added permissions claim to JWT for identity gateway to be used for all requests by 51M users; refactored to prevent authorization recursion",
-				"Researched performance of event sourcing projection replay, discovered major architectural flaw, escalated to the tech lead",
-				"Java, Axon Framework, Spring, CQRS, event sourcing, ForgeRock IG, Kubernetes",
+				"Modified critical identity gateway serving 51M users, added permissions claim to JWT, refactored to prevent zero trust authorization recursion",
+				"Identified production-level architecture issue in event sourcing which would break future migrations, documented and escalated to tech lead",
+				"Java, Axon Framework, Spring, CQRS, event sourcing, ForgeRock IG",
 			]}
 		/>
 
@@ -133,9 +133,9 @@
 			startDate = "Jun 2018"
 			endDate = "Aug 2019"
 			points = {[
-				"Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an e-commerce store selling fluorescent proteins",
+				"Founded business, acquired customers, built projects start to finish:",
+				"Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
 				"Designed UI with structured product description and custom shopping cart, integrated with Shopify storefront API",
-				"Founded business, acquired customers, built projects start to finish",
 				"React, MobX, Shopify storefront API, Docker Compose",
 			]}
 		/>
