@@ -24,7 +24,8 @@ spec:
   - host: denniskrasnov.com
     http:
       paths:
-      - path: /
+      - pathType: Prefix
+        path: /
         backend:
           serviceName: portfolio-web
           servicePort: 80
