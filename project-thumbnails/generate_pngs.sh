@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Ensure I'm in the right folder
-cd project-thumbnails
-
 # Generate PNGs https://stackoverflow.com/a/5846727
 gimp -n -i -b - <<EOF
 (let* ( (file's (cadr (file-glob "*.xcf" 1))) (filename "") (image 0) (layer 0) )
@@ -17,12 +14,3 @@ gimp -n -i -b - <<EOF
   (gimp-quit 0)
   )
 EOF
-
-# Ensure folder exists
-mkdir -p ../public/project-thumbnails
-
-# Remove old pictures
-rm ../public/project-thumbnails/*
-
-# Move pictures to public folder
-mv *.png ../public/project-thumbnails
