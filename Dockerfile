@@ -17,6 +17,7 @@ WORKDIR /app
 
 # Build Javascipt bundle using svelte
 COPY package.json package-lock.json ./
+RUN npm ci
 COPY . .
 RUN npm run build
 
