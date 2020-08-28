@@ -61,7 +61,7 @@
 			<Input
 				name="email"
 				label="Email"
-				placeholder="john.doe@gmail.com" 
+				placeholder="johndoe@company.com" 
 			/>
 			<Input
 				name="message"

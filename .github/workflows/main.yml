@@ -27,7 +27,7 @@ jobs:
     - name: Push image to DigitalOcean Container Registry
       run: docker push registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER
   
-  redeploy-production-kubernetes:
+  deploy-kubernetes:
     needs: build
     runs-on: ubuntu-latest
     steps:

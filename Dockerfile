@@ -13,11 +13,11 @@ RUN ./generate_pngs.sh
 ####################################################
 
 FROM node:14 AS application_builder
-WORKDIR /data
+WORKDIR /app
 
 # Build Javascipt bundle using svelte
+COPY package.json package-lock.json ./
 COPY . .
-RUN npm install
 RUN npm run build
 
 ####################################################
@@ -33,6 +33,6 @@ RUN rm /usr/share/nginx/html/*
 COPY nginx-svelte.conf /etc/nginx/conf.d/svelte.conf
 
 # Copy assets
+COPY --from=application_builder /app/public .
 RUN mkdir -p project-thumbnails
 COPY --from=thumbnail_builder /data/*.png ./project-thumbnails/
-COPY --from=application_builder /data/public .
