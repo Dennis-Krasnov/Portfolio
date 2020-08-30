@@ -38,7 +38,7 @@
 		transition: all .15s ease;
 
 		&.button-row {
-			margin: 0 12px 15px 0;
+			margin: 15px 12px 0 0;
 		}
 
 		&.primary {

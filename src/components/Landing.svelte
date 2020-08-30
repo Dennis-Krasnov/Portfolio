@@ -37,8 +37,8 @@
 
 			padding: 64px 0 120px 0; // FIXME
 
-			// Height of lhs when p spans 3 lines
-			min-height: 283px;
+			// Height of lhs when p spans 2 lines
+			min-height: 264px;
 		}}
 	}
 
@@ -67,10 +67,10 @@
 		}
 
 		.cta {
-			margin: 15px 0 0 0;
+			margin: 0 0 0 0;
 
 			@media (min-width: $landing-page-breakpoint) {& {
-				margin: 30px 0 0 0;
+				margin: 15px 0 0 0;
 			}}
 		}
 	}
@@ -79,7 +79,7 @@
 		background: url("/cartoon_caricature.png");
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center; // TODO: right align???
+		background-position: center;
 
 		@media (max-width: $landing-page-breakpoint) {& {
 			display: none;
