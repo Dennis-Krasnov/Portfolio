@@ -90,21 +90,20 @@
 		/>
 
 		<Project
-			name = "krasnov.dev"
-			summary = "Portfolio Website"
-			colourHex = "#d5f0fe"
-			blackText
-			projectId = "portfolio"
-			imageUrl = "/project-thumbnails/portfolio.png"
-		/>
-
-		<Project
 			name = "Chess"
 			summary = "Swing Game"
 			colourHex = "#e5e8ee"
 			blackText
 			projectId = "chess"
 			imageUrl = "/project-thumbnails/chess.png"
+		/>
+
+		<Project
+			name = "krasnov.dev"
+			summary = "Portfolio Website"
+			colourHex = "#578ffb"
+			projectId = "portfolio"
+			imageUrl = "/project-thumbnails/portfolio.png"
 		/>
 	</Projects>
 </Section>
