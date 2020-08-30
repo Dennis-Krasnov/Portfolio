@@ -13,7 +13,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Build docker image
+    - name: Build Docker image
       run: docker build -t registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER .
     
     - name: Install doctl
@@ -24,7 +24,7 @@ jobs:
     - name: Log in to DigitalOcean Container Registry with short-lived credentials
       run: doctl registry login --expiry-seconds 600
 
-    - name: Push image to DigitalOcean Container Registry
+    - name: Push Docker image to DigitalOcean Container Registry
       run: docker push registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER
   
   deploy-kubernetes:

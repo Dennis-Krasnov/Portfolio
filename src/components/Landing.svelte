@@ -76,7 +76,7 @@
 	}
 
 	.rhs {
-		background: url("/cartoon.png");
+		background: url("/cartoon_caricature.png");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center; // TODO: right align???
