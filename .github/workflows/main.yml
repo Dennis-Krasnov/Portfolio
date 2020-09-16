@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build Docker image
-      run: docker build -t registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER .
+      run: DOCKER_BUILDKIT=1 docker build -t registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER .
     
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
