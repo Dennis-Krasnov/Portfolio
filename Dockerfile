@@ -1,9 +1,10 @@
-FROM archlinux:latest AS thumbnail_builder
+FROM alpine:edge AS thumbnail_builder
 WORKDIR /data
 
-# Install Gimp
-RUN pacman -Syu --noconfirm
-RUN pacman -S gimp --noconfirm
+# Install Gimp https://pkgs.org/download/gimp
+RUN apk update && apk upgrade
+RUN apk add bash
+RUN apk add gimp=2.10.20-r2
 
 # Generate PNG images from .xcf files
 COPY ./project-thumbnails .
