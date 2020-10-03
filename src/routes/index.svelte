@@ -111,6 +111,34 @@
 <Section id="work" watermarkPadding dark>
 	<WatermarkHeader title="work" />
 	<Experiences>
+		<!-- <Experience
+			imageUrl = "/work/???.svg"
+			position = "Software Engineering Intern"
+			company = "???"
+			startDate = Jan 2021"
+			endDate = "Apr 2021"
+			points = {[
+				"...",
+				"...",
+				"...",
+				"...",
+			]}
+		/> -->
+
+		<!-- <Experience
+			imageUrl = "/work/ray-wenderlich.svg"
+			position = "Article Tech Editor"
+			company = "raywenderlich.com"
+			startDate = "??? 2020"
+			endDate = "present"
+			points = {[
+				"...",
+				"(article link)",
+				"(article link)",
+				"(article link)",
+			]}
+		/> -->
+
 		<Experience
 			imageUrl = "/work/ultimate-software.svg"
 			position = "Software Engineering Intern"
@@ -132,7 +160,7 @@
 			startDate = "Jun 2018"
 			endDate = "Aug 2019"
 			points = {[
-				"Founded business, acquired customers, built projects start to finish:",
+				// "Founded business, acquired customers, built projects start to finish:",
 				"Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
 				"Designed UI with structured product description and custom shopping cart, integrated with Shopify storefront API",
 				"React, MobX, Shopify storefront API, Docker Compose",
@@ -155,9 +183,12 @@
 	</Experiences>
 </Section>
 
+<!-- TODO: Waterloo -->
+
 <Section id="contact" watermarkPadding>
 	<WatermarkHeader title="contact" />
-	<ContactForm />
+	<!-- FIXME -->
+	<!-- <ContactForm /> -->
 </Section>
 
 <style lang="scss"></style>

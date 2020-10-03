@@ -1,3 +1,4 @@
+# TODO: specify exact alpine version when it hits stable
 FROM alpine:edge AS thumbnail_builder
 WORKDIR /data
 
@@ -16,11 +17,11 @@ RUN ./generate_pngs.sh
 FROM node:14 AS application_builder
 WORKDIR /app
 
-# Build Javascipt bundle using svelte
+# Export static website using Sapper
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-RUN npm run build
+RUN npm run export
 
 ####################################################
 
@@ -32,9 +33,9 @@ RUN rm /etc/nginx/conf.d/default.conf
 RUN rm /usr/share/nginx/html/*
 
 # Copy Nginx configuration
-COPY nginx-svelte.conf /etc/nginx/conf.d/svelte.conf
+COPY nginx-sapper.conf /etc/nginx/conf.d/sapper.conf
 
 # Copy assets
-COPY --from=application_builder /app/public .
+COPY --from=application_builder /app/__sapper__/export .
 RUN mkdir -p project-thumbnails
 COPY --from=thumbnail_builder /data/*.png ./project-thumbnails/

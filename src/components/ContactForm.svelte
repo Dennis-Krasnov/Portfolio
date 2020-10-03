@@ -2,8 +2,8 @@
 	import { Form, Input, Select, Choice } from 'sveltejs-forms';
 	import * as yup from 'yup';
 
-	import Spinner from "../components/Spinner.svelte";
-	import SubmitButton from "../components/SubmitButton.svelte";
+	import Spinner from "./Spinner.svelte";
+	import SubmitButton from "./SubmitButton.svelte";
 
 	let message: string = "";
 

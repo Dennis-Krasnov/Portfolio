@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Button from '../components/Button.svelte';
-    import NavBarButton from '../components/NavBarButton.svelte';
-    import Section from "../components/Section.svelte";
+    import Button from './Button.svelte';
+    import NavBarButton from './NavBarButton.svelte';
+    import Section from "./Section.svelte";
 
     // Must link to # for scoll animation
 	// Clearing hash allows user to scroll to /# multiple times in a row

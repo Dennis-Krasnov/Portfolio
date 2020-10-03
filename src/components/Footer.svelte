@@ -1,6 +1,6 @@
 <script lang="ts">
-	import FooterButton from "../components/FooterButton.svelte";
-	import Section from "../components/Section.svelte";
+	import FooterButton from "./FooterButton.svelte";
+	import Section from "./Section.svelte";
 
 	let currentYear: number = new Date().getFullYear();
 </script>
