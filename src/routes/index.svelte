@@ -113,19 +113,20 @@
 <Section id="work" watermarkPadding dark>
 	<WatermarkHeader title="work" />
 	<Experiences>
-		<!-- <Experience
-			imageUrl = "/work/???.svg"
-			position = "Software Engineering Intern"
-			company = "???"
-			startDate = Jan 2021"
+		<!-- TODO: For professional profiles, do request use of branded profiles and templates via cgi.brand@cgi.com. -->
+		<Experience
+			imageUrl = "/work/cgi.svg"
+			position = "Incoming Developer co-op"
+			company = "CGI"
+			startDate = "Jan 2021"
 			endDate = "Apr 2021"
 			points = {[
-				"...",
-				"...",
-				"...",
-				"...",
+				// "...",
+				// "...",
+				// "...",
+				// "...",
 			]}
-		/> -->
+		/>
 
 		<!-- <Experience
 			imageUrl = "/work/ray-wenderlich.svg"

@@ -110,7 +110,7 @@
 
             .logo-daterange {
                 flex-flow: column-reverse nowrap;
-                justify-content: start;
+                justify-content: center;
             }
 
             .content {
