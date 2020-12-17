@@ -69,6 +69,8 @@
 	</Skills>
 </Section>
 
+<!-- TODO: https://www.raywenderlich.com/about#toc-flutter-team -->
+
 <Section id="projects" watermarkPadding>
 	<WatermarkHeader title="projects" />
 	<Projects>
@@ -185,10 +187,10 @@
 
 <!-- TODO: Waterloo -->
 
-<Section id="contact" watermarkPadding>
-	<WatermarkHeader title="contact" />
+<!-- <Section id="contact" watermarkPadding>
+	<WatermarkHeader title="contact" /> -->
 	<!-- FIXME -->
 	<!-- <ContactForm /> -->
-</Section>
+<!-- </Section> -->
 
 <style lang="scss"></style>
