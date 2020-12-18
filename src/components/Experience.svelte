@@ -24,10 +24,10 @@
 </div>
 
 <style lang="scss">
-	@import "../styles/constants.scss";
+    @import "../styles/constants.scss";
 
 	.experience-container {
-        padding: 32px 0;
+        padding: 46px 0;
 
         display: flex;
         flex-flow: column nowrap;
@@ -54,16 +54,19 @@
             }
 
             .logo {
-                width: 48px;
-                height: 48px;
+                width: 120px;
+                height: 120px;
                 padding: 15px;
+                margin: 0 0 10px 0;
                 border-radius: 50%;
+                border: 1px solid #e8e8eb;
 
-                background: $timeline-colour;
+                background: white;
 
                 img {
-                    width: 48px;
-                    height: 48px;
+                    width: 80px;
+                    height: 80px;
+                    padding: 20px;
                     
                     object-fit: contain;
                     user-select: none;
@@ -73,9 +76,6 @@
 
         .content {
             .header {
-                display: flex;
-                flex-flow: row wrap;
-                align-items: baseline;
                 margin-bottom: 16px;
 
                 h2 {
@@ -111,10 +111,14 @@
             .logo-daterange {
                 flex-flow: column-reverse nowrap;
                 justify-content: center;
+
+                .logo {
+                    margin: 5px 0;
+                }
             }
 
             .content {
-                padding: 0 0 0 48px;
+                padding: 0 0 0 72px;
 
                 ul {
                     // Make text more readable

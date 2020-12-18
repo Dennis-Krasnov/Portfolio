@@ -25,10 +25,12 @@
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
+
+		margin: 80px 0 0 0;
 	}
 
 	.copyright {
-		margin: 20px 0;
+		margin: 20px 0 30px 0;
 		text-align: center;
 		line-height: 22px;
 

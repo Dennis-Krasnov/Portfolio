@@ -116,12 +116,12 @@
 		<!-- TODO: For professional profiles, do request use of branded profiles and templates via cgi.brand@cgi.com. -->
 		<Experience
 			imageUrl = "/work/cgi.svg"
-			position = "Incoming Developer co-op"
+			position = "Developer co-op"
 			company = "CGI"
 			startDate = "Jan 2021"
 			endDate = "Apr 2021"
 			points = {[
-				// "...",
+				"I'm currently working here :)",
 				// "...",
 				// "...",
 				// "...",
