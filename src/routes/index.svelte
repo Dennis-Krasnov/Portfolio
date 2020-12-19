@@ -1,9 +1,7 @@
 <script lang="ts">
 	// import ContactForm from "../components/ContactForm.svelte";
-	import Button from "../components/Button.svelte";
-import Experience from "../components/Experience.svelte";
+	import Experience from "../components/Experience.svelte";
 	import Experiences from "../components/Experiences.svelte";
-import Footer from "../components/Footer.svelte";
 	import Landing from "../components/Landing.svelte";
 	import Project from "../components/Project.svelte";
 	import Projects from "../components/Projects.svelte";
@@ -158,14 +156,13 @@ import Footer from "../components/Footer.svelte";
 			startDate = "Jun 2018"
 			endDate = "Aug 2019"
 			points = {[
-				// "Founded business, acquired customers, built projects start to finish:",
 				"Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
 				"Designed UI with structured product description and custom shopping cart, integrated with Shopify storefront API",
 				"React, MobX, Shopify storefront API, Docker Compose",
 			]}
 		/>
 
-		<Experience 
+		<Experience
 			imageUrl = "/work/pocket-trade-show.png"
 			position = "Freelance Developer"
 			company = "Pocket Trade Show"
@@ -182,10 +179,6 @@ import Footer from "../components/Footer.svelte";
 </Section>
 
 <!-- TODO: Waterloo education -->
-
-<!-- <Section id="contact" watermarkPadding>
-	<WatermarkHeader title="contact" /> -->
-	<!-- FIXME -->
 	<!-- <ContactForm /> -->
 <!-- </Section> -->
 

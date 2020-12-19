@@ -12,17 +12,3 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-
-    - name: Build Docker image
-      run: DOCKER_BUILDKIT=1 docker build --progress=plain -t registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER .
-    
-    - name: Install doctl
-      uses: digitalocean/action-doctl@v2
-      with:
-        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-
-    - name: Log in to DigitalOcean Container Registry with short-lived credentials
-      run: doctl registry login --expiry-seconds 600
-
-    - name: Push Docker image to DigitalOcean Container Registry
-      run: docker push registry.digitalocean.com/krasnov/portfolio-web:$GITHUB_RUN_NUMBER
