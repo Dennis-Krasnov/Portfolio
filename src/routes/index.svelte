@@ -1,7 +1,9 @@
 <script lang="ts">
-	import ContactForm from "../components/ContactForm.svelte";
-	import Experience from "../components/Experience.svelte";
+	// import ContactForm from "../components/ContactForm.svelte";
+	import Button from "../components/Button.svelte";
+import Experience from "../components/Experience.svelte";
 	import Experiences from "../components/Experiences.svelte";
+import Footer from "../components/Footer.svelte";
 	import Landing from "../components/Landing.svelte";
 	import Project from "../components/Project.svelte";
 	import Projects from "../components/Projects.svelte";
@@ -69,8 +71,6 @@
 	</Skills>
 </Section>
 
-<!-- TODO: https://www.raywenderlich.com/about#toc-flutter-team -->
-
 <Section id="projects" watermarkPadding>
 	<WatermarkHeader title="projects" />
 	<Projects>
@@ -113,7 +113,6 @@
 <Section id="work" watermarkPadding dark>
 	<WatermarkHeader title="work" />
 	<Experiences>
-		<!-- TODO: For professional profiles, do request use of branded profiles and templates via cgi.brand@cgi.com. -->
 		<Experience
 			imageUrl = "/work/cgi.svg"
 			position = "Developer co-op"
@@ -121,26 +120,22 @@
 			startDate = "Jan 2021"
 			endDate = "Apr 2021"
 			points = {[
-				"I'm currently working here :)",
-				// "...",
-				// "...",
-				// "...",
+				"I'll be working here really soon :)",
 			]}
 		/>
 
-		<!-- <Experience
-			imageUrl = "/work/ray-wenderlich.svg"
-			position = "Article Tech Editor"
-			company = "raywenderlich.com"
-			startDate = "??? 2020"
+		<Experience
+			imageUrl = "/work/raywenderlich.svg"
+			position = "Technical Editor"
+			company = "Razeware"
+			startDate = "Oct 2020"
 			endDate = "present"
 			points = {[
-				"...",
-				"(article link)",
-				"(article link)",
-				"(article link)",
+				"<a href=\"https://raywenderlich.com\" target=_blank>raywenderlich.com</a> provides high-quality tutorials averaging 90k daily pageviews",
+				"Ensured technical accuracy of tutorial articles utilizing expert knowledge of Flutter",
+				"Technical edited <a href=\"https://raywenderlich.com/TODO\" target=_blank>Theming in Flutter</a> article", // todo: a, b, c articles
 			]}
-		/> -->
+		/>
 
 		<Experience
 			imageUrl = "/work/ultimate-software.svg"
@@ -159,7 +154,7 @@
 		<Experience 
 			imageUrl = "/work/sgbiotec.png"
 			position = "Freelance Developer"
-			company = "Solar Grants Biotechnology Inc."
+			company = "Solar Grants Biotechnology"
 			startDate = "Jun 2018"
 			endDate = "Aug 2019"
 			points = {[
@@ -186,7 +181,7 @@
 	</Experiences>
 </Section>
 
-<!-- TODO: Waterloo -->
+<!-- TODO: Waterloo education -->
 
 <!-- <Section id="contact" watermarkPadding>
 	<WatermarkHeader title="contact" /> -->
