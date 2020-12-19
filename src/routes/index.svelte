@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ContactForm from "../components/ContactForm.svelte";
+	// import ContactForm from "../components/ContactForm.svelte";
 	import Experience from "../components/Experience.svelte";
 	import Experiences from "../components/Experiences.svelte";
 	import Landing from "../components/Landing.svelte";
@@ -112,6 +112,30 @@
 	<WatermarkHeader title="work" />
 	<Experiences>
 		<Experience
+			imageUrl = "/work/cgi.svg"
+			position = "Developer co-op"
+			company = "CGI"
+			startDate = "Jan 2021"
+			endDate = "Apr 2021"
+			points = {[
+				"I'll be working here really soon :)",
+			]}
+		/>
+
+		<Experience
+			imageUrl = "/work/raywenderlich.svg"
+			position = "Technical Editor"
+			company = "Razeware"
+			startDate = "Oct 2020"
+			endDate = "present"
+			points = {[
+				"<a href=\"https://raywenderlich.com\" target=_blank>raywenderlich.com</a> provides high-quality tutorials averaging 90k daily pageviews",
+				"Ensured technical accuracy of tutorial articles utilizing expert knowledge of Flutter",
+				"Technical edited <a href=\"https://raywenderlich.com/TODO\" target=_blank>Theming in Flutter</a> article", // todo: a, b, c articles
+			]}
+		/>
+
+		<Experience
 			imageUrl = "/work/ultimate-software.svg"
 			position = "Software Engineering Intern"
 			company = "Ultimate Software"
@@ -128,18 +152,17 @@
 		<Experience 
 			imageUrl = "/work/sgbiotec.png"
 			position = "Freelance Developer"
-			company = "Solar Grants Biotechnology Inc."
+			company = "Solar Grants Biotechnology"
 			startDate = "Jun 2018"
 			endDate = "Aug 2019"
 			points = {[
-				"Founded business, acquired customers, built projects start to finish:",
 				"Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
 				"Designed UI with structured product description and custom shopping cart, integrated with Shopify storefront API",
 				"React, MobX, Shopify storefront API, Docker Compose",
 			]}
 		/>
 
-		<Experience 
+		<Experience
 			imageUrl = "/work/pocket-trade-show.png"
 			position = "Freelance Developer"
 			company = "Pocket Trade Show"
@@ -155,9 +178,8 @@
 	</Experiences>
 </Section>
 
-<Section id="contact" watermarkPadding>
-	<WatermarkHeader title="contact" />
-	<ContactForm />
-</Section>
+<!-- TODO: Waterloo education -->
+	<!-- <ContactForm /> -->
+<!-- </Section> -->
 
 <style lang="scss"></style>

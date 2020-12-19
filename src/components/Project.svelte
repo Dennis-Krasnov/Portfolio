@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Link } from "svelte-routing";
+	// import { Link } from "svelte-routing"; FIXME
 
     export let name: string;
 	export let summary: string;
@@ -12,8 +12,7 @@
 </script>
 
 <div class="project-container">
-	<!-- Link allows routing during npm dev -->
-	<Link to="projects/{projectId}">
+	<a rel=prefetch href="projects/{projectId}">
 		<div class="background" style="background: {colourHex}">
 			<div class="title {colourClass}">
 				<h4>{name}</h4>
@@ -23,7 +22,7 @@
 				<img src="{imageUrl}" alt="{summary}">
 			</div>
 		</div>
-	</Link>
+	</a>
 </div>
 
 <style lang="scss">

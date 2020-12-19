@@ -11,23 +11,12 @@ Portfolio website made using the Svelte component framework. Includes contact fo
 
 ```bash
 npm i node-sass
+# npm rebuild node-sass # may be necessary
 ```
 
 Set "Svelte > Language-server: Runtime" setting to result of `which node`
 
 Restart VSC
-
-##### Firebase
-
-```bash
-# Setup your firebase project
-npm i -g firebase-tools
-firebase login
-
-firebase functions:config:set sendgrid.api_key="THE API KEY"
-# To run in emulator using `firebase serve`
-firebase functions:config:get > .runtimeconfig.json
-```
 
 ##### Run website
 
@@ -41,13 +30,4 @@ npm run export-project-thumbnails
 
 npm run dev
 # Use `firebase serve` or `firebase deploy` to see it live
-```
-
-##### Run cloud functions
-
-```bash
-cd functions
-npm install
-firebase deploy
-# Use `firebase serve` or `firebase deploy` when using contact form
 ```

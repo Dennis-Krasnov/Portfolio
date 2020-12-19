@@ -1,4 +1,6 @@
+.DS_Store
 /node_modules/
-/public/build/
-/public/project-thumbnails/*
-.runtimeconfig.json
+/src/node_modules/@sapper/
+yarn-error.log
+/__sapper__/
+/static/project-thumbnails/*
