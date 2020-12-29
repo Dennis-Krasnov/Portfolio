@@ -25,9 +25,5 @@ git clone https://github.com/Dennis-Krasnov/Portfolio.git
 cd Portfolio
 npm install
 
-# Requires gimp to generate project thumbnails
-npm run export-project-thumbnails
-
 npm run dev
-# Use `firebase serve` or `firebase deploy` to see it live
 ```

@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import ContactForm from "../components/ContactForm.svelte";
 	import Experience from "../components/Experience.svelte";
 	import Experiences from "../components/Experiences.svelte";
 	import Landing from "../components/Landing.svelte";
@@ -9,11 +8,24 @@
 	import Skill from "../components/Skill.svelte";
 	import Skills from "../components/Skills.svelte";
 	import WatermarkHeader from "../components/WatermarkHeader.svelte";
+	import Button from '../components/Button.svelte';
 
 	// The first time I got paid for development work, Pocket Trade Show
 	let professionalStartDate: string = "08/01/2017";
 	let millisecondsInYear: number = 31536000000;
 	let yearsExperience: number = Math.floor((new Date().getTime() - new Date(professionalStartDate).getTime()) / millisecondsInYear);
+
+	// Log custom event in Google Analytics
+	function logDownloadEvent() {
+		// @ts-ignore
+		firebase.analytics().logEvent("resume_download");
+	}
+
+	// TODO
+	function logContactFormEvent() {
+		// @ts-ignore
+		firebase.analytics().logEvent("contact_form");
+	}
 </script>
 
 <svelte:head>
@@ -24,7 +36,11 @@
 	<Landing
 		title="Experienced Developer Available for Hire"
 		summary="Full stack software engineer with {yearsExperience} years experience designing and developing structured software systems."
-	/>
+	>
+		<span slot="cta">
+			<Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>
+		</span>
+	</Landing>
 	<!-- TODO: <Companies/> -->
 </Section>
 
@@ -69,8 +85,12 @@
 	</Skills>
 </Section>
 
+<Section watermarkPadding>
+	<WatermarkHeader title="testimonials" fontSizeViewWidth={12.5} />
+</Section>
+
 <Section id="projects" watermarkPadding>
-	<WatermarkHeader title="projects" />
+	<WatermarkHeader title="projects" fontSizeViewWidth={18} />
 	<Projects>
 		<Project
 			name = "Creative FOSS"
