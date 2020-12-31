@@ -27,7 +27,7 @@
     @import "../styles/constants.scss";
 
 	.experience-container {
-        padding: 46px 0;
+        padding: 0 0 92px 0;
 
         display: flex;
         flex-flow: column nowrap;
@@ -54,8 +54,8 @@
             }
 
             .logo {
-                width: 120px;
-                height: 120px;
+                width: 100px;
+                height: 100px;
                 padding: 15px;
                 margin: 0 0 10px 0;
                 border-radius: 50%;
@@ -64,8 +64,8 @@
                 background: white;
 
                 img {
-                    width: 80px;
-                    height: 80px;
+                    width: 60px;
+                    height: 60px;
                     padding: 20px;
                     
                     object-fit: contain;
@@ -114,6 +114,13 @@
 
                 .logo {
                     margin: 5px 0;
+                    width: 120px;
+                    height: 120px;
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
                 }
             }
 

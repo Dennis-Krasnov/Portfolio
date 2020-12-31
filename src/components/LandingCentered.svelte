@@ -1,41 +1,32 @@
 <script lang="ts">
-	export let imageUrl: string;
 	export let title: string;
 	export let summary: string;
 </script>
 
 <div class="landing-container">
-	<div class="lhs">
-		<h1>{title}</h1>
-		<p>{@html summary}</p>
+	<h1>{title}</h1>
+	<p>{@html summary}</p>
 
-		<div class="cta">
-			<slot name="cta" />
-		</div>
+	<div class="cta">
+		<slot name="cta" />
 	</div>
-	<img src="{imageUrl}" alt="Cover photo">
 </div>
 
 <style lang="scss">
 	@import "../styles/constants.scss";
 
 	.landing-container {
-		display: grid;
-
+		text-align: center;
 		padding: 32px 0 80px 0; // FIXME
 
+		// For better readability
+		max-width: 700px;
+		margin: 0 auto;
+
 		@media (min-width: $landing-page-breakpoint) {& {
-			grid-template-columns: .55fr .45fr;
-			gap: 0 40px;
-
 			padding: 64px 0 120px 0; // FIXME
-
-			// Height of lhs when p spans 2 lines
-			min-height: 264px;
 		}}
-	}
 
-	.lhs {
 		h1 {
 			font-weight: 500;
 			margin: 0 0 20px 0;
@@ -66,16 +57,5 @@
 				margin: 15px 0 0 0;
 			}}
 		}
-	}
-
-	img {
-		width: 100%;
-		object-fit: contain;
-		height: 264px;
-		user-select: none;
-
-		@media (max-width: $landing-page-breakpoint) {& {
-			display: none;
-		}}
 	}
 </style>

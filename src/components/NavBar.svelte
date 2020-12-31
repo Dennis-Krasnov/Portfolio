@@ -28,9 +28,9 @@
 
             <div class="scroll-links">
                 <NavBarButton hash="skills">skills</NavBarButton>
-                <NavBarButton hash="projects">projects</NavBarButton>
                 <NavBarButton hash="work">work</NavBarButton>
-                <!-- <NavBarButton hash="contact">contact</NavBarButton> -->
+                <NavBarButton hash="projects">projects</NavBarButton>
+                <NavBarButton hash="contact">contact</NavBarButton>
             </div>
             
             <span class="resume-download">

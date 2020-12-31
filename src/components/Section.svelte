@@ -4,11 +4,10 @@
 	export let dark: boolean = false;
 
 	$: watermarkPaddingClass = watermarkPadding ? "watermark-padding" : "";
-	$: darkClass = dark ? "dark" : "";
 </script>
 
-<section id="{id}" class="{darkClass}">
-	<div class="content {watermarkPaddingClass}">
+<section id="{id}" class:dark>
+	<div class="content" class:watermark-padding={watermarkPadding}>
 		<slot/>
 	</div>
 </section>
