@@ -35,7 +35,9 @@
         imageUrl="/cartoon_caricature.png"
     >
         <span slot="cta">
+<!--            <Button href="/dennis_krasnov_resume.pdf" buttonRow primary targetBlank on:click={logDownloadEvent}>download resume</Button><Button href="#projects" buttonRow>view projects</Button>-->
             <Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>
+<!--            <Button href="#contact" buttonRow primary>contact me</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>-->
         </span>
     </Landing>
 </Section>
@@ -82,7 +84,7 @@
 </Section>
 
 <Section watermarkPadding>
-    <WatermarkHeader title="testimonials" fontSizeViewWidth={12.5} />
+    <WatermarkHeader title="testimonials" } />
     <Testimonial
         imageUrl="/testimonial/igor.png"
         quote="Dennis is an experienced web developer, with an insight into the nuances of modern website design and implementation, compatibility with different platforms/devices ..."
@@ -162,7 +164,7 @@
 </Section>
 
 <Section id="projects" watermarkPadding>
-    <WatermarkHeader title="projects" fontSizeViewWidth={18} />
+    <WatermarkHeader title="projects" />
     <Projects>
         <Project
             name = "Creative FOSS"
@@ -201,7 +203,7 @@
 </Section>
 
 <Section watermarkPadding dark>
-    <WatermarkHeader title="education" fontSizeViewWidth={16} />
+    <WatermarkHeader title="education" />
     <Experiences>
         <Experience
             imageUrl = "/education/waterloo.png"

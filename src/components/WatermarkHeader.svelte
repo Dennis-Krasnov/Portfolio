@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let title: string;
-	export let fontSizeViewWidth: number = 19;
+	export let fontSizeViewWidth: number = 12;
 </script>
 
 <!-- TODO: try applying typewriter animation: https://www.npmjs.com/package/svelte-typewriter -->

@@ -35,4 +35,8 @@
 		line-height: 28px;
 		color: #525f7f;
 	}
+
+	b {
+		color: red;
+	}
 </style>

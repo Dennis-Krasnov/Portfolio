@@ -73,7 +73,7 @@
                     font-weight: 600;
                     white-space: nowrap;
 
-                    color: black;
+                    color: #343434; // Same as logo
                 }
             }
 

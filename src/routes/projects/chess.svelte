@@ -13,7 +13,7 @@
 <Section>
     <LandingCentered
         title="Chess"
-        summary="Complete game of chess for my grade 10 final project. Won school’s computer science Course and Department Awards."
+        summary="Complete game of chess with AI for my grade 10 final project. Won school’s computer science course and department awards."
     >
 		<span slot="cta">
 			<Button href="https://github.com/Dennis-Krasnov/Chess" targetBlank buttonRow primary>Github</Button><Button href="/case-study/DennisKrasnovChess.jar" targetBlank buttonRow>Download JAR</Button>

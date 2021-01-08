@@ -9,12 +9,18 @@
 
 <div class="experience-container">
     <div class="logo-daterange">
-        <div class="date">{startDate}</div>
+<!--        <div class="date">{startDate}</div>-->
+<!--        TODO: remove unnecessary stylings for dates! -->
         <div class="logo"><img src="{imageUrl}" alt="{company} logo"/></div>
-        <div class="date">{endDate}</div>
+<!--        <div class="date">{endDate}</div>-->
     </div>
     <div class="content">
-        <div class="header"><h2>{position}</h2><h4>@ {company}</h4></div>
+<!--        <div class="header"><h2>{position}</h2><h4>@ {company}</h4></div>-->
+        <div class="header">
+            <h2>{position}</h2>
+            <h4>@ {company}</h4>
+<!--            <h5>{startDate} -> {endDate}</h5>-->
+        </div>
         <ul>
             {#each points as point}
                 <li>{@html point}</li>
@@ -125,7 +131,7 @@
             }
 
             .content {
-                padding: 0 0 0 72px;
+                padding: 0 0 0 60px;
 
                 ul {
                     // Make text more readable

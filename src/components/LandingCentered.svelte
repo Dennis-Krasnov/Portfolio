@@ -35,6 +35,7 @@
 
 			color: #32325d;
 			transition: all 0.25s ease;
+			font-weight: bold;
 			
 			@media (min-width: $landing-page-breakpoint) {& {
 				font-size: 42px;

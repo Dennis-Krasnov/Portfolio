@@ -41,10 +41,11 @@
         p {
           position: relative;
 
-          font-size: 19px;
-          font-weight: 400;
-          font-style: italic;
-          line-height: 32px;
+          // From landing section paragraph
+          font-weight: 300;
+          font-size: 23px;
+          line-height: 35px;
+          color: #525f7f;
 
           &:before {
             content: open-quote;

@@ -37,14 +37,14 @@
 
 	.lhs {
 		h1 {
-			font-weight: 500;
+			font-weight: 600;
 			margin: 0 0 20px 0;
 			font-size: 34px;
 			line-height: 44px;
 
 			color: #32325d;
 			transition: all 0.25s ease;
-			
+
 			@media (min-width: $landing-page-breakpoint) {& {
 				font-size: 42px;
 				line-height: 52px;
