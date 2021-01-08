@@ -21,9 +21,8 @@
 		user-select: none;
 
 		@media (min-width: 1200px) {& {
-			// Seamlessly cap watermark size at 1200px * 19%
-			//font-size: 228px;
-          font-size: calc(1200px * var(--font-size) / 100);
+            // Seamlessly cap watermark size at 1200px * 19%
+            font-size: calc(1200px * var(--font-size) / 100);
 		}}
 	}
 </style>

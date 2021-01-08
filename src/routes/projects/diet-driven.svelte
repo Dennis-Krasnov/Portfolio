@@ -12,8 +12,8 @@
 
 <Section>
 	<LandingCentered
-		title="Calorie Counter Mobile App"
-		summary="Diet Driven is a calorie counter mobile app for iOS, Android."
+		title="Diet Driven"
+		summary="Diet Driven is a calorie counter mobile app for iOS, Android. Created in frustration of current solutions and their lack of features and customization, Diet Driven focuses on the needs of a power user."
 	>
 		<span slot="cta">
 			<Button href="https://github.com/Dennis-Krasnov/Diet-Driven" targetBlank buttonRow primary>Github</Button>

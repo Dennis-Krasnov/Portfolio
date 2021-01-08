@@ -13,7 +13,7 @@
 			<slot name="cta" />
 		</div>
 	</div>
-	<img src="{imageUrl}" alt="Cover photo">
+	<img src="{imageUrl}" alt="Landing">
 </div>
 
 <style lang="scss">

@@ -10,6 +10,7 @@
     import WatermarkHeader from "../components/WatermarkHeader.svelte";
     import Testimonial from "../components/Testimonial.svelte";
     import Button from '../components/Button.svelte';
+    import ContactForm from '../components/ContactForm.svelte';
 
     // The first time I got paid for development work, Pocket Trade Show
     let professionalStartDate: string = "08/01/2017";
@@ -20,12 +21,6 @@
     function logDownloadEvent() {
         // @ts-ignore
         firebase.analytics().logEvent("resume_download");
-    }
-
-    // TODO
-    function logContactFormEvent() {
-        // @ts-ignore
-        firebase.analytics().logEvent("contact_form");
     }
 </script>
 
@@ -43,7 +38,6 @@
             <Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>
         </span>
     </Landing>
-    <!-- TODO: <Companies/> -->
 </Section>
 
 <Section id="skills" watermarkPadding dark>
@@ -107,7 +101,7 @@
 			startDate = "Jan 2021"
 			endDate = "Apr 2021"
 			points = {[
-                "I'll be working here really soon :)",
+                "I'm currently working here :)",
             ]}
         />
 
@@ -120,7 +114,7 @@
 			points = {[
                 "<a href=\"https://raywenderlich.com\" target=_blank>raywenderlich.com</a> provides high-quality tutorials averaging 90k daily pageviews",
                 "Ensured technical accuracy of tutorial articles utilizing expert knowledge of Flutter",
-                "Technical edited <a href=\"https://www.raywenderlich.com/16628777-theming-a-flutter-app-getting-started\" target=_blank>Theming a Flutter App: Getting Started</a> article", // todo: a, b, c articles
+                "Technical edited <a href=\"https://www.raywenderlich.com/16628777-theming-a-flutter-app-getting-started\" target=_blank>Theming a Flutter App: Getting Started</a> article, more on the way", // TODO: a, b, c articles
             ]}
         />
 
@@ -189,7 +183,7 @@
 
         <Project
             name = "Chess"
-            summary = "Swing Game"
+            summary = "Java Swing Game"
             colourHex = "#e5e8ee"
             blackText
             projectId = "chess"
@@ -216,18 +210,16 @@
             startDate = "Sep 2018"
             endDate = "Apr 2023"
             points = {[
+                "$2000 President’s Scholarship of Distinction scholarship for 95% admission average",
                 "Coursework: data structure analysis, OOP programming in C++, algorithm analysis, operating systems design, computer architecture",
             ]}
         />
     </Experiences>
 </Section>
 
-<Section id="contact" watermarkPadding>
-    <WatermarkHeader title="contact" />
-</Section>
-
-<!-- TODO: Waterloo education -->
-    <!-- <ContactForm /> -->
-<!-- </Section> -->
+<!--<Section id="contact" watermarkPadding>-->
+<!--    <WatermarkHeader title="contact" />-->
+<!--    <ContactForm />-->
+<!--</Section>-->
 
 <style lang="scss"></style>

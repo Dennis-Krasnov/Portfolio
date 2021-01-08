@@ -7,6 +7,12 @@
 
 	let message: string = "";
 
+	// Log custom event in Google Analytics
+	function logContactFormEvent() {
+		// @ts-ignore
+		firebase.analytics().logEvent("contact_form");
+	}
+
 	const schema = yup.object().shape({
 		name: yup.string().required(), // TODO: max
 		email: yup.string().required().email(),
@@ -35,6 +41,7 @@
 			}
 			resetForm();
 			message = "Success!";
+			logContactFormEvent();
 		} catch (error) {
 			message = "Something went wrong... try emailing me?";
 		} finally {
@@ -51,31 +58,31 @@
 		<a href="mailto:dennis@krasnov.dev"><i class="far fa-envelope fa-fw fa-lg"></i><span>dennis@krasnov.dev</span></a>
 		<a href="tel:226-580-9787"><i class="far fa-mobile-android fa-fw fa-lg"></i><span>(226) 580 - 9787</span></a>
 	</div>
-	<div class="contact-form">
-		<Form {schema} on:submit={handleSubmit} let:isSubmitting>
-			<Input
-				name="name"
-				label="Name"
-				placeholder="John Doe" 
-			/>
-			<Input
-				name="email"
-				label="Email"
-				placeholder="johndoe@company.com" 
-			/>
-			<Input
-				name="message"
-				label="Message"
-				placeholder="Hello there!"
-				multiline
-			/>
-			{#if isSubmitting}
-				<Spinner />
-			{:else}
-				<SubmitButton>shoot me a message</SubmitButton><span class="message">{message}</span>
-			{/if}
-		</Form>
-	</div>
+<!--	<div class="contact-form">-->
+<!--		<Form {schema} on:submit={handleSubmit} let:isSubmitting>-->
+<!--			<Input-->
+<!--				name="name"-->
+<!--				label="Name"-->
+<!--				placeholder="John Doe" -->
+<!--			/>-->
+<!--			<Input-->
+<!--				name="email"-->
+<!--				label="Email"-->
+<!--				placeholder="johndoe@company.com" -->
+<!--			/>-->
+<!--			<Input-->
+<!--				name="message"-->
+<!--				label="Message"-->
+<!--				placeholder="Hello there!"-->
+<!--				multiline-->
+<!--			/>-->
+<!--			{#if isSubmitting}-->
+<!--				<Spinner />-->
+<!--			{:else}-->
+<!--				<SubmitButton>shoot me a message</SubmitButton><span class="message">{message}</span>-->
+<!--			{/if}-->
+<!--		</Form>-->
+<!--	</div>-->
 </div>
 
 <style lang="scss">
@@ -91,7 +98,7 @@
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: center;
-			align-items: start;
+			align-items: start; // TODO: center?
 
 			a {
 				margin: 20px 0;

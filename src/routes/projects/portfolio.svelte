@@ -2,7 +2,7 @@
 	import Button from "../../components/Button.svelte";
 	import LandingCentered from "../../components/LandingCentered.svelte";
 	import Section from "../../components/Section.svelte";
-	import DemoPicture from "../../components/DemoPicture.svelte";
+	import DemoIframe from "../../components/DemoIframe.svelte";
 	import WatermarkHeader from "../../components/WatermarkHeader.svelte";
 </script>
 
@@ -12,18 +12,17 @@
 
 <Section>
 	<LandingCentered
-		title="Portfolio Website"
-		summary="something something something"
+		title="krasnov.dev"
+		summary="Portfolio website written in Svelte showcasing my skills and experience."
 	>
 		<span slot="cta">
-			<Button href="https://github.com/Dennis-Krasnov/Chess" targetBlank buttonRow primary>Github Repository</Button>
-			<Button href="https://krasnov.dev" targetBlank buttonRow>View live</Button>
+			<Button href="https://github.com/Dennis-Krasnov/Portfolio" targetBlank buttonRow primary>Github</Button><Button href="https://krasnov.dev" targetBlank buttonRow>View live</Button>
 		</span>
 	</LandingCentered>
 </Section>
 
 <Section watermarkPadding dark>
-	<!--	<WatermarkHeader title="demo" />-->
-	<WatermarkHeader title="Work in progress" fontSizeViewWidth={9} />
-	<DemoPicture imageUrl="/case-study/cat.gif" altText="Diet Driven Demo" />
+	<WatermarkHeader title="demo" />
+<!--	<DemoIframe src="https://krasnov.dev" title="Portfolio Demo (inception)" /> FIXME -->
+	<DemoIframe src="http://localhost:3000" title="Portfolio Demo (inception)" />
 </Section>
