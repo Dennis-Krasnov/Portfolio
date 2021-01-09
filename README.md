@@ -1,7 +1,7 @@
 # Krasnov Dev Portfolio
 ![Build and Deploy CI/CD](https://github.com/Dennis-Krasnov/Portfolio/workflows/Build%20and%20Deploy%20CI/CD/badge.svg)
 
-Portfolio website made using the Svelte component framework. Includes contact form which triggers Firebase Cloud Function that uses SendGrid to send myself an email. Automated CI/CD pipeline builds and deploys web bundle and serverless function to Firebase.
+I built a portfolio website showcasing my skills and experience. Check it out at denniskrasnov.com!
 
 [View live](https://krasnov.dev/)
 
