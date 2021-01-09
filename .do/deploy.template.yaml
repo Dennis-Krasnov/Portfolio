@@ -2,7 +2,7 @@ spec:
   name: potfolio
   static_sites:
     - git:
-        branch: main
+        branch: master
         repo_clone_url: https://github.com/Dennis-Krasnov/Portfolio.git
       name: portfolio
       build_command: npm run export
