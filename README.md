@@ -21,5 +21,5 @@ npm run dev
 #### Common problems
 ```shell
 # Error: Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime:
-npm rebuild node-sass # may be necessary
+npm rebuild node-sass
 ```
