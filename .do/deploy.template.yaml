@@ -7,5 +7,5 @@ spec:
       name: portfolio
       build_command: npm run export
       output_dir: __sapper__/export
-        routes:
-            - path: /
+      routes:
+        - path: /
