@@ -5,6 +5,6 @@ spec:
         branch: master
         repo_clone_url: https://github.com/Dennis-Krasnov/Portfolio.git
       name: portfolio
-      build_command: npm run export && mkdir -p build && cp -r __sapper__/export build
+      build_command: npm run export && mkdir -p build && cp -r __sapper__/export/* build
       routes:
         - path: /
