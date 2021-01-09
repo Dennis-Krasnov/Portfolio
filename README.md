@@ -5,22 +5,10 @@ Portfolio website made using the Svelte component framework. Includes contact fo
 
 [View live](https://krasnov.dev/)
 
+### Deploy to Digital Ocean
+[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/Dennis-Krasnov/Portfolio/tree/master&refcode=4ed2be2d0a5c)
+
 ### How to run
-
-##### VSC setup
-
-```bash
-npm i node-sass
-
-# Error: Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime:
-# npm rebuild node-sass # may be necessary
-```
-
-Set "Svelte > Language-server: Runtime" setting to result of `which node`
-
-Restart VSC
-
-##### Run website
 
 ```bash
 git clone https://github.com/Dennis-Krasnov/Portfolio.git
@@ -28,4 +16,10 @@ cd Portfolio
 npm install
 
 npm run dev
+```
+
+#### Common problems
+```shell
+# Error: Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime:
+npm rebuild node-sass # may be necessary
 ```
