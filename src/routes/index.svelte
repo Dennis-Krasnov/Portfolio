@@ -35,7 +35,6 @@
         imageUrl="/cartoon_caricature.png"
     >
         <span slot="cta">
-<!--            <Button href="/dennis_krasnov_resume.pdf" buttonRow primary targetBlank on:click={logDownloadEvent}>download resume</Button><Button href="#projects" buttonRow>view projects</Button>-->
             <Button href="#projects" buttonRow primary>view projects</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>
 <!--            <Button href="#contact" buttonRow primary>contact me</Button><Button href="/dennis_krasnov_resume.pdf" buttonRow targetBlank on:click={logDownloadEvent}>download resume</Button>-->
         </span>

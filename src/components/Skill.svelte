@@ -13,7 +13,6 @@
 <style lang="scss">
 	@import "../styles/constants.scss";
 
-
     img {
         height: 48px;
         margin: 0 0 12px 0;

@@ -23,6 +23,5 @@
 
 <Section watermarkPadding dark>
 	<WatermarkHeader title="demo" />
-<!--	<DemoIframe src="https://krasnov.dev" title="Portfolio Demo (inception)" /> FIXME -->
-	<DemoIframe src="http://localhost:3000" title="Portfolio Demo (inception)" />
+	<DemoIframe src="https://krasnov.dev" title="Portfolio Demo (inception)" />
 </Section>

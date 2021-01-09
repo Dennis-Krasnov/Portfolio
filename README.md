@@ -11,6 +11,8 @@ Portfolio website made using the Svelte component framework. Includes contact fo
 
 ```bash
 npm i node-sass
+
+# Error: Node Sass does not yet support your current environment: Linux 64-bit with Unsupported runtime:
 # npm rebuild node-sass # may be necessary
 ```
 
