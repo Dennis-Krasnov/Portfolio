@@ -1,0 +1,17 @@
+domains:
+  - domain: denniskrasnov.com
+    type: PRIMARY
+    zone: denniskrasnov.com
+name: portfolio
+region: nyc
+static_sites:
+  - build_command: npm run export
+    environment_slug: node-js
+    github:
+      branch: master
+      deploy_on_push: true
+      repo: Dennis-Krasnov/Portfolio
+    name: portfolio
+    output_dir: __sapper__/export
+    routes:
+      - path: /
