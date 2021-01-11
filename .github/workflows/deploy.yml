@@ -30,19 +30,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build OCI image
-        run: buildah unshare ./scripts/build-container.sh
-
-      - name: Install doctl
-        uses: digitalocean/action-doctl@v2
-        with:
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-
-      - name: Log in to DigitalOcean Container Registry with short-lived credentials
-        run: doctl registry login --expiry-seconds 600
-
-      - name: Push OCI image to DigitalOcean Container Registry
-        run: buildah push portfolio-web $IMAGE_NAME:$IMAGE_TAG
+#      - name: Build OCI image
+#        run: buildah unshare ./scripts/build-container.sh
+#
+#      - name: Install doctl
+#        uses: digitalocean/action-doctl@v2
+#        with:
+#          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+#
+#      - name: Log in to DigitalOcean Container Registry with short-lived credentials
+#        run: doctl registry login --expiry-seconds 600
+#
+#      - name: Push OCI image to DigitalOcean Container Registry
+#        run: buildah push portfolio-web $IMAGE_NAME:$IMAGE_TAG
 
     deploy:
       needs: push

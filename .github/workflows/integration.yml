@@ -17,7 +17,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Build OCI image
-      run: buildah unshare ./scripts/build-container.sh
+      run: |
+        export SVELTE_BUNDLE=$(mktemp -d -t "$(date +%Y-%m-%d-%H-%M-%S)-XXXXXXXXXX")
+        buildah unshare ./scripts/generate-svelte-bundle.sh
+        ./scripts/build-nginx-image.sh
 
     - name: Archive local OCI iamge
       run: buildah push portfolio-web oci:$OCI_IMAGE_PATH:portfolio-web
