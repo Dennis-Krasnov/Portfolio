@@ -37,8 +37,13 @@ build_nginx_image () {
     buildah copy $CONTAINER $SVELTE_BUNDLE .
     buildah run $CONTAINER -- nginx -t || exit 1
 
+    buildah containers
+    buildah images
+
     buildah commit $CONTAINER portfolio-web
+    buildah images
     buildah rm $CONTAINER
+    buildah containers
 }
 
 main "$@"
