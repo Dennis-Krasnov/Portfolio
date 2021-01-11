@@ -87,10 +87,10 @@ jobs:
       - name: Push OCI image to DigitalOcean Container Registry
         run: buildah push portfolio-web $IMAGE_NAME:$IMAGE_TAG
 
-    deploy:
-      needs: push
-      if: github.ref == 'refs/tags/release'
-      runs-on: ubuntu-latest
-      steps:
-        - name: Hello
-          run: echo hello
+  deploy:
+    needs: push
+    if: github.ref == 'refs/tags/release'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello
+        run: echo hello
