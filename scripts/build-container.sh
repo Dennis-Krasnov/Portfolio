@@ -18,9 +18,14 @@ generate_svelte_bundle () {
     buildah run $BUILD_CONTAINER -- npm ci
     buildah run $BUILD_CONTAINER -- npm run export
 
+    echo hello
+
     # Extract bundle from build container
     local MOUNT=$(buildah mount $BUILD_CONTAINER)
     cp -r $MOUNT/build/__sapper__/export/. $SVELTE_BUNDLE
+
+    ls -l $SVELTE_BUNDLE
+
     buildah umount $BUILD_CONTAINER
 
     buildah rm $BUILD_CONTAINER
