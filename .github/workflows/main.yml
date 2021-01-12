@@ -3,6 +3,7 @@ name: Continuous Integration and Deployment
 on:
   push:
     branches: [ master ]
+    tags: v2.*
   pull_request:
     branches: [ master ]
 
