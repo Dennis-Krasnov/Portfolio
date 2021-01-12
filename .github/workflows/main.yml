@@ -39,6 +39,11 @@ jobs:
         with:
           name: portfolio-web-image
 
+      - name: debug
+        run: |
+          buildah images
+          ls -l /tmp/portfolio-web
+
       - name: Restore local OCI image
         run: buildah pull oci:/tmp/portfolio-web
 
