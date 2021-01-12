@@ -56,11 +56,11 @@ jobs:
           buildah images
           podman images
           sudo sysctl kernel.unprivileged_userns_clone=1
-          curl http://localhost:8080
           podman run --rm -d -p $PORT:8080 portfolio-web
           sleep 1
           ls -l
           pwd
+          curl http://localhost:8080
           python scripts/smoke-test.py
 
   check-vulnerability:
