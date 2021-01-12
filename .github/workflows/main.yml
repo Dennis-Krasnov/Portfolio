@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ master ]
 
-env:
-  OCI_IMAGE_PATH: /tmp/portfolio-web
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,13 +20,13 @@ jobs:
         ./scripts/build-nginx-image.sh
 
     - name: Archive local OCI iamge
-      run: buildah push portfolio-web oci:$OCI_IMAGE_PATH:portfolio-web
+      run: buildah push portfolio-web oci:/tmp/portfolio-web:portfolio-web
 
     - name: Upload local OCI image
       uses: actions/upload-artifact@v2
       with:
         name: portfolio-web-image
-        path: $OCI_IMAGE_PATH
+        path: /tmp/portfolio-web
 
   smoke-test:
     needs: build
@@ -43,7 +40,7 @@ jobs:
           name: portfolio-web-image
 
       - name: Restore local OCI image
-        run: buildah pull oci:$OCI_IMAGE_PATH
+        run: buildah pull oci:/tmp/portfolio-web
 
       - name: Smoke test
         run: |
@@ -74,7 +71,7 @@ jobs:
           name: portfolio-web-image
 
       - name: Restore local OCI image
-        run: buildah pull oci:$OCI_IMAGE_PATH
+        run: buildah pull oci:/tmp/portfolio-web
 
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
