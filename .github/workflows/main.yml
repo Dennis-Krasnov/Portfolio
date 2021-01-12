@@ -43,35 +43,35 @@ jobs:
           name: portfolio-web-image
           path: /tmp/portfolio-web
 
-      - name: debug
-        run: |
-          buildah images
-          ls -l /tmp/portfolio-web
-
       - name: Restore local OCI image
         run: buildah pull oci:/tmp/portfolio-web
 
       - name: Smoke test
         run: |
-          buildah images
-          podman images
           sudo sysctl kernel.unprivileged_userns_clone=1
-          echo $PORT
           podman run --rm -d -p $PORT:8080 portfolio-web
           sleep 3
-          ls -l
-          pwd
-          curl http://localhost:8080
           python scripts/smoke-test.py
 
   check-vulnerability:
     needs: build
     runs-on: ubuntu-20.04
     steps:
-      - name: Hello
-        run: echo hello
+      - name: Download local OCI image
+        uses: actions/download-artifact@v2
+        with:
+          name: portfolio-web-image
+          path: /tmp/portfolio-web
 
-      # TODO: https://github.com/aquasecurity/trivy-action
+      - name: Restore local OCI image
+        run: buildah pull oci:/tmp/portfolio-web
+
+      - name: Install Trivy vulnerability scanner
+        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+
+      - name: Scan for vulnerabilities
+        run: trivy image --severity HIGH,CRITICAL --input /tmp/portfolio-web
+        # TODO: --exit-code 1
 
   push:
     needs: [ smoke-test, check-vulnerability ]
