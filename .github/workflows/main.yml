@@ -18,8 +18,8 @@ jobs:
 
     - name: Build OCI image
       run: |
-        # https://github.com/containers/podman/blob/master/rootless.md
-        sysctl net.ipv4.ip_unprivileged_port_start=80
+#         https://github.com/containers/podman/blob/master/rootless.md
+#        sysctl net.ipv4.ip_unprivileged_port_start=80
         export SVELTE_BUNDLE=$(mktemp -d -t "$(date +%Y-%m-%d-%H-%M-%S)-XXXXXXXXXX")
         ./scripts/generate-svelte-bundle.sh
         ./scripts/build-nginx-image.sh
