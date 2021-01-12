@@ -81,7 +81,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
-      IMAGE_TAG: ${{ github.sha }}
+      IMAGE_TAG: ${GITHUB_REF#refs/tags/}
     steps:
       - name: Download local OCI image
         uses: actions/download-artifact@v2
@@ -112,7 +112,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
-      IMAGE_TAG: ${{ github.sha }}
+      IMAGE_TAG: ${GITHUB_REF#refs/tags/}
     steps:
       - name: Hello
         run: echo hello, $IMAGE_NAME:$IMAGE_TAG test
