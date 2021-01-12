@@ -110,4 +110,4 @@ jobs:
       IMAGE_TAG: ${{ github.sha }}
     steps:
       - name: Hello
-        run: echo hello, $IMAGE_NAME:$IMAGE_TAG
+        run: echo hello, $IMAGE_NAME:$IMAGE_TAG test
