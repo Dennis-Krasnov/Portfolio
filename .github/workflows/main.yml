@@ -16,6 +16,7 @@ jobs:
 
     - name: Build OCI image
       run: |
+        sudo sysctl net.ipv4.ip_unprivileged_port_start=80
         export SVELTE_BUNDLE=$(mktemp -d -t XXXXXXX)
         buildah unshare ./scripts/generate-svelte-bundle.sh
         ./scripts/build-nginx-image.sh
@@ -50,7 +51,7 @@ jobs:
       - name: Smoke test
         run: |
           sudo sysctl kernel.unprivileged_userns_clone=1
-          podman run --rm -d -p $PORT:8080 portfolio-web
+          podman run --rm -d -p $PORT:80 portfolio-web
           sleep 3
           python scripts/smoke-test.py
 
@@ -71,8 +72,8 @@ jobs:
         run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
       - name: Scan for vulnerabilities
-        run: trivy image --severity HIGH,CRITICAL --input /tmp/portfolio-web
-        # TODO: --exit-code 1
+        run: trivy image --input /tmp/portfolio-web
+        # TODO: --severity HIGH,CRITICAL --exit-code 1
 
   push:
     needs: [ smoke-test, check-vulnerability ]
