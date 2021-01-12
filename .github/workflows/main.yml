@@ -44,7 +44,8 @@ jobs:
 
       - name: Smoke test
         run: |
-          podman run --rm -d -p $PORT:80 portfolio-web
+          buildah images
+          podman run --rm -d -p $PORT:8080 portfolio-web
           sleep 1
           python scripts/smoke-test.py
 
