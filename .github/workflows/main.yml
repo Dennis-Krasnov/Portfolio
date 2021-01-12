@@ -51,6 +51,8 @@ jobs:
       - name: Smoke test
         run: |
           buildah images
+          podman images
+          sysctl kernel.unprivileged_userns_clone=1
           podman run --rm -d -p $PORT:8080 portfolio-web
           sleep 1
           ls -l
