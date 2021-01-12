@@ -75,7 +75,7 @@ jobs:
         run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
       - name: Scan for vulnerabilities
-        run: trivy image --quiet --input /tmp/portfolio-web
+        run: trivy image --no-progress --input /tmp/portfolio-web
         # TODO: --severity HIGH,CRITICAL --exit-code 1
 
   push:
