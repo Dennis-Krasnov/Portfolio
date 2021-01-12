@@ -105,6 +105,9 @@ jobs:
     needs: push
     if: github.ref == 'refs/tags/release'
     runs-on: ubuntu-20.04
+    env:
+      IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
+      IMAGE_TAG: ${{ github.sha }}
     steps:
       - name: Hello
-        run: echo hello
+        run: echo hello, $IMAGE_NAME:$IMAGE_TAG
