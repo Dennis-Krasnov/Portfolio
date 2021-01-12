@@ -111,7 +111,7 @@ jobs:
         run: buildah push $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
 
   deploy:
-#    needs: push
+    needs: push
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-20.04
     steps:
