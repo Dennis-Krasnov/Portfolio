@@ -111,13 +111,39 @@ jobs:
         run: buildah push $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
 
   deploy:
-    needs: push
+#    needs: push
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout infrastructure repository
+        uses: actions/checkout@v2
+        with:
+          repository: Dennis-Krasnov/Kubernetes-Infrastructure
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+
       - name: Get tag version
         id: get_version
         run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
 
-      - name: Hello
-        run: echo $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
+      - name: Install yq
+        run: sudo wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/bin/yq && sudo chmod +x /usr/bin/yq
+        env:
+          VERSION: v4.2.0
+          BINARY: yq_linux_amd64
+
+      - name: Edit deployment image
+        run: yq e ".spec.template.spec.containers[0].image = \"IMAGE_REF\"" -i app/portfolio/production/deployment.yaml
+        env:
+          IMAGE_REF: $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          title: Update portfolio image to ${{ steps.get_version.outputs.VERSION }}
+          commit-message: update portfolio image to ${{ steps.get_version.outputs.VERSION }}
+          body: >
+            This PR is auto-generated from
+            [github.com/Dennis-Krasnov/Portfolio](https://github.com/Dennis-Krasnov/Portfolio).
+          labels: automated, portfolio
+          delete-branch: true
