@@ -15,7 +15,7 @@ jobs:
 
     - name: Build OCI image
       run: |
-        export SVELTE_BUNDLE=$(mktemp -d -t "$(date +%Y-%m-%d-%H-%M-%S)-XXXXXXXXXX")
+        export SVELTE_BUNDLE=$(mktemp -d -t XXXXXXX)
         buildah unshare ./scripts/generate-svelte-bundle.sh
         ./scripts/build-nginx-image.sh
 
@@ -67,7 +67,7 @@ jobs:
         run: buildah pull oci:/tmp/portfolio-web
 
       - name: Install Trivy vulnerability scanner
-        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
 
       - name: Scan for vulnerabilities
         run: trivy image --severity HIGH,CRITICAL --input /tmp/portfolio-web
