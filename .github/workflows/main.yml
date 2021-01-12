@@ -16,7 +16,7 @@ jobs:
     - name: Build OCI image
       run: |
         export SVELTE_BUNDLE=$(mktemp -d -t "$(date +%Y-%m-%d-%H-%M-%S)-XXXXXXXXXX")
-        ./scripts/generate-svelte-bundle.sh
+        buildah unshare ./scripts/generate-svelte-bundle.sh
         ./scripts/build-nginx-image.sh
 
     - name: Archive local OCI iamge
@@ -56,8 +56,9 @@ jobs:
           buildah images
           podman images
           sudo sysctl kernel.unprivileged_userns_clone=1
+          echo $PORT
           podman run --rm -d -p $PORT:8080 portfolio-web
-          sleep 1
+          sleep 3
           ls -l
           pwd
           curl http://localhost:8080
