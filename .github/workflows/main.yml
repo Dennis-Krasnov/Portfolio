@@ -38,6 +38,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: portfolio-web-image
+          path: /tmp/portfolio-web
 
       - name: debug
         run: |
@@ -75,6 +76,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: portfolio-web-image
+          path: /tmp/portfolio-web
 
       - name: Restore local OCI image
         run: buildah pull oci:/tmp/portfolio-web
