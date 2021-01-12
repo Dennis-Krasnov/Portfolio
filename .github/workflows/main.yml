@@ -75,7 +75,7 @@ jobs:
 
   push:
     needs: [ smoke-test, check-vulnerability ]
-    if: github.ref == 'refs/tags/release'
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
@@ -103,7 +103,7 @@ jobs:
 
   deploy:
     needs: push
-    if: github.ref == 'refs/tags/release'
+    if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
