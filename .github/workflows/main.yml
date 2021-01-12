@@ -132,7 +132,7 @@ jobs:
           BINARY: yq_linux_amd64
 
       - name: Edit deployment image
-        run: yq e ".spec.template.spec.containers[0].image = \"IMAGE_REF\"" -i app/portfolio/production/deployment.yaml
+        run: yq e ".spec.template.spec.containers[0].image = \"$IMAGE_REF\"" -i app/portfolio/production/deployment.yaml
         env:
           IMAGE_REF: $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
 
