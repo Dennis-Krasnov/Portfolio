@@ -34,6 +34,9 @@ jobs:
     env:
       PORT: 8080
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Download local OCI image
         uses: actions/download-artifact@v2
         with:
@@ -52,7 +55,7 @@ jobs:
         run: |
           buildah images
           podman images
-          sysctl kernel.unprivileged_userns_clone=1
+          sudo sysctl kernel.unprivileged_userns_clone=1
           podman run --rm -d -p $PORT:8080 portfolio-web
           sleep 1
           ls -l
