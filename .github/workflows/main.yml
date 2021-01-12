@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
@@ -30,7 +30,7 @@ jobs:
 
   smoke-test:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       PORT: 8080
     steps:
@@ -64,7 +64,7 @@ jobs:
 
   check-vulnerability:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Hello
         run: echo hello
@@ -74,7 +74,7 @@ jobs:
   push:
     needs: [ smoke-test, check-vulnerability ]
     if: github.ref == 'refs/tags/release'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     env:
       IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
       IMAGE_TAG: ${{ github.sha }}
@@ -102,7 +102,7 @@ jobs:
   deploy:
     needs: push
     if: github.ref == 'refs/tags/release'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Hello
         run: echo hello
