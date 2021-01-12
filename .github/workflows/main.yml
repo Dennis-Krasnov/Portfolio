@@ -100,8 +100,11 @@ jobs:
       - name: Log in to DigitalOcean Container Registry with short-lived credentials
         run: doctl registry login --expiry-seconds 600
 
+      - name: Debug
+        run: buildah images
+
       - name: Push OCI image to DigitalOcean Container Registry
-        run: buildah push portfolio-web $IMAGE_NAME:$IMAGE_TAG
+        run: buildah push localhost/tmp/portfolio-web $IMAGE_NAME:$IMAGE_TAG
 
   deploy:
     needs: push
