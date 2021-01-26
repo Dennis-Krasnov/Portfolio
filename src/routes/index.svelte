@@ -10,7 +10,7 @@
     import WatermarkHeader from "../components/WatermarkHeader.svelte";
     import Testimonial from "../components/Testimonial.svelte";
     import Button from '../components/Button.svelte';
-    import ContactForm from '../components/ContactForm.svelte';
+    // import ContactForm from '../components/ContactForm.svelte';
 
     // The first time I got paid for development work, Pocket Trade Show
     let professionalStartDate: string = "08/01/2017";
@@ -103,7 +103,7 @@
 			startDate = "Jan 2021"
 			endDate = "Apr 2021"
 			points = {[
-                "I'm currently working here :)",
+                "Currently working on Spring Boot microservices in digital platform team",
             ]}
         />
 
@@ -114,9 +114,9 @@
 			startDate = "Oct 2020"
 			endDate = "present"
 			points = {[
+                "Edited <a href=\"https://www.raywenderlich.com/16628777-theming-a-flutter-app-getting-started\" target=_blank>Theming a Flutter App: Getting Started</a> article, more on the way", // TODO: a, b, c articles
+                "Ensured technical accuracy of content utilizing expert knowledge of Flutter",
                 "<a href=\"https://raywenderlich.com\" target=_blank>raywenderlich.com</a> provides high-quality tutorials averaging 90k daily pageviews",
-                "Ensured technical accuracy of tutorial articles utilizing expert knowledge of Flutter",
-                "Technical edited <a href=\"https://www.raywenderlich.com/16628777-theming-a-flutter-app-getting-started\" target=_blank>Theming a Flutter App: Getting Started</a> article, more on the way", // TODO: a, b, c articles
             ]}
         />
 
@@ -127,9 +127,9 @@
 			startDate = "Sep 2019"
 			endDate = "Dec 2019"
 			points = {[
-                "Developed authorization microservices in identity platform team",
-                "Modified critical identity gateway serving 51M users, added permissions claim to JWT, refactored to prevent zero trust authorization recursion",
-                "Identified production-level architecture issue in event sourcing which would break future migrations, documented and escalated to tech lead",
+                "Developed OAuth2 authorization microservices in identity platform team",
+                "Added custom permissions claim to JWT on critical ForgeRock identity gateway serving 51M users, refactored to prevent zero trust authorization recursion",
+                "Identified production-level architecture issue in event sourcing aggregate which would break future migrations, documented and escalated to tech lead",
                 "Java, Axon Framework, Spring, CQRS, event sourcing, ForgeRock IG",
             ]}
         />
@@ -141,9 +141,10 @@
 			startDate = "Jun 2018"
 			endDate = "Aug 2019"
 			points = {[
-                "Created <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
+			    "Acquired customer, gathered requirements, managed customer expectations",
+			    "Planned, designed, developed, released, and maintained <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
                 "Designed UI with structured product description and custom shopping cart, integrated with Shopify storefront API",
-                "React, MobX, Shopify storefront API, Docker Compose",
+                "React, MobX, Shopify storefront API",
             ]}
         />
 
