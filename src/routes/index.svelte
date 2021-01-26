@@ -98,7 +98,7 @@
     <Experiences>
         <Experience
 			imageUrl = "/work/cgi.svg"
-			position = "Developer co-op"
+			position = "Software Developer Intern"
 			company = "CGI"
 			startDate = "Jan 2021"
 			endDate = "Apr 2021"
@@ -109,7 +109,7 @@
 
         <Experience
 			imageUrl = "/work/raywenderlich.svg"
-			position = "Technical Editor"
+			position = "Flutter Technical Editor"
 			company = "Razeware"
 			startDate = "Oct 2020"
 			endDate = "present"

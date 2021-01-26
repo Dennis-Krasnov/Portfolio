@@ -1,12 +1,9 @@
 # Krasnov Dev Portfolio
 ![Build and Deploy CI/CD](https://github.com/Dennis-Krasnov/Portfolio/workflows/Build%20and%20Deploy%20CI/CD/badge.svg)
 
-I built a portfolio website showcasing my skills and experience. Check it out at denniskrasnov.com!
+I built a portfolio website showcasing my skills and experience. Check it out at krasnov.dev!
 
 [View live](https://krasnov.dev/)
-
-### Deploy to Digital Ocean
-[![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/Dennis-Krasnov/Portfolio/tree/master&refcode=4ed2be2d0a5c)
 
 ### How to run
 
