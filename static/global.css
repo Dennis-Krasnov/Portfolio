@@ -1,0 +1,36 @@
+/* Reset */
+h1, h2, h3, h4, h5, h6, p, ul, ol, pre {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Constants */
+:root {
+  --menu-height: 74px;
+}
+
+/* Smooth scroll */
+/*html {*/
+/*  scroll-behavior: smooth;*/
+/*}*/
+
+/*@media screen and (prefers-reduced-motion: reduce) {*/
+/*  html {*/
+/*    scroll-behavior: auto;*/
+/*  }*/
+/*}*/
+
+/* Font */
+body {
+  font-size: 16px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(51, 51, 51);
+}
+
+b, strong {
+  font-weight: 600;
+}
