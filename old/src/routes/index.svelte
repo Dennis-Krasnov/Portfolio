@@ -13,7 +13,7 @@
     // import ContactForm from '../components/ContactForm.svelte';
 
     // The first time I got paid for development work, Pocket Trade Show
-    let professionalStartDate: string = "08/01/2017";
+    let professionalStartDate: string = "08/01/2017"; // Aug
     let millisecondsInYear: number = 31536000000;
     let yearsExperience: number = Math.floor((new Date().getTime() - new Date(professionalStartDate).getTime()) / millisecondsInYear);
 
