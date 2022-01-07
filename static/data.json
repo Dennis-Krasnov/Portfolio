@@ -7,33 +7,33 @@
   "skills": [
     {
       "image": "/skills/backend.svg",
-      "name": "Backend Development",
-      "description": "<b>Spring</b>-based <b>Java/Kotlin</b> for <b>REST</b> and <b>gRPC</b> services. <b>Postgre</b>, <b>Redis</b>, <b>Firestore</b> DBs. Project configuration with <b>Gradle</b>."
+      "title": "Backend Development",
+      "summary": "<b>Spring</b>-based <b>Java/Kotlin</b> for <b>REST</b> and <b>gRPC</b> services. <b>Postgre</b>, <b>Redis</b>, <b>Firestore</b> DBs. Project configuration with <b>Gradle</b>."
     },
     {
       "image": "/skills/web.svg",
-      "name": "Web Development",
-      "description": "Responsive websites in <b>HTML5</b>, <b>CSS/SCSS</b>. <b>Rx/Redux</b>-based <b>React</b> applications in <b>ES6 JavaScript</b> and <b>Typescript</b>."
+      "title": "Web Development",
+      "summary": "Responsive websites in <b>HTML5</b>, <b>CSS/SCSS</b>. <b>Rx/Redux</b>-based <b>React</b> applications in <b>ES6 JavaScript</b> and <b>Typescript</b>."
     },
     {
       "image": "/skills/systems.svg",
-      "name": "Systems Programming",
-      "description": "Large <b>C++</b> projects. Safe multithreaded code in <b>Rust</b>. Deep understanding of performant <b>data structures</b> and <b>algorithms</b>."
+      "title": "Systems Programming",
+      "summary": "Large <b>C++</b> projects. Safe multithreaded code in <b>Rust</b>. Deep understanding of performant <b>data structures</b> and <b>algorithms</b>."
     },
     {
       "image": "/skills/mobile.svg",
-      "name": "Mobile Development",
-      "description": "<b>Dart/Flutter</b> mobile apps for both <b>iOS</b> and <b>Android</b>. Stream-based <b>BLoC</b> state management. <b>Firebase</b>-powered backend."
+      "title": "Mobile Development",
+      "summary": "<b>Dart/Flutter</b> mobile apps for both <b>iOS</b> and <b>Android</b>. Stream-based <b>BLoC</b> state management. <b>Firebase</b>-powered backend."
     },
     {
       "image": "/skills/ux.svg",
-      "name": "UX Design",
-      "description": "Interactive app prototyping in <b>Figma</b>. <b>Usability Testing</b> with real users. Frequent iterations based on feedback."
+      "title": "UX Design",
+      "summary": "Interactive app prototyping in <b>Figma</b>. <b>Usability Testing</b> with real users. Frequent iterations based on feedback."
     },
     {
       "image": "/skills/business.svg",
-      "name": "Full Business Cycle",
-      "description": "Acquiring customers, gathering <b>requirements</b>, managing <b>expectations</b>, timely execution, long-term <b>maintenance</b>."
+      "title": "Full Business Cycle",
+      "summary": "Acquiring customers, gathering <b>requirements</b>, managing <b>expectations</b>, timely execution, long-term <b>maintenance</b>."
     }
   ]
 }
