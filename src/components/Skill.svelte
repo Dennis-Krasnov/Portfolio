@@ -11,27 +11,27 @@
 </div>
 
 <style>
-  img {
-    height: 48px;
-    margin: 0 0 12px 0;
-    width: 48px;
+    img {
+        height: 48px;
+        margin: 0 0 12px 0;
+        width: 48px;
 
-    user-select: none;
-  }
+        user-select: none;
+    }
 
-  h2 {
-    font-weight: 600;
-    font-size: 19px;
-    line-height: 32px;
+    h2 {
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 32px;
 
-    color: #32325d;
-  }
+        color: #32325d;
+    }
 
-  p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 28px;
+    p {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 28px;
 
-    color: #525f7f;
-  }
+        color: #525f7f;
+    }
 </style>

@@ -27,34 +27,34 @@
 </svelte:head>
 
 <Section>
-    <Landing {...data.landing} />
+    <Landing {...data.landing}/>
 </Section>
 
 <Section id="skills" watermarkPadding dark>
     <WatermarkHeader title="skills"/>
     <Skills>
         {#each data.skills as skill}
-            <Skill {...skill} />
+            <Skill {...skill}/>
         {/each}
     </Skills>
 </Section>
 
 <Section watermarkPadding>
-    <WatermarkHeader title="testimonials" />
+    <WatermarkHeader title="testimonials"/>
 </Section>
 
 <Section id="work" watermarkPadding dark>
-    <WatermarkHeader title="work" />
+    <WatermarkHeader title="work"/>
 </Section>
 
 <Section id="projects" watermarkPadding>
-    <WatermarkHeader title="projects" />
+    <WatermarkHeader title="projects"/>
 </Section>
 
 <Section watermarkPadding dark>
-    <WatermarkHeader title="education" />
+    <WatermarkHeader title="education"/>
 </Section>
 
 <Section watermarkPadding>
-    <WatermarkHeader title="contact" />
+    <WatermarkHeader title="contact"/>
 </Section>
