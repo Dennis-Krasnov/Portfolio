@@ -2,7 +2,8 @@
   "landing": {
     "image": "/cartoon_caricature.png",
     "title": "Experienced Developer Available for Hire",
-    "summary": "Full stack software engineer with 4 years experience designing and developing structured software systems."
+    "summary": "Full stack software engineer with 4 years experience designing and developing structured software systems.",
+    "resume": "/dennis_krasnov_resume.pdf"
   },
   "skills": [
     {
