@@ -7,32 +7,32 @@
   },
   "skills": [
     {
-      "image": "/skills/backend.svg",
+      "image": "/skills_icons/backend.svg",
       "title": "Backend Development",
       "summary": "<b>REST</b> and <b>gRPC</b> services in <b>Java/Spring</b> and <b>NodeJS</b>. <b>PostgreSQL</b> and <b>Redis</b> databases. Continuous delivery with <b>Kubernetes</b>."
     },
     {
-      "image": "/skills/web.svg",
+      "image": "/skills_icons/web.svg",
       "title": "Web Development",
       "summary": "<b>React</b> apps with <b>hooks/Redux</b>-based state management. <b>JavaScript</b> and <b>Typescript</b>. Responsive websites using <b>HTML/CSS</b>."
     },
     {
-      "image": "/skills/systems.svg",
+      "image": "/skills_icons/systems.svg",
       "title": "Systems Programming",
       "summary": "<b>Rust</b> and its <b>async runtimes</b>. Non-blocking IO with <b>io_uring</b>. Foreign function interface. Performant <b>data structures</b> and <b>algorithms</b>."
     },
     {
-      "image": "/skills/architecture.svg",
+      "image": "/skills_icons/architecture.svg",
       "title": "Software Architecture",
       "summary": "<b>Relational</b> and <b>NoSQL</b> modelling. <b>Queue</b>-based systems and <b>microservices</b>. <b>CQRS</b> and <b>event sourcing</b>. Domain-driven design."
     },
     {
-      "image": "/skills/mobile.svg",
+      "image": "/skills_icons/mobile.svg",
       "title": "Mobile Development",
       "summary": "<b>Dart/Flutter</b> mobile apps for <b>iOS/Android</b>. Stream-based <b>BLoC</b> state management. <b>Deep link</b> navigation. <b>Firebase</b> backend."
     },
     {
-      "image": "/skills/business.svg",
+      "image": "/skills_icons/business.svg",
       "title": "Full Product Cycle",
       "summary": "Acquiring customers, gathering <b>requirements</b>, managing <b>expectations</b>, timely execution, long-term <b>maintenance</b>."
     }
