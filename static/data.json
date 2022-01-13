@@ -36,5 +36,13 @@
       "title": "Full Product Cycle",
       "summary": "Acquiring customers, gathering <b>requirements</b>, managing <b>expectations</b>, timely execution, long-term <b>maintenance</b>."
     }
+  ],
+  "testimonials": [
+    {
+      "image": "/testimonial/igor.png",
+      "quote": "Dennis is an experienced web developer, with an insight into the nuances of modern website design and implementation, compatibility with different platforms/devices ...",
+      "name": "Igor Kolotilin, Ph.D.",
+      "position": "CSO & President of Solar Grants Biotechnology"
+    }
   ]
 }

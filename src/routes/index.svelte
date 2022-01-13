@@ -18,6 +18,7 @@
   import WatermarkHeader from "../components/WatermarkHeader.svelte";
   import Skill from "../components/Skill.svelte";
   import Landing from "../components/Landing.svelte";
+  import Testimonial from "../components/Testimonial.svelte";
 
   export let data;
 </script>
@@ -41,6 +42,7 @@
 
 <Section watermarkPadding>
     <WatermarkHeader title="testimonials"/>
+    <Testimonial {...data.testimonials[0]}/>
 </Section>
 
 <Section id="work" watermarkPadding dark>
