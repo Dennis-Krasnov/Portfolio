@@ -13,7 +13,8 @@
         <p>{@html summary}</p>
 
         <div class="cta">
-            <Button href="#projects" buttonRow primary>view projects</Button><Button href={resume} buttonRow targetBlank>download resume</Button>
+            <!-- TODO: remove button row style -->
+            <Button href={resume} buttonRow primary targetBlank>download resume</Button>
         </div>
     </div>
     <img src="{image}" alt="Landing">

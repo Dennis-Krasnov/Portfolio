@@ -54,7 +54,3 @@
 <Section watermarkPadding dark>
     <WatermarkHeader title="education"/>
 </Section>
-
-<Section watermarkPadding>
-    <WatermarkHeader title="contact"/>
-</Section>
