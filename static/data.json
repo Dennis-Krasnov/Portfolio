@@ -1,25 +1,30 @@
 {
   "landing": {
     "image": "/cartoon_caricature.png",
-    "title": "Experienced Developer Available for Hire",
-    "summary": "Full stack software engineer with 4 years experience designing and developing structured software systems.",
+    "title": "Experienced Developer Available for Hire May 2022",
+    "summary": "4 years of work experience, award-winning side projects, skilled in system design, expert in Rust.",
     "resume": "/dennis_krasnov_resume.pdf"
   },
   "skills": [
     {
       "image": "/skills/backend.svg",
       "title": "Backend Development",
-      "summary": "<b>Spring</b>-based <b>Java/Kotlin</b> for <b>REST</b> and <b>gRPC</b> services. <b>Postgre</b>, <b>Redis</b>, <b>Firestore</b> DBs. Project configuration with <b>Gradle</b>."
+      "summary": "<b>REST</b> and <b>gRPC</b> services in <b>Java/Spring</b> and <b>NodeJS</b>. <b>PostgreSQL</b> and <b>Redis</b> databases. Continuous delivery with <b>Kubernetes</b>."
     },
     {
       "image": "/skills/web.svg",
       "title": "Web Development",
-      "summary": "Responsive websites in <b>HTML5</b>, <b>CSS/SCSS</b>. <b>Rx/Redux</b>-based <b>React</b> applications in <b>ES6 JavaScript</b> and <b>Typescript</b>."
+      "summary": "<b>React</b> apps with <b>hooks/Redux</b>-based state management. <b>JavaScript</b> and <b>Typescript</b>. Responsive websites using <b>HTML/CSS</b>."
     },
     {
       "image": "/skills/systems.svg",
       "title": "Systems Programming",
-      "summary": "Large <b>C++</b> projects. Safe multithreaded code in <b>Rust</b>. Deep understanding of performant <b>data structures</b> and <b>algorithms</b>."
+      "summary": "<b>Rust</b> and its <b>async runtimes</b>. Non-blocking IO with <b>io_uring</b>. Foreign function interface. Performant <b>data structures</b> and <b>algorithms</b>."
+    },
+    {
+      "image": "/skills/architecture.svg",
+      "title": "Software Architecture",
+      "summary": "<b>Relational</b> and <b>NoSQL</b> modelling. <b>Queue</b>-based systems and <b>microservices</b>. <b>CQRS</b> and <b>event sourcing</b>. Domain-driven design."
     },
     {
       "image": "/skills/mobile.svg",
@@ -27,13 +32,8 @@
       "summary": "<b>Dart/Flutter</b> mobile apps for both <b>iOS</b> and <b>Android</b>. Stream-based <b>BLoC</b> state management. <b>Firebase</b>-powered backend."
     },
     {
-      "image": "/skills/ux.svg",
-      "title": "UX Design",
-      "summary": "Interactive app prototyping in <b>Figma</b>. <b>Usability Testing</b> with real users. Frequent iterations based on feedback."
-    },
-    {
       "image": "/skills/business.svg",
-      "title": "Full Business Cycle",
+      "title": "Full Product Cycle",
       "summary": "Acquiring customers, gathering <b>requirements</b>, managing <b>expectations</b>, timely execution, long-term <b>maintenance</b>."
     }
   ]
