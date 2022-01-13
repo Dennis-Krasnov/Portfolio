@@ -29,7 +29,7 @@
     {
       "image": "/skills/mobile.svg",
       "title": "Mobile Development",
-      "summary": "<b>Dart/Flutter</b> mobile apps for both <b>iOS</b> and <b>Android</b>. Stream-based <b>BLoC</b> state management. <b>Firebase</b>-powered backend."
+      "summary": "<b>Dart/Flutter</b> mobile apps for <b>iOS/Android</b>. Stream-based <b>BLoC</b> state management. <b>Deep link</b> navigation. <b>Firebase</b> backend."
     },
     {
       "image": "/skills/business.svg",
