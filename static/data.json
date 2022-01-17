@@ -44,5 +44,85 @@
       "name": "Igor Kolotilin, Ph.D.",
       "position": "CSO & President of Solar Grants Biotechnology"
     }
+  ],
+  "work": [
+    {
+      "image": "/experience_icons/wfhomie.png",
+      "fullWidth": true,
+      "position": "Software Engineer",
+      "company": "WFHomie",
+      "startDate": "May 2021",
+      "endDate": "Aug 2021",
+      "points": [
+        "Created fault-tolerant shipping label generator using NodeJS, Postgres, Canada Post API. Automation <b>slashed typical order processing labor from 55h to 2h</b>",
+        "Introduced Rx-based state management to React webapp which decoupled UI from database code and enabled real-time updates without a page refresh",
+        "Invented and championed new design for onboarding flow which resolved 12 backlog tickets. Project became the company-wide priority for two sprints"
+      ]
+    },
+    {
+      "image": "/experience_icons/cgi.svg",
+      "fullWidth": false,
+      "position": "Software Developer",
+      "company": "CGI",
+      "startDate": "Jan 2021",
+      "endDate": "Apr 2021",
+      "points": [
+        "Migrated Spring queue processor service from RabbitMQ to Solace PubSub+",
+        "Configured resilient Consul services using templated systemd on RHEL servers"
+      ]
+    },
+    {
+      "image": "/experience_icons/ultimate_software.svg",
+      "fullWidth": false,
+      "position": "Software Engineer",
+      "company": "Ultimate Software",
+      "startDate": "Sep 2019",
+      "endDate": "Dec 2019",
+      "points": [
+        "Developed OAuth2 authorization microservices in identity platform team",
+        "Added permissions claim to JWT on critical-path ForgeRock identity gateway <b>serving 51M users</b>, refactored to prevent zero-trust authorization recursion",
+        "Uncovered an architectural issue in the event sourcing write model which breaks future compatibility, documented and presented solution to the team"
+      ]
+    },
+    {
+      "image": "/experience_icons/sgbiotec.png",
+      "fullWidth": false,
+      "position": "Freelance Developer",
+      "company": "Solar Grants Biotechnology",
+      "startDate": "Jun 2018",
+      "endDate": "Aug 2019",
+      "points": [
+        "Acquired customer, gathered requirements, managed customer expectations",
+        "Planned, designed, developed, released, and maintained <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
+        "Written in React with MobX for state management, integrated with Shopify storefront API"
+      ]
+    },
+    {
+      "image": "/experience_icons/pocket_trade_show.png",
+      "fullWidth": false,
+      "position": "Freelance Developer",
+      "company": "Pocket Trade Show",
+      "startDate": "Jul 2016",
+      "endDate": "Aug 2017",
+      "points": [
+        "Created Pocket Trade Show, an online tradeshow platform that connects buyers and sellers",
+        "Developed web frontend using MVC pattern in PHP, implemented file upload to S3 bucket",
+        "Restructured MySQL database to accommodate web in addition to mobile app, migrated existing data"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "image": "/education_icons/waterloo.png",
+      "fullWidth": false,
+      "position": "Bachelor of Computer Science",
+      "company": "University of Waterloo",
+      "startDate": "Sep 2018",
+      "endDate": "Apr 2023",
+      "points": [
+        "$2000 President’s Scholarship of Distinction scholarship for 95% admission average",
+        "Coursework: math, data structures, algorithms, operating systems, computer architecture, compilers, networking, databases, distributed systems, and more"
+      ]
+    }
   ]
 }

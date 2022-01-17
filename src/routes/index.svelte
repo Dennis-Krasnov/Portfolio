@@ -19,6 +19,7 @@
   import Skill from "../components/Skill.svelte";
   import Landing from "../components/Landing.svelte";
   import Testimonial from "../components/Testimonial.svelte";
+  import Experience from "../components/Experience.svelte";
 
   export let data;
 </script>
@@ -47,6 +48,9 @@
 
 <Section id="work" watermarkPadding dark>
     <WatermarkHeader title="work"/>
+    {#each data.work as work}
+        <Experience {...work} />
+    {/each}
 </Section>
 
 <Section id="projects" watermarkPadding>
@@ -55,4 +59,7 @@
 
 <Section watermarkPadding dark>
     <WatermarkHeader title="education"/>
+    {#each data.education as education}
+        <Experience {...education} />
+    {/each}
 </Section>
