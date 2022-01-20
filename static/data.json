@@ -111,6 +111,56 @@
       ]
     }
   ],
+  "projects": [
+    {
+      "name": "Uringy",
+      "summary": "Async Runtime for Rust using io_uring",
+      "colourHex": "#82b440",
+      "whiteText": true,
+      "projectId": "uringy",
+      "image": "/project_thumbnails/uringy.png"
+    },
+    {
+      "name": "Diet Driven",
+      "summary": "Calorie Counter Mobile App",
+      "colourHex": "#eaeceb",
+      "whiteText": false,
+      "projectId": "diet_driven",
+      "image": "/project_thumbnails/diet_driven.png"
+    },
+    {
+      "name": "Creative FOSS",
+      "summary": "Open Source Collaboration Tool",
+      "colourHex": "#578ffb",
+      "whiteText": true,
+      "projectId": "creative_foss",
+      "image": "/project_thumbnails/creative_foss.png"
+    },
+    {
+      "name": "Deep Link Navigation",
+      "summary": "Navigation Library for Flutter",
+      "colourHex": "#82b440",
+      "whiteText": true,
+      "projectId": "deep_link_navigation",
+      "image": "/project_thumbnails/deep_link_navigation.png"
+    },
+    {
+      "name": "Chess",
+      "summary": "Java Swing Game",
+      "colourHex": "#e5e8ee",
+      "whiteText": false,
+      "projectId": "chess",
+      "image": "/case_study/chess/thumbnail.png"
+    },
+    {
+      "name": "krasnov.dev",
+      "summary": "Portfolio Website",
+      "colourHex": "#578ffb",
+      "whiteText": true,
+      "projectId": "portfolio",
+      "image": "/project_thumbnails/portfolio.png"
+    }
+  ],
   "education": [
     {
       "image": "/education_icons/waterloo.png",

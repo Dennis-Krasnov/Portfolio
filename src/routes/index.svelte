@@ -20,6 +20,8 @@
   import Landing from "../components/Landing.svelte";
   import Testimonial from "../components/Testimonial.svelte";
   import Experience from "../components/Experience.svelte";
+  import Projects from "../components/Projects.svelte";
+  import Project from "../components/Project.svelte";
 
   export let data;
 </script>
@@ -55,6 +57,11 @@
 
 <Section id="projects" watermarkPadding>
     <WatermarkHeader title="projects"/>
+    <Projects>
+        {#each data.projects as project}
+            <Project {...project}/>
+        {/each}
+    </Projects>
 </Section>
 
 <Section watermarkPadding dark>
