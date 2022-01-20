@@ -7,8 +7,6 @@
     import CodeSnippet from "../../components/CodeSnippet.svelte";
     import Paragraph from "../../components/Paragraph.svelte";
     import DemoPicture from "../../components/DemoPicture.svelte";
-
-    export let codeSnippets;
 </script>
 
 <svelte:head>
