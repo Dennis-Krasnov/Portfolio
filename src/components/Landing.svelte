@@ -1,81 +1,91 @@
 <script lang="ts">
-	export let imageUrl: string;
-	export let title: string;
-	export let summary: string;
+    import Button from "./Button.svelte";
+
+    export let image: string;
+    export let title: string;
+    export let summary: string;
+    export let resume: string;
 </script>
 
 <div class="landing-container">
-	<div class="lhs">
-		<h1>{title}</h1>
-		<p>{@html summary}</p>
+    <div class="lhs">
+        <h1>{title}</h1>
+        <p>{@html summary}</p>
 
-		<div class="cta">
-			<slot name="cta" />
-		</div>
-	</div>
-	<img src="{imageUrl}" alt="Landing">
+        <div class="cta">
+            <Button href={resume} buttonRow primary targetBlank>download resume</Button>
+        </div>
+    </div>
+    <img src="{image}" alt="Landing">
 </div>
 
-<style lang="scss">
-	@import "../styles/constants.scss";
+<style>
+    .landing-container {
+        display: grid;
 
-	.landing-container {
-		display: grid;
+        /* Mobile */
+        padding: 32px 0 80px 0; /* FIXME */
+    }
 
-		padding: 32px 0 80px 0; // FIXME
+    .lhs h1 {
+        font-weight: 600;
+        margin: 0 0 20px 0;
 
-		@media (min-width: $landing-page-breakpoint) {& {
-			grid-template-columns: .55fr .45fr;
-			gap: 0 40px;
+        /* Mobile */
+        font-size: 34px;
+        line-height: 44px;
 
-			padding: 64px 0 120px 0; // FIXME
+        color: #32325d;
+        transition: all 0.25s ease;
+    }
 
-			// Height of lhs when p spans 2 lines
-			min-height: 264px;
-		}}
-	}
+    .lhs p {
+        font-weight: 300;
+        font-size: 23px;
+        line-height: 35px;
 
-	.lhs {
-		h1 {
-			font-weight: 600;
-			margin: 0 0 20px 0;
-			font-size: 34px;
-			line-height: 44px;
+        color: #525f7f;
+    }
 
-			color: #32325d;
-			transition: all 0.25s ease;
+    .lhs .cta {
+        /* Mobile */
+        margin: 0 0 0 0;
+    }
 
-			@media (min-width: $landing-page-breakpoint) {& {
-				font-size: 42px;
-				line-height: 52px;
-			}}
-		}
+    img {
+        width: 100%;
+        height: 264px;
 
-		p {
-			font-weight: 300;
-			font-size: 23px;
-			line-height: 35px;
+        object-fit: contain;
+        user-select: none;
+    }
 
-			color: #525f7f;
-		}
+    /* Desktop */
+    @media (min-width: 820px) {
+        .landing-container {
+            grid-template-columns: .55fr .45fr;
+            gap: 0 40px;
 
-		.cta {
-			margin: 0 0 0 0;
+            padding: 64px 0 120px 0; /* FIXME */
 
-			@media (min-width: $landing-page-breakpoint) {& {
-				margin: 15px 0 0 0;
-			}}
-		}
-	}
+            /* Height of lhs when p spans 2 lines */
+            min-height: 264px;
+        }
 
-	img {
-		width: 100%;
-		object-fit: contain;
-		height: 264px;
-		user-select: none;
+        .lhs h1 {
+            font-size: 42px;
+            line-height: 52px;
+        }
 
-		@media (max-width: $landing-page-breakpoint) {& {
-			display: none;
-		}}
-	}
+        .lhs .cta {
+            margin: 15px 0 0 0;
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 820px) {
+        img {
+            display: none;
+        }
+    }
 </style>

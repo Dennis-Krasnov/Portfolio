@@ -5,13 +5,11 @@
 
 <iframe src="{src}" title="{title}"></iframe>
 
-<style lang="scss">
-	@import "../styles/constants.scss";
+<style>
+  iframe {
+    width: 100%;
+    height: 500px;
 
-    iframe {
-      width: 100%;
-      height: 500px;
-
-      background: white;
-    }
+    background: white;
+  }
 </style>

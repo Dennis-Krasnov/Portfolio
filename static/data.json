@@ -1,0 +1,178 @@
+{
+  "landing": {
+    "image": "/cartoon_caricature.png",
+    "title": "Experienced Developer Available for Hire May 2022",
+    "summary": "4 years of work experience, award-winning side projects, skilled in system design, expert in Rust.",
+    "resume": "/dennis_krasnov_resume.pdf"
+  },
+  "skills": [
+    {
+      "image": "/skills_icons/backend.svg",
+      "title": "Backend Development",
+      "summary": "<b>REST</b> and <b>gRPC</b> services in <b>Java/Spring</b> and <b>NodeJS</b>. <b>PostgreSQL</b> and <b>Redis</b> databases. Continuous delivery with <b>Kubernetes</b>."
+    },
+    {
+      "image": "/skills_icons/web.svg",
+      "title": "Web Development",
+      "summary": "<b>React</b> apps with <b>hooks/Redux</b>-based state management. <b>JavaScript</b> and <b>Typescript</b>. Responsive websites using <b>HTML/CSS</b>."
+    },
+    {
+      "image": "/skills_icons/systems.svg",
+      "title": "Systems Programming",
+      "summary": "<b>Rust</b> and its <b>async runtimes</b>. Non-blocking IO with <b>io_uring</b>. Foreign function interface. Performant <b>data structures</b> and <b>algorithms</b>."
+    },
+    {
+      "image": "/skills_icons/architecture.svg",
+      "title": "Software Architecture",
+      "summary": "<b>Relational</b> and <b>NoSQL</b> modelling. <b>Queue</b>-based systems and <b>microservices</b>. <b>CQRS</b> and <b>event sourcing</b>. Domain-driven design."
+    },
+    {
+      "image": "/skills_icons/mobile.svg",
+      "title": "Mobile Development",
+      "summary": "<b>Dart/Flutter</b> mobile apps for <b>iOS/Android</b>. Stream-based <b>BLoC</b> state management. <b>Deep link</b> navigation. <b>Firebase</b> backend."
+    },
+    {
+      "image": "/skills_icons/business.svg",
+      "title": "Full Product Cycle",
+      "summary": "Acquiring customers, gathering <b>requirements</b>, managing <b>expectations</b>, timely execution, long-term <b>maintenance</b>."
+    }
+  ],
+  "testimonials": [
+    {
+      "image": "/testimonial_portrait/igor.png",
+      "quote": "Dennis is an experienced web developer, with an insight into the nuances of modern website design and implementation, compatibility with different platforms/devices ...",
+      "name": "Igor Kolotilin, Ph.D.",
+      "position": "CSO & President of Solar Grants Biotechnology"
+    }
+  ],
+  "work": [
+    {
+      "image": "/experience_icons/wfhomie.png",
+      "fullWidth": true,
+      "position": "Software Engineer",
+      "company": "WFHomie",
+      "startDate": "May 2021",
+      "endDate": "Aug 2021",
+      "points": [
+        "Created fault-tolerant shipping label generator using NodeJS, Postgres, Canada Post API. Automation <b>slashed typical order processing labor from 55h to 2h</b>",
+        "Introduced Rx-based state management to React webapp which decoupled UI from database code and enabled real-time updates without a page refresh",
+        "Invented and championed new design for onboarding flow which resolved 12 backlog tickets. Project became the company-wide priority for two sprints"
+      ]
+    },
+    {
+      "image": "/experience_icons/cgi.svg",
+      "fullWidth": false,
+      "position": "Software Developer",
+      "company": "CGI",
+      "startDate": "Jan 2021",
+      "endDate": "Apr 2021",
+      "points": [
+        "Migrated Spring queue processor service from RabbitMQ to Solace PubSub+",
+        "Configured resilient Consul services using templated systemd on RHEL servers"
+      ]
+    },
+    {
+      "image": "/experience_icons/ultimate_software.svg",
+      "fullWidth": false,
+      "position": "Software Engineer",
+      "company": "Ultimate Software",
+      "startDate": "Sep 2019",
+      "endDate": "Dec 2019",
+      "points": [
+        "Developed OAuth2 authorization microservices in identity platform team",
+        "Added permissions claim to JWT on critical-path ForgeRock identity gateway <b>serving 51M users</b>, refactored to prevent zero-trust authorization recursion",
+        "Uncovered an architectural issue in the event sourcing write model which breaks future compatibility, documented and presented solution to the team"
+      ]
+    },
+    {
+      "image": "/experience_icons/sgbiotec.png",
+      "fullWidth": false,
+      "position": "Freelance Developer",
+      "company": "Solar Grants Biotechnology",
+      "startDate": "Jun 2018",
+      "endDate": "Aug 2019",
+      "points": [
+        "Acquired customer, gathered requirements, managed customer expectations",
+        "Planned, designed, developed, released, and maintained <a href=\"https://sgbiotec.com\" target=\"sgbiotec\">sgbiotec.com</a>, an online store selling lab-grade fluorescent proteins",
+        "Written in React with MobX for state management, integrated with Shopify storefront API"
+      ]
+    },
+    {
+      "image": "/experience_icons/pocket_trade_show.png",
+      "fullWidth": false,
+      "position": "Freelance Developer",
+      "company": "Pocket Trade Show",
+      "startDate": "Jul 2016",
+      "endDate": "Aug 2017",
+      "points": [
+        "Created Pocket Trade Show, an online tradeshow platform that connects buyers and sellers",
+        "Developed web frontend using MVC pattern in PHP, implemented file upload to S3 bucket",
+        "Restructured MySQL database to accommodate web in addition to mobile app, migrated existing data"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Uringy",
+      "summary": "Async Runtime for Rust using io_uring",
+      "colourHex": "#82b440",
+      "whiteText": true,
+      "projectId": "uringy",
+      "image": "/project_thumbnails/uringy.png"
+    },
+    {
+      "name": "Diet Driven",
+      "summary": "Calorie Counter Mobile App",
+      "colourHex": "#eaeceb",
+      "whiteText": false,
+      "projectId": "diet_driven",
+      "image": "/project_thumbnails/diet_driven.png"
+    },
+    {
+      "name": "Creative FOSS",
+      "summary": "Open Source Collaboration Tool",
+      "colourHex": "#578ffb",
+      "whiteText": true,
+      "projectId": "creative_foss",
+      "image": "/project_thumbnails/creative_foss.png"
+    },
+    {
+      "name": "Deep Link Navigation",
+      "summary": "Navigation Library for Flutter",
+      "colourHex": "#82b440",
+      "whiteText": true,
+      "projectId": "deep_link_navigation",
+      "image": "/project_thumbnails/deep_link_navigation.png"
+    },
+    {
+      "name": "Chess",
+      "summary": "Java Swing Game",
+      "colourHex": "#e5e8ee",
+      "whiteText": false,
+      "projectId": "chess",
+      "image": "/case_study/chess/thumbnail.png"
+    },
+    {
+      "name": "krasnov.dev",
+      "summary": "Portfolio Website",
+      "colourHex": "#578ffb",
+      "whiteText": true,
+      "projectId": "portfolio",
+      "image": "/project_thumbnails/portfolio.png"
+    }
+  ],
+  "education": [
+    {
+      "image": "/education_icons/waterloo.png",
+      "fullWidth": false,
+      "position": "Bachelor of Computer Science",
+      "company": "University of Waterloo",
+      "startDate": "Sep 2018",
+      "endDate": "Apr 2023",
+      "points": [
+        "$2000 President’s Scholarship of Distinction scholarship for 95% admission average",
+        "Coursework: math, data structures, algorithms, operating systems, computer architecture, compilers, networking, databases, distributed systems, and more"
+      ]
+    }
+  ]
+}

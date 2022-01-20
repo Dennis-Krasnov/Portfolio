@@ -5,9 +5,7 @@
 
 <img src="{imageUrl}" alt="{altText}">
 
-<style lang="scss">
-	@import "../styles/constants.scss";
-
+<style>
     img {
       width: 100%;
       user-select: none;

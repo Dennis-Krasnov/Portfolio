@@ -1,106 +1,91 @@
 <script lang="ts">
-	// import { Link } from "svelte-routing"; FIXME
-
     export let name: string;
-	export let summary: string;
-	export let colourHex: string;
-	export let blackText: boolean = false;
-	export let projectId: string;
-	export let imageUrl: string;
-
-	$: colourClass = blackText ? "" : "white-text";
+    export let summary: string;
+    export let colourHex: string;
+    export let whiteText: boolean = true;
+    export let projectId: string;
+    export let image: string;
 </script>
 
 <div class="project-container">
-	<a rel=prefetch href="projects/{projectId}">
-		<div class="background" style="background: {colourHex}">
-			<div class="title {colourClass}">
-				<h4>{name}</h4>
-				<h2>{@html summary}</h2>
-			</div>
-			<div class="thumbnail">
-				<img src="{imageUrl}" alt="{summary}">
-			</div>
-		</div>
-	</a>
+<!--    FIXME: how to do prefetch if at all? -->
+    <a rel=prefetch href="projects/{projectId}">
+        <div class="background" style="background: {colourHex}">
+            <div class="title" class:whiteText>
+                <h4>{name}</h4>
+                <h2>{@html summary}</h2>
+            </div>
+            <div class="thumbnail">
+                <img src="{image}" alt="{summary}">
+            </div>
+        </div>
+    </a>
 </div>
 
-<style lang="scss">
-	@import "../styles/constants.scss";
+<style>
+    /* Inspired by http://qaisar.design */
 
-	// Inspired by http://qaisar.design
+    /* Animation */
+    .project-container:hover .background {
+        transform: scale(0.94);
+    }
 
-	.project-container {
-		// Force shorter names/summaries to fill full width
-		width: 100%;
+    .project-container:hover .thumbnail {
+        transform: scale(1.15);
+    }
 
-		&:hover {
-			.background {
-				transform: scale(0.94);
-			}
+    .background {
+        position: relative; /* For absolute positioned thumbnail */
 
-			.thumbnail {
-    			transform: scale(1.15);
-			}
-		}
-	
-		
-		.background {
-			position: relative;
-			height: 520px;
-			padding: 40px;
+        max-width: 394px; /* Width of placeholder on largest screen */
+        height: 520px;
+        padding: 40px;
 
-			// Width of placeholder on largest screen
-			max-width: 394px;
+        overflow: hidden; /* Stop thumbnail from going out of bounds */
+        transition: all 0.25s ease;
+    }
 
-			overflow: hidden;
-			transition: all 0.25s ease;
+    .background .title {
+        color: rgb(21, 48, 79);
+    }
 
-			.title {
-				color: rgb(21, 48, 79);
+    .background .title.whiteText {
+        color: white;
+    }
 
-				h4 {
-					text-transform: uppercase;
-					letter-spacing: 2.5px;
-					margin-bottom: 10px;
-					font-size: 19px;
-					line-height: 28px;
-				}
+    .background .title h4 {
+        margin-bottom: 10px;
 
-				h2 {
-					padding-right: 50px;
-					font-size: 42px;
-					letter-spacing: -0.3px;
-				}
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-size: 19px;
+        line-height: 28px;
+    }
 
-				&.white-text {
-					color: white;
-				}
-			}
+    .background .title h2 {
+        font-size: 42px;
+        letter-spacing: -0.3px;
+    }
 
-			.thumbnail {
-				position: absolute;
-				bottom: 0;
-				right: 0;
+    .thumbnail {
+        position: absolute;
+        bottom: 0;
+        right: 0;
 
-				transition: all 0.25s ease;
-				user-select: none;
+        transition: all 0.25s ease;
+        user-select: none;
+    }
 
-				img {
-					display: block;
-					max-width: 100%;
-					height: auto;
-				}
-			}
-		}
+    .thumbnail img {
+        max-width: 100%;
+    }
 
-		@media (min-width: $max-content-width - $project-shink-before-breakpoint) {& {
-			margin: auto;
+    /* Desktop: section width (1000px) - project shrink before breakpoint (150px) */
+    @media (min-width: 850px) {
+        .project-container:nth-child(odd) {
+            /* Project offset */
+            margin: -100px 0 100px 0;
+        }
+    }
 
-			// Odd works better for an odd number of projects
-			&:nth-child(odd) {
-				margin: -$project-offset 0 $project-offset 0;
-			}
-		}}
-	}
 </style>

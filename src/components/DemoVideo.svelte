@@ -7,9 +7,7 @@
     Your browser does not support the video tag.
 </video>
 
-<style lang="scss">
-	@import "../styles/constants.scss";
-
+<style>
     video {
       width: 100%;
     }

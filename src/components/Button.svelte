@@ -12,10 +12,8 @@
 <!-- Event forward on:click -->
 <a href="{href}" class="{buttonRowClass} {primarySecondaryClass}" target={targetBlankAttribute} on:click><slot/></a>
 
-<style lang="scss">
-	@import "../styles/constants.scss";
-
-	// Inspired by https://stripe.com
+<style>
+	/* Inspired by https://stripe.com */
 
 	a {
 		color: white;
@@ -36,22 +34,23 @@
 		text-decoration: none;
 		-webkit-transition: all .15s ease;
 		transition: all .15s ease;
-
-		&.button-row {
-			margin: 15px 12px 0 0;
-		}
-
-		&.primary {
-			background-color: $logo-colour;
-		}
-
-		&.secondary {
-			background-color: #32325d;
-		}
-
-		&:hover {
-			box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-			transform: translateY(-2px);
-		}
 	}
+
+    a.button-row {
+         margin: 15px 12px 0 0;
+     }
+
+    a.primary {
+        /* logo colour */
+         background-color: #d61f35;
+     }
+
+    a.secondary {
+         background-color: #32325d;
+     }
+
+    a:hover {
+         box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+         transform: translateY(-2px);
+     }
 </style>

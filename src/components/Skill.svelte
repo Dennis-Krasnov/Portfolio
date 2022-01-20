@@ -1,42 +1,37 @@
 <script lang="ts">
-    export let imageUrl: string;
+    export let image: string;
     export let title: string;
-	export let summary: string;
+    export let summary: string;
 </script>
 
 <div class="skill-container">
-    <img src="{imageUrl}" alt="{title} icon"/>
-	<h2>{title}</h2>
-	<p>{@html summary}</p>
+    <img src="{image}" alt="{title} icon"/>
+    <h2>{title}</h2>
+    <p>{@html summary}</p>
 </div>
 
-<style lang="scss">
-	@import "../styles/constants.scss";
-
-
+<style>
     img {
         height: 48px;
-        margin: 0 0 12px 0;
         width: 48px;
-        
+        margin-bottom: 12px;
+
         user-select: none;
     }
 
-	h2 {
-		font-weight: 600;
-		font-size: 19px;
-		line-height: 32px;
-		color: #32325d;
-	}
+    h2 {
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 32px;
 
-	p {
-		font-weight: 400;
-		font-size: 17px;
-		line-height: 28px;
-		color: #525f7f;
-	}
+        color: #32325d;
+    }
 
-	b {
-		color: red;
-	}
+    p {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 28px;
+
+        color: #525f7f;
+    }
 </style>
