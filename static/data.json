@@ -1,6 +1,6 @@
 {
   "landing": {
-    "image": "/cartoon_caricature.png",
+    "image": "/cartoon_caricature.webp",
     "title": "Experienced Developer Available for Hire May 2022",
     "summary": "4 years of work experience, award-winning side projects, skilled in system design, expert in Rust.",
     "resume": "/dennis_krasnov_resume.pdf"
@@ -39,7 +39,7 @@
   ],
   "testimonials": [
     {
-      "image": "/testimonial_portrait/igor.png",
+      "image": "/testimonial_portrait/igor.webp",
       "quote": "Dennis is an experienced web developer, with an insight into the nuances of modern website design and implementation, compatibility with different platforms/devices ...",
       "name": "Igor Kolotilin, Ph.D.",
       "position": "CSO & President of Solar Grants Biotechnology"
