@@ -3,15 +3,11 @@ name: Continuous Integration and Deployment
 on:
   push:
     branches: [ master ]
-    tags: v2.*
   pull_request:
     branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-env:
-  IMAGE_NAME: registry.digitalocean.com/krasnov/portfolio-web
 
 jobs:
   build:
@@ -20,131 +16,24 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Build OCI image
-      run: |
-        sudo sysctl net.ipv4.ip_unprivileged_port_start=80
-        export SVELTE_BUNDLE=$(mktemp -d -t XXXXXXX)
-        buildah unshare ./scripts/generate-svelte-bundle.sh
-        ./scripts/build-nginx-image.sh
+    - name: Build web bundle
+      run: npm run build
 
-    - name: Archive local OCI iamge
-      run: buildah push portfolio-web oci:/tmp/portfolio-web:portfolio-web
-
-    - name: Upload local OCI image
+    - name: Upload web bundle
       uses: actions/upload-artifact@v2
       with:
-        name: portfolio-web-image
-        path: /tmp/portfolio-web
+        name: portfolio-web-bundle
+        path: build
 
-  smoke-test:
+  deploy:
     needs: build
     runs-on: ubuntu-20.04
-    env:
-      PORT: 8080
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Download local OCI image
-        uses: actions/download-artifact@v2
+      - name: Deploy to digital ocean app platform
+        uses: digitalocean/app_action@main
         with:
-          name: portfolio-web-image
-          path: /tmp/portfolio-web
-
-      - name: Restore local OCI image
-        run: buildah pull oci:/tmp/portfolio-web
-
-      - name: Smoke test
-        run: |
-          sudo sysctl kernel.unprivileged_userns_clone=1
-          podman run --rm -d -p $PORT:80 portfolio-web
-          sleep 3
-          python scripts/smoke-test.py
-
-  check-vulnerability:
-    needs: build
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Download local OCI image
-        uses: actions/download-artifact@v2
-        with:
-          name: portfolio-web-image
-          path: /tmp/portfolio-web
-
-      - name: Restore local OCI image
-        run: buildah pull oci:/tmp/portfolio-web
-
-      - name: Install Trivy vulnerability scanner
-        run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sudo sh -s -- -b /usr/local/bin
-
-      - name: Scan for vulnerabilities
-        run: trivy image --no-progress --input /tmp/portfolio-web
-        # TODO: --severity HIGH,CRITICAL --exit-code 1
-
-  push:
-    needs: [ smoke-test, check-vulnerability ]
-    if: startsWith(github.ref, 'refs/tags/v')
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Get tag version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-
-      - name: Download local OCI image
-        uses: actions/download-artifact@v2
-        with:
-          name: portfolio-web-image
-          path: /tmp/portfolio-web
-
-      - name: Restore local OCI image
-        run: buildah pull oci:/tmp/portfolio-web
-
-      - name: Install doctl
-        uses: digitalocean/action-doctl@v2
-        with:
+          app_name: my_DO_app
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-
-      - name: Log in to DigitalOcean Container Registry with short-lived credentials
-        run: doctl registry login --expiry-seconds 600
-
-      - name: Rename OCI image
-        run: buildah tag localhost/tmp/portfolio-web $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
-
-      - name: Push OCI image to DigitalOcean Container Registry
-        run: buildah push $IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}
-
-  deploy:
-    needs: push
-    if: startsWith(github.ref, 'refs/tags/v')
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout infrastructure repository
-        uses: actions/checkout@v2
-        with:
-          repository: Dennis-Krasnov/Kubernetes-Infrastructure
-          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-
-      - name: Get tag version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
-
-      - name: Install yq
-        run: sudo wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/bin/yq && sudo chmod +x /usr/bin/yq
-        env:
-          VERSION: v4.2.0
-          BINARY: yq_linux_amd64
-
-      - name: Edit deployment image
-        run: yq e ".spec.template.spec.containers[0].image = \"$IMAGE_NAME:${{ steps.get_version.outputs.VERSION }}\"" -i app/portfolio/production/deployment.yaml
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          title: Update portfolio image to ${{ steps.get_version.outputs.VERSION }}
-          commit-message: update portfolio image to ${{ steps.get_version.outputs.VERSION }}
-          body: >
-            This PR is auto-generated from
-            [github.com/Dennis-Krasnov/Portfolio](https://github.com/Dennis-Krasnov/Portfolio).
-          labels: automated, portfolio
-          delete-branch: true
