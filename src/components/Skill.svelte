@@ -13,8 +13,8 @@
 <style>
     img {
         height: 48px;
-        margin: 0 0 12px 0;
         width: 48px;
+        margin-bottom: 12px;
 
         user-select: none;
     }
