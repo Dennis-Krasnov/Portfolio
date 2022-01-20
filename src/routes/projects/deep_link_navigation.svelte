@@ -53,7 +53,7 @@
 <Section watermarkPadding dark>
     <WatermarkHeader title="demo"/>
     <div class="phone">
-        <DemoIframe src="http://karopka.duckdns.org:9121/" title="Deep Link Navigation Demo"/>
+        <DemoIframe src="https://deep-link-navigation-demo-o6ro9.ondigitalocean.app/" title="Deep Link Navigation Demo"/>
     </div>
     <Paragraph>
         Flutter is a application framework that compiles natively for iOS, Android, and the web.
