@@ -109,15 +109,3 @@
         background: lightgray;
     }
 </style>
-
-<!--<Section watermarkPadding>-->
-<!--    <WatermarkHeader title="deployment"/>-->
-<!--    <Paragraph>statically built:</Paragraph>-->
-<!--    from a json file that looks like this...-->
-<!--    <Paragraph>index.svelte looks like this... loads data up at compile time. I'm content modifying the JSON file manually and track it in git, but for less technical clients I've spun up a CMS that can spit this JSON file, no changes to the code!. (everything compenent based)</Paragraph>-->
-
-<!--    Not the only thing that's built at compile time, I highlight code using highlight.js at compile time :)-->
-
-<!--    <CodeSnippet snippet={codeSnippets.buildah}/>-->
-<!--    <Paragraph>similar to a dockerfile, but as a shell script (replace podman with docker so that I don't have to explain it)</Paragraph>-->
-<!--</Section>-->
