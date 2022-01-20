@@ -19,7 +19,7 @@ jobs:
     - name: Build web bundle
       run: npm ci
 
-    - name: Build web bundle
+    - name: Download npm dependencies
       run: npm run build
 
     - name: Upload web bundle
