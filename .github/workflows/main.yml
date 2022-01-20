@@ -27,16 +27,3 @@ jobs:
       with:
         name: portfolio-web-bundle
         path: build
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-#      - name: Deploy to digital ocean app platform
-#        uses: digitalocean/app_action@main
-#        with:
-#          app_name: my_DO_app
-#          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
