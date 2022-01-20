@@ -13,7 +13,6 @@
         <p>{@html summary}</p>
 
         <div class="cta">
-            <!-- TODO: remove button row style -->
             <Button href={resume} buttonRow primary targetBlank>download resume</Button>
         </div>
     </div>

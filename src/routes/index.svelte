@@ -51,7 +51,7 @@
 <Section id="work" watermarkPadding dark>
     <WatermarkHeader title="work"/>
     {#each data.work as work}
-        <Experience {...work} />
+        <Experience {...work}/>
     {/each}
 </Section>
 
@@ -67,6 +67,6 @@
 <Section watermarkPadding dark>
     <WatermarkHeader title="education"/>
     {#each data.education as education}
-        <Experience {...education} />
+        <Experience {...education}/>
     {/each}
 </Section>
