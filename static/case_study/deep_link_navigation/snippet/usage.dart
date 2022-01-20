@@ -1,0 +1,1 @@
+DeepLinkNavigator.of(context).navigateTo([LibraryDL(), ArtistDL(...)])
