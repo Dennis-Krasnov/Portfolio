@@ -45,7 +45,9 @@
 
 <Section watermarkPadding>
     <WatermarkHeader title="testimonials"/>
-    <Testimonial {...data.testimonials[0]}/>
+    {#each data.testimonials as testimonial, i}
+        <Testimonial {...testimonial} rtl={i % 2 === 1}/>
+    {/each}
 </Section>
 
 <Section id="work" watermarkPadding dark>
