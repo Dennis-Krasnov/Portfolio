@@ -2,14 +2,12 @@
     import hljs from "highlight.js";
 
     export async function load({fetch}) {
-        const limitConcurrencyResponse = await fetch("/case_study/uringy/snippet/limit_concurrency.rs");
-        const sharingResourceResponse = await fetch("/case_study/uringy/snippet/sharing_resource.rs");
+        const structuredConcurrencyResponse = await fetch("/case_study/uringy/snippet/structured_concurrency.rs");
 
         return {
             props: {
                 codeSnippets: {
-                    limitConcurrency: hljs.highlight(await limitConcurrencyResponse.text(), {language: "Rust"}).value,
-                    sharingResource: hljs.highlight(await sharingResourceResponse.text(), {language: "Rust"}).value,
+                    structuredConcurrency: hljs.highlight(await structuredConcurrencyResponse.text(), {language: "Rust"}).value,
                 }
             }
         }
@@ -35,7 +33,7 @@
 
 <Section>
     <LandingCentered
-            title="Uringy - Async Runtime for Rust using io_uring"
+            title="Uringy - Async Runtime for Rust based on io_uring"
             summary="Work in progress. Simple and efficient non-blocking IO for Rust."
     >
 		<span slot="cta">
@@ -50,11 +48,12 @@
     <Paragraph>
         Rust comes with built-in support for the async/await syntax.
         However, you're supposed to bring your own runtime that runs asynchronous tasks and interacts with the kernel.
-        Uringy is one such runtime, where block_on is the bridge between sync and async code.
+        Uringy is one such runtime, where the block_on function is the bridge between sync and async code.
     </Paragraph>
     <Paragraph>
-        The runtime runs on a single thread (inspired by NodeJS), and for parallelism you spawn multiple threads with their own runtime.
-        Unlike NodeJS (uses epoll under the hood), there is no need for an auxiliary thread pool for file IO operations, since io_uring supports file IO natively.
+        The runtime runs on a single thread (inspired by NodeJS).
+        Unlike NodeJS which uses epoll under the hood, there is no need for an auxiliary thread pool for file IO operations, since io_uring supports filesystem IO natively.
+        For parallelism, you can spawn multiple threads with their own runtime.
     </Paragraph>
     <DemoPicture imageUrl="/case_study/uringy/diagram.png"/>
 </Section>
@@ -63,30 +62,29 @@
     <WatermarkHeader title="io_uring"/>
     <Paragraph>
         io_uring is a new asynchronous syscall interface for Linux, implemented using a pair of memory mapped ring buffers.
-        it has several benefits:
+        It has several benefits:
         <ul style="margin-left: 32px">
-            <li>Buffers aren't copied to and from the kernel, instead ownership of a buffer is given the kernel</li>
-            <li>Syscall costs are amortized due to batching several submission queue entries before issuing the system call that submits them all</li>
-            <li>Can remove syscall cost by making the kernel poll the submission queue for entries</li>
-            <li>Can remove context switches and hardware interrupts by polling the completion queue for entries instead of blocking</li>
-            <li>Can remove cost of passing ownership of buffers to kernel by preregistering them</li>
+            <!-- TODO: provided fd/buffers, oneshot syscalls -->
+            <li>Buffers aren't copied to and from the kernel, instead ownership of a buffer is lent out to the kernel</li>
+            <li>Syscall overhead is amortized due to batching several submission queue entries before issuing the system call that submits them all</li>
+            <li>Provides efficient IPC from one io_uring instance to another</li>
         </ul>
     </Paragraph>
 </Section>
 
 <Section watermarkPadding dark>
-    <WatermarkHeader title="API"/>
+    <WatermarkHeader title="Structured Concurrency"/>
 
     <Paragraph>
-        Here is a sample of the tentative API for Uringy.
-        Note that Futures in Uringy don't need to implement Send trait (unlike Tokio) so there's no need for atomics.
+        Inspired by <a href="https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful">trio</a> and <a href="https://doc.rust-lang.org/stable/std/thread/fn.scope.html">scoped threads</a>, Uringy doesn't allow globally spawning tasks.
+        Instead, tasks form a tree starting with block_on.
+        Parent tasks wait for their children to complete.
+        Parent tasks propagate cancellation to their children.
+        Child tasks propagate panics to their parent after waiting for its own children to complete.
     </Paragraph>
 
-    <Paragraph>Sharing a resource amongst multiple asynchronous tasks.</Paragraph>
-    <CodeSnippet snippet={codeSnippets.sharingResource}/>
-
-    <Paragraph>Limiting concurrency to 100 tasks at a time.</Paragraph>
-    <CodeSnippet snippet={codeSnippets.limitConcurrency}/>
+    <Paragraph>He'res an example of limiting the number of concurrent connections. Note the lack of reference counting and interior mutability.</Paragraph>
+    <CodeSnippet snippet={codeSnippets.structuredConcurrency}/>
 </Section>
 
 <!--<Section watermarkPadding>-->
