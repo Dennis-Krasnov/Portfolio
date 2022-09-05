@@ -53,6 +53,18 @@
   ],
   "work": [
     {
+      "image": "/experience_icons/dapper_labs.png",
+      "fullWidth": false,
+      "position": "Backend Software Engineer",
+      "company": "Dapper Labs",
+      "startDate": "May 2022",
+      "endDate": "Aug 2022",
+      "points": [
+        "Identified 3 unnecessary layers in microservice design, created POC using Hasura, <b>avoided over 1000 lines of boilerplate</b> while creating a new service",
+        "Added complex query to listings endpoint, implemented join and kick endpoints for squads service, wrote Go client library for an internal queueing API"
+      ]
+    },
+    {
       "image": "/experience_icons/wfhomie.png",
       "fullWidth": true,
       "position": "Full-Stack Software Engineer",
