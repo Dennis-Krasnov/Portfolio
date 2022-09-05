@@ -41,7 +41,7 @@
 <Section>
     <LandingCentered
             title="Deep Link Navigation - Navigation Library for Flutter"
-            summary="Elegant abstraction for deep linking navigation in Flutter. 50+ stars on Github."
+            summary="Elegant abstraction for deep linking navigation in Flutter. 60+ stars on Github."
     >
 		<span slot="cta">
 			<Button href="https://github.com/Dennis-Krasnov/Flutter-Deep-Link-Navigation" targetBlank buttonRow primary>Github</Button><Button
