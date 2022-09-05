@@ -42,13 +42,13 @@
   		"image": "/testimonial_portrait/reza.jpeg",
   		"quote": "Dennis is very knowledgeable in software design and backend development. We used to manually print hundreds of individual shipping labels on Canada Post’s website. Dennis came up with an interactive tool that reliably integrates with their API, saving us days of labor.",
   		"name": "Reza Farahini",
-  		"position": "Co-founder and CTO of WFHomie"
+  		"position": "Co-founder and CTO at WFHomie"
   	},
     {
       "image": "/testimonial_portrait/igor.webp",
       "quote": "Dennis is an experienced web developer, with an insight into the nuances of modern website design and implementation, compatibility with different platforms/devices ...",
       "name": "Igor Kolotilin, Ph.D.",
-      "position": "CSO & President of Solar Grants Biotechnology"
+      "position": "CSO & President at Solar Grants Biotechnology"
     }
   ],
   "work": [
