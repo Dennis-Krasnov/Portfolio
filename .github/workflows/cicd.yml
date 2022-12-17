@@ -1,0 +1,38 @@
+name: Continuous Integration and Deployment
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  env:
+    FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
+  build_deploy:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: "npm"
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build web bundle
+      run: npm run build
+
+    - name: Upload web bundle
+      uses: actions/upload-artifact@v2
+      with:
+        name: portfolio-web-bundle
+        path: build
+
+    - name: Setup flyctl
+      uses: superfly/flyctl-actions/setup-flyctl@master
+
+    - name: Deploy to fly.io
+      run: flyctl deploy --local-only
