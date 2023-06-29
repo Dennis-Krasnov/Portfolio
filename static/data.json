@@ -55,7 +55,7 @@
     {
       "image": "/experience_icons/dapper_labs.png",
       "fullWidth": false,
-      "position": "Backend Software Engineer",
+      "position": "Backend Software Engineer Intern",
       "company": "Dapper Labs",
       "startDate": "May 2022",
       "endDate": "Aug 2022",
@@ -67,7 +67,7 @@
     {
       "image": "/experience_icons/wfhomie.png",
       "fullWidth": true,
-      "position": "Full-Stack Software Engineer",
+      "position": "Full-Stack Software Engineer Intern",
       "company": "WFHomie",
       "startDate": "May 2021",
       "endDate": "Aug 2021",
@@ -80,7 +80,7 @@
     {
       "image": "/experience_icons/cgi.svg",
       "fullWidth": false,
-      "position": "Backend Software Developer",
+      "position": "Backend Software Engineer Intern",
       "company": "CGI",
       "startDate": "Jan 2021",
       "endDate": "Apr 2021",
@@ -92,7 +92,7 @@
     {
       "image": "/experience_icons/ultimate_software.svg",
       "fullWidth": false,
-      "position": "Backend Software Engineer",
+      "position": "Backend Software Engineer Intern",
       "company": "Ultimate Software",
       "startDate": "Sep 2019",
       "endDate": "Dec 2019",
