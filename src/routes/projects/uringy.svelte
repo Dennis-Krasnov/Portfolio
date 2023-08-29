@@ -33,7 +33,7 @@
 
 <Section>
     <LandingCentered
-            title="Uringy - Non-blocking Rust without the pain of async/await"
+            title="Uringy - Non-blocking Rust without the pain and complexity of async/await"
             summary="A simple single-threaded concurrency runtime based on io_uring."
     >
 		<span slot="cta">
