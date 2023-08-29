@@ -33,8 +33,8 @@
 
 <Section>
     <LandingCentered
-            title="Uringy - Concurrency Runtime for Rust based on io_uring"
-            summary="A simple single-threaded concurrency runtime for Rust based on io_uring."
+            title="Uringy - Non-blocking Rust without the pain of async/await"
+            summary="A simple single-threaded concurrency runtime based on io_uring."
     >
 		<span slot="cta">
 			<Button href="https://github.com/Dennis-Krasnov/Uringy" targetBlank buttonRow primary>Github</Button><Button
