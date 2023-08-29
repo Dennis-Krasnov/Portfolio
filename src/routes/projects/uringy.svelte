@@ -33,8 +33,8 @@
 
 <Section>
     <LandingCentered
-            title="Uringy - Async Runtime for Rust based on io_uring"
-            summary="Work in progress. Simple and efficient non-blocking IO for Rust."
+            title="Uringy - Concurrency Runtime for Rust based on io_uring"
+            summary="A simple single-threaded concurrency runtime for Rust based on io_uring."
     >
 		<span slot="cta">
 			<Button href="https://github.com/Dennis-Krasnov/Uringy" targetBlank buttonRow primary>Github</Button><Button
@@ -46,9 +46,9 @@
 <Section watermarkPadding dark>
     <WatermarkHeader title="diagram"/>
     <Paragraph>
-        Rust comes with built-in support for the async/await syntax.
-        However, you're supposed to bring your own runtime that runs asynchronous tasks and interacts with the kernel.
-        Uringy is one such runtime, where the block_on function is the bridge between sync and async code.
+        Writing concurrent code in Rust doesn't need to be painful.
+        Uringy is a runtime that combines structured concurrency, a single-threaded design, and Linux's io_uring.
+        Intended for server applications, from simple single-threaded to highly scalable thread-per-core designs.
     </Paragraph>
     <Paragraph>
         The runtime runs on a single thread (inspired by NodeJS).
@@ -77,13 +77,13 @@
 
     <Paragraph>
         Inspired by <a href="https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful">trio</a> and <a href="https://doc.rust-lang.org/stable/std/thread/fn.scope.html">scoped threads</a>, Uringy doesn't allow globally spawning tasks.
-        Instead, tasks form a tree starting with block_on.
+        Instead, tasks form a tree starting with start.
         Parent tasks wait for their children to complete.
         Parent tasks propagate cancellation to their children.
         Child tasks propagate panics to their parent after waiting for its own children to complete.
     </Paragraph>
 
-    <Paragraph>He'res an example of limiting the number of concurrent connections. Note the lack of reference counting and interior mutability.</Paragraph>
+    <Paragraph>Here's an example of a TCP echo server. Note the lack of async and await.</Paragraph>
     <CodeSnippet snippet={codeSnippets.structuredConcurrency}/>
 </Section>
 
