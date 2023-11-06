@@ -44,8 +44,7 @@
             summary="Complete chess game engine with a rules-based AI. Swing-based UI. Won school’s computer science course and department awards."
     >
 		<span slot="cta">
-			<Button href="https://github.com/Dennis-Krasnov/Chess" targetBlank buttonRow primary>Github</Button><Button
-                href="/case_study/chess/DennisKrasnovChess.jar" targetBlank buttonRow>Download JAR</Button>
+			<Button href="/case_study/chess/DennisKrasnovChess.jar" targetBlank buttonRow primary>Download JAR</Button>
 		</span>
     </LandingCentered>
 </Section>
