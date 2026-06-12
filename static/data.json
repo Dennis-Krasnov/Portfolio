@@ -2,7 +2,7 @@
   "landing": {
     "image": "/cartoon_caricature.webp",
     "title": "Experienced Developer Available for Hire",
-    "summary": "4 years of work experience, award-winning side projects, skilled in system design, expert in Rust.",
+    "summary": "Over 5 years of work experience, award-winning side projects, skilled in system design, expert in Rust.",
     "resume": "/dennis_krasnov_resume.pdf"
   },
   "skills": [
@@ -52,6 +52,22 @@
     }
   ],
   "work": [
+    {
+      "image": "/experience_icons/power_takeoff.jpeg",
+      "fullWidth": false,
+      "position": "Backend Software Engineer",
+      "company": "Power TakeOff",
+      "startDate": "December 2023",
+      "endDate": "Present",
+      "points": [
+        "Created flexible GraphQL-like endpoint for querying a complicated hierarchy of business entities. Reduced technical debt by eliminating 4 legacy endpoints using the strangler fig pattern. Introduced Testcontainers and 178 regression tests.",
+        "Re-implemented TimescaleDB query that filters, upsamples, and aggregates terabytes of time series data in PL/pgSQL. Enables efficient on-demand derivation of a cost ($) time series from a consumption (kWh) and rate ($/kWh) time series.",
+        "Significantly optimized algorithm that detects electricity meters renamed or moved in the hierarchy. Avoided expensive cartesian product by aggressively filtering out incompatible candidates based on their position.",
+        "Designed and implemented API keys with fine-grained scopes that integrates with the existing JWT-based auth.",
+        "Led the conditional alerts project that sends email alerts based on the result of daily analyses. Designed and implemented a horizontally scalable service that performs recurring analyses of electricity consumption data. Team of 4 worked on project for 1.5 months.",
+        "Delivered 3 hour-long presentations at internal developer conferences. Topics: concurrency, HTTP, API security."
+      ]
+    },
     {
       "image": "/experience_icons/dapper_labs.png",
       "fullWidth": false,
